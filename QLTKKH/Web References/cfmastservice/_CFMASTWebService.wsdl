@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ReadProc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="acctno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="martype" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="mrcrlimitmax" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="afacctno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="balance" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastchange" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReadProcResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SuaThemTienCIMAST">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="afacctno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="acctno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="money" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastchange" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuaThemTienCIMASTResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SuaTruTienCIMAST">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="afacctno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="acctno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="money" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastchange" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuaTruTienCIMASTResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="makh" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ten" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="soluuky" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loaigiay" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sogiay" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ngaycap" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="diachi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dienthoai" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="somobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCustomerResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="FixCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="makh" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ten" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="soluuky" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loaigiay" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sogiay" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ngaycap" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="diachi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dienthoai" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="somobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FixCustomerResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaKh" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteCustomerResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ReadProcSoapIn">
+    <wsdl:part name="parameters" element="tns:ReadProc" />
+  </wsdl:message>
+  <wsdl:message name="ReadProcSoapOut">
+    <wsdl:part name="parameters" element="tns:ReadProcResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuaThemTienCIMASTSoapIn">
+    <wsdl:part name="parameters" element="tns:SuaThemTienCIMAST" />
+  </wsdl:message>
+  <wsdl:message name="SuaThemTienCIMASTSoapOut">
+    <wsdl:part name="parameters" element="tns:SuaThemTienCIMASTResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuaTruTienCIMASTSoapIn">
+    <wsdl:part name="parameters" element="tns:SuaTruTienCIMAST" />
+  </wsdl:message>
+  <wsdl:message name="SuaTruTienCIMASTSoapOut">
+    <wsdl:part name="parameters" element="tns:SuaTruTienCIMASTResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCustomer" />
+  </wsdl:message>
+  <wsdl:message name="AddCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="FixCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:FixCustomer" />
+  </wsdl:message>
+  <wsdl:message name="FixCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:FixCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteCustomer" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteCustomerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CFMASTWebServiceSoap">
+    <wsdl:operation name="ReadProc">
+      <wsdl:input message="tns:ReadProcSoapIn" />
+      <wsdl:output message="tns:ReadProcSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaThemTienCIMAST">
+      <wsdl:input message="tns:SuaThemTienCIMASTSoapIn" />
+      <wsdl:output message="tns:SuaThemTienCIMASTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaTruTienCIMAST">
+      <wsdl:input message="tns:SuaTruTienCIMASTSoapIn" />
+      <wsdl:output message="tns:SuaTruTienCIMASTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomer">
+      <wsdl:input message="tns:AddCustomerSoapIn" />
+      <wsdl:output message="tns:AddCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FixCustomer">
+      <wsdl:input message="tns:FixCustomerSoapIn" />
+      <wsdl:output message="tns:FixCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <wsdl:input message="tns:DeleteCustomerSoapIn" />
+      <wsdl:output message="tns:DeleteCustomerSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CFMASTWebServiceSoap" type="tns:CFMASTWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ReadProc">
+      <soap:operation soapAction="http://tempuri.org/ReadProc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaThemTienCIMAST">
+      <soap:operation soapAction="http://tempuri.org/SuaThemTienCIMAST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaTruTienCIMAST">
+      <soap:operation soapAction="http://tempuri.org/SuaTruTienCIMAST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomer">
+      <soap:operation soapAction="http://tempuri.org/AddCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixCustomer">
+      <soap:operation soapAction="http://tempuri.org/FixCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <soap:operation soapAction="http://tempuri.org/DeleteCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CFMASTWebServiceSoap12" type="tns:CFMASTWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ReadProc">
+      <soap12:operation soapAction="http://tempuri.org/ReadProc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaThemTienCIMAST">
+      <soap12:operation soapAction="http://tempuri.org/SuaThemTienCIMAST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaTruTienCIMAST">
+      <soap12:operation soapAction="http://tempuri.org/SuaTruTienCIMAST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomer">
+      <soap12:operation soapAction="http://tempuri.org/AddCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixCustomer">
+      <soap12:operation soapAction="http://tempuri.org/FixCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <soap12:operation soapAction="http://tempuri.org/DeleteCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CFMASTWebService">
+    <wsdl:port name="CFMASTWebServiceSoap" binding="tns:CFMASTWebServiceSoap">
+      <soap:address location="https://localhost:44374/_CFMASTWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CFMASTWebServiceSoap12" binding="tns:CFMASTWebServiceSoap12">
+      <soap12:address location="https://localhost:44374/_CFMASTWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

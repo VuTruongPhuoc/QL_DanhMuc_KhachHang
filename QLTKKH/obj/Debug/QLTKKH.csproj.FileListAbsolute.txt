@@ -1,0 +1,17 @@
+P:\C#\QLTKKH\QLTKKH\bin\Debug\QLTKKH.exe.config
+P:\C#\QLTKKH\QLTKKH\bin\Debug\QLTKKH.exe
+P:\C#\QLTKKH\QLTKKH\bin\Debug\QLTKKH.pdb
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.csproj.AssemblyReference.cache
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.csproj.SuggestedBindingRedirects.cache
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.Properties.Resources.resources
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.csproj.GenerateResource.cache
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.csproj.CoreCompileInputs.cache
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.exe
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.pdb
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmAFMAST.resources
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmUpdateAFMAST.resources
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH._frmMain.resources
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmUpdateCFMAST.resources
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmCFMAST.resources
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmCIMAST.resources
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmUpdateCIMAST.resources

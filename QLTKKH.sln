@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLTKKH", "QLTKKH\QLTKKH.csproj", "{3128E1DF-9CA5-4E7A-8B13-3E2E6E743EF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSV", "WebSV\WebSV.csproj", "{EA4E1A62-83DF-40E4-9A7C-647F5FA1DF74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3128E1DF-9CA5-4E7A-8B13-3E2E6E743EF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3128E1DF-9CA5-4E7A-8B13-3E2E6E743EF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3128E1DF-9CA5-4E7A-8B13-3E2E6E743EF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3128E1DF-9CA5-4E7A-8B13-3E2E6E743EF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA4E1A62-83DF-40E4-9A7C-647F5FA1DF74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA4E1A62-83DF-40E4-9A7C-647F5FA1DF74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA4E1A62-83DF-40E4-9A7C-647F5FA1DF74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA4E1A62-83DF-40E4-9A7C-647F5FA1DF74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {793F83B3-7930-41E3-A26A-62A4421FF1E3}
+	EndGlobalSection
+EndGlobal

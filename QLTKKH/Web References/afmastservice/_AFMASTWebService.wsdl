@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ThemAFMAST">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="acctno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="martype" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="mrcrlimitmax" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ThemAFMASTResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SuaAFMAST">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="acctno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="martype" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="mrcrlimitmax" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuaAFMASTResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="XoaAFMAST">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="acctno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="XoaAFMASTResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ThemAFMASTSoapIn">
+    <wsdl:part name="parameters" element="tns:ThemAFMAST" />
+  </wsdl:message>
+  <wsdl:message name="ThemAFMASTSoapOut">
+    <wsdl:part name="parameters" element="tns:ThemAFMASTResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuaAFMASTSoapIn">
+    <wsdl:part name="parameters" element="tns:SuaAFMAST" />
+  </wsdl:message>
+  <wsdl:message name="SuaAFMASTSoapOut">
+    <wsdl:part name="parameters" element="tns:SuaAFMASTResponse" />
+  </wsdl:message>
+  <wsdl:message name="XoaAFMASTSoapIn">
+    <wsdl:part name="parameters" element="tns:XoaAFMAST" />
+  </wsdl:message>
+  <wsdl:message name="XoaAFMASTSoapOut">
+    <wsdl:part name="parameters" element="tns:XoaAFMASTResponse" />
+  </wsdl:message>
+  <wsdl:portType name="_AFMASTWebServiceSoap">
+    <wsdl:operation name="ThemAFMAST">
+      <wsdl:input message="tns:ThemAFMASTSoapIn" />
+      <wsdl:output message="tns:ThemAFMASTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaAFMAST">
+      <wsdl:input message="tns:SuaAFMASTSoapIn" />
+      <wsdl:output message="tns:SuaAFMASTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaAFMAST">
+      <wsdl:input message="tns:XoaAFMASTSoapIn" />
+      <wsdl:output message="tns:XoaAFMASTSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="_AFMASTWebServiceSoap" type="tns:_AFMASTWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ThemAFMAST">
+      <soap:operation soapAction="http://tempuri.org/ThemAFMAST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaAFMAST">
+      <soap:operation soapAction="http://tempuri.org/SuaAFMAST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaAFMAST">
+      <soap:operation soapAction="http://tempuri.org/XoaAFMAST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="_AFMASTWebServiceSoap12" type="tns:_AFMASTWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ThemAFMAST">
+      <soap12:operation soapAction="http://tempuri.org/ThemAFMAST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaAFMAST">
+      <soap12:operation soapAction="http://tempuri.org/SuaAFMAST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaAFMAST">
+      <soap12:operation soapAction="http://tempuri.org/XoaAFMAST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="_AFMASTWebService">
+    <wsdl:port name="_AFMASTWebServiceSoap" binding="tns:_AFMASTWebServiceSoap">
+      <soap:address location="https://localhost:44374/_AFMASTWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="_AFMASTWebServiceSoap12" binding="tns:_AFMASTWebServiceSoap12">
+      <soap12:address location="https://localhost:44374/_AFMASTWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
