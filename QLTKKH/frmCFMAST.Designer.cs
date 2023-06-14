@@ -41,11 +41,11 @@
             this.MOBILE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EMAIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLamMoi = new System.Windows.Forms.Button();
+            this.btnDuyet = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.btnDuyet = new System.Windows.Forms.Button();
-            this.btnLamMoi = new System.Windows.Forms.Button();
             this.grbKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.panel1.SuspendLayout();
@@ -180,6 +180,26 @@
             this.panel1.Size = new System.Drawing.Size(1172, 86);
             this.panel1.TabIndex = 7;
             // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Location = new System.Drawing.Point(692, 27);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(107, 30);
+            this.btnLamMoi.TabIndex = 6;
+            this.btnLamMoi.Text = "Làm Mới";
+            this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
+            // btnDuyet
+            // 
+            this.btnDuyet.Location = new System.Drawing.Point(533, 28);
+            this.btnDuyet.Name = "btnDuyet";
+            this.btnDuyet.Size = new System.Drawing.Size(107, 30);
+            this.btnDuyet.TabIndex = 5;
+            this.btnDuyet.Text = "Duyệt";
+            this.btnDuyet.UseVisualStyleBackColor = true;
+            this.btnDuyet.Click += new System.EventHandler(this.btnDuyet_Click);
+            // 
             // btnThem
             // 
             this.btnThem.Location = new System.Drawing.Point(47, 27);
@@ -210,34 +230,15 @@
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // btnDuyet
-            // 
-            this.btnDuyet.Location = new System.Drawing.Point(533, 28);
-            this.btnDuyet.Name = "btnDuyet";
-            this.btnDuyet.Size = new System.Drawing.Size(107, 30);
-            this.btnDuyet.TabIndex = 5;
-            this.btnDuyet.Text = "Duyệt";
-            this.btnDuyet.UseVisualStyleBackColor = true;
-            this.btnDuyet.Click += new System.EventHandler(this.btnDuyet_Click);
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.Location = new System.Drawing.Point(692, 27);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(107, 30);
-            this.btnLamMoi.TabIndex = 6;
-            this.btnLamMoi.Text = "Làm Mới";
-            this.btnLamMoi.UseVisualStyleBackColor = true;
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click_1);
-            // 
-            // frmCustomer
+            // frmCFMAST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1172, 524);
             this.Controls.Add(this.grbKhachHang);
             this.Controls.Add(this.panel1);
-            this.Name = "frmCustomer";
+            this.Name = "frmCFMAST";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmKhachHang";
             this.Load += new System.EventHandler(this.frmKhachHang_Load);
             this.grbKhachHang.ResumeLayout(false);

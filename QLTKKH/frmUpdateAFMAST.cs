@@ -16,9 +16,11 @@ namespace QLTKKH
     {
         webservice.WebService1 websv = new webservice.WebService1 ();
         afmastservice._AFMASTWebService afmastsv = new afmastservice._AFMASTWebService ();
-        public frmUpdateAFMAST()
+        private DataGridView dgv;
+        public frmUpdateAFMAST(DataGridView dgvAFMAST)
         {
             InitializeComponent();
+            dgv = dgvAFMAST;
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -58,7 +60,6 @@ namespace QLTKKH
             else
             {
                 DataTable data = dt.Tables[0];
-                MessageBox.Show(data.ToString());
                 int k = Convert.ToInt32(data.Rows.Count.ToString().Trim());
                 k++;
                 txtACCTNO.Text = "001D" + k.ToString("D6");
@@ -66,11 +67,10 @@ namespace QLTKKH
             if (frmAFMAST.str.Trim() == "Sửa tiểu khoản.")
             {
                 lbTieuKhoan.Text = frmAFMAST.str.Trim();
-                cboCUSTID.SelectedItem = frmAFMAST.LuuThongTin.makh;
-                txtACCTNO.Text = frmAFMAST.LuuThongTin.mahd;
-                
-                txtMARTYPE.Text = frmAFMAST.LuuThongTin.chovaykhong;
-                txtMRCRLIMITMAX.Text = frmAFMAST.LuuThongTin.hanmuc.ToString();
+                cboCUSTID.SelectedItem = dgv.Rows[frmAFMAST.row].Cells[0].Value.ToString();
+                txtACCTNO.Text = dgv.Rows[frmAFMAST.row].Cells[1].Value.ToString();
+                txtMARTYPE.Text = dgv.Rows[frmAFMAST.row].Cells[2].Value.ToString();
+                txtMRCRLIMITMAX.Text = dgv.Rows[frmAFMAST.row].Cells[3].Value.ToString();
             }
             txtACCTNO.Enabled = false;
         }

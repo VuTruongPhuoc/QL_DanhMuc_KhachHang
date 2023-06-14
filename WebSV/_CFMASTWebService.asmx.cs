@@ -38,7 +38,7 @@ namespace WebSV
             command.Parameters.Add("p_balance", OracleDbType.Int32).Value = balance;
             command.Parameters.Add("p_lastchange", OracleDbType.Date).Value = lastchange;
             conn.Open();
-            OracleDataReader reader = command.ExecuteReader();
+            command.ExecuteNonQuery();
             conn.Close();
         }
         [WebMethod]
@@ -81,29 +81,69 @@ namespace WebSV
         }
         [WebMethod]
         [Obsolete]
-        public void AddCustomer(string makh, string ten, string soluuky, string loaigiay, string sogiay, string ngaycap, string diachi, string dienthoai, string somobile, string email)
+        public void ThemCFMAST(string custid, string fullname, string custodycd, string idtype, string idcode, DateTime iddate, string address, string phone, string mobile, string email)
         {
-            string sql = "INSERT INTO CFMAST(CUSTID,FULLNAME,CUSTODYCD,IDTYPE,IDCODE,IDDATE,ADDRESS,PHONE,MOBILE,EMAIL) " +
-                     "VALUES (N'" + makh + "', N'" + ten + "', N'" + soluuky + "', N'" + loaigiay + "'," +
-                     "N'" + sogiay + "', DATE '" + ngaycap + "', N'" + diachi + "',N'" + dienthoai + "',N'" + somobile + "',N'" + email + "')";
-            websv.DataChange(sql);
+            OracleConnection conn = null;
+            OracleCommand command = new OracleCommand();
+            conn = new OracleConnection(websv.getConnect());
+            command.Connection = conn;
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "ThemCFMAST";
 
+            command.Parameters.Add("p_custid", OracleDbType.Varchar2).Value = custid;
+            command.Parameters.Add("p_fullname", OracleDbType.Varchar2).Value = fullname;
+            command.Parameters.Add("p_custodycd", OracleDbType.Varchar2).Value = custodycd;
+            command.Parameters.Add("p_idtype", OracleDbType.Varchar2).Value = idtype;
+            command.Parameters.Add("p_idcode", OracleDbType.Varchar2).Value = idcode;
+            command.Parameters.Add("p_iddate", OracleDbType.Date).Value = iddate;
+            command.Parameters.Add("p_address", OracleDbType.Varchar2).Value = address;
+            command.Parameters.Add("p_phone", OracleDbType.Varchar2).Value = phone;
+            command.Parameters.Add("p_mobile", OracleDbType.Varchar2).Value = mobile;
+            command.Parameters.Add("p_email", OracleDbType.Varchar2).Value = email;
+            conn.Open();
+            command.ExecuteNonQuery();
+            conn.Close();
         }
         [WebMethod]
         [Obsolete]
-        public void FixCustomer(string makh, string ten, string soluuky, string loaigiay, string sogiay, string ngaycap, string diachi, string dienthoai, string somobile, string email)
+        public void SuaCFMAST(string custid, string fullname, string custodycd, string idtype, string idcode, DateTime iddate, string address, string phone, string mobile, string email)
         {
-            string sql = "UPDATE CFMAST SET FULLNAME = N'" + ten + "',CUSTODYCD = N'" + soluuky + "',IDTYPE = N'" + loaigiay + "'," +
-                        "IDCODE = N'" + sogiay + "',IDDATE = DATE '" + ngaycap + "'," +
-                        "ADDRESS = N'" + diachi + "',PHONE = N'" + dienthoai + "',MOBILE = N'" + somobile + "',EMAIL = N'" + email + "' WHERE CUSTID = N'" + makh + "'";
-            websv.DataChange(sql);
+            OracleConnection conn = null;
+            OracleCommand command = new OracleCommand();
+            conn = new OracleConnection(websv.getConnect());
+            command.Connection = conn;
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "SuaCFMAST";
+
+            command.Parameters.Add("p_custid", OracleDbType.Varchar2).Value = custid;
+            command.Parameters.Add("p_fullname", OracleDbType.Varchar2).Value = fullname;
+            command.Parameters.Add("p_custodycd", OracleDbType.Varchar2).Value = custodycd;
+            command.Parameters.Add("p_idtype", OracleDbType.Varchar2).Value = idtype;
+            command.Parameters.Add("p_idcode", OracleDbType.Varchar2).Value = idcode;
+            command.Parameters.Add("p_iddate", OracleDbType.Date).Value = iddate;
+            command.Parameters.Add("p_address", OracleDbType.Varchar2).Value = address;
+            command.Parameters.Add("p_phone", OracleDbType.Varchar2).Value = phone;
+            command.Parameters.Add("p_mobile", OracleDbType.Varchar2).Value = mobile;
+            command.Parameters.Add("p_email", OracleDbType.Varchar2).Value = email;
+            conn.Open();
+            command.ExecuteNonQuery();
+            conn.Close();
         }
         [WebMethod]
         [Obsolete]
-        public void DeleteCustomer(string MaKh)
+        public void XoaCFMAST(string custid)
         {
-            string sql = "delete CFMAST where CUSTID = '" + MaKh + "'";
-            websv.DataChange(sql);
+            OracleConnection conn = null;
+            OracleCommand command = new OracleCommand();
+            conn = new OracleConnection(websv.getConnect());
+            command.Connection = conn;
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "XoaCFMAST";
+
+            command.Parameters.Add("p_custid", OracleDbType.Varchar2).Value = custid;
+            conn.Open();
+            command.ExecuteNonQuery();
+            conn.Close();
         }
     }
 }

@@ -14,6 +14,7 @@ namespace QLTKKH
     public partial class frmAFMAST : Form
     {
         public static string str = "Thêm mới tiểu khoản.";
+        public static int row;
         webservice.WebService1 websv = new webservice.WebService1();
         afmastservice._AFMASTWebService afmastsv = new afmastservice._AFMASTWebService();
         public frmAFMAST()
@@ -44,7 +45,7 @@ namespace QLTKKH
         private void btnThem_Click(object sender, EventArgs e)
         {
             str = "Thêm mới tiểu khoản.";
-            frmUpdateAFMAST frm = new frmUpdateAFMAST();
+            frmUpdateAFMAST frm = new frmUpdateAFMAST(dgvAFMAST);
             frm.Show();
 
         }
@@ -52,11 +53,8 @@ namespace QLTKKH
         private void btnSua_Click(object sender, EventArgs e)
         {
             str = "Sửa tiểu khoản.";
-            LuuThongTin.makh = dgvAFMAST.CurrentRow.Cells[0].Value.ToString();
-            LuuThongTin.mahd = dgvAFMAST.CurrentRow.Cells[1].Value.ToString();
-            LuuThongTin.chovaykhong = dgvAFMAST.CurrentRow.Cells[2].Value.ToString();
-            LuuThongTin.hanmuc = int.Parse(dgvAFMAST.CurrentRow.Cells[3].Value.ToString());
-            frmUpdateAFMAST frm = new frmUpdateAFMAST();
+            row = dgvAFMAST.CurrentCell.RowIndex;
+            frmUpdateAFMAST frm = new frmUpdateAFMAST(dgvAFMAST);
             frm.Show();
         }
 
@@ -71,13 +69,6 @@ namespace QLTKKH
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             loadgdv();
-        }
-        public class LuuThongTin
-        {
-            static public string makh;
-            static public string mahd;
-            static public string chovaykhong;
-            static public int hanmuc;
         }
     }
 }

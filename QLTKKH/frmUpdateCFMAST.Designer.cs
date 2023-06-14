@@ -168,7 +168,6 @@
             this.cboIDTYPE.Name = "cboIDTYPE";
             this.cboIDTYPE.Size = new System.Drawing.Size(159, 33);
             this.cboIDTYPE.TabIndex = 36;
-            this.cboIDTYPE.SelectedIndexChanged += new System.EventHandler(this.cboIDTYPE_SelectedIndexChanged);
             // 
             // dtpIDDATE
             // 

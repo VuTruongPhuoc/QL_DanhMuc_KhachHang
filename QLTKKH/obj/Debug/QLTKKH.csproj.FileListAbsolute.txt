@@ -15,3 +15,5 @@ P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmUpdateCFMAST.resources
 P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmCFMAST.resources
 P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmCIMAST.resources
 P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmUpdateCIMAST.resources
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmSEMAST.resources
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmUpdateSEMAST.resources

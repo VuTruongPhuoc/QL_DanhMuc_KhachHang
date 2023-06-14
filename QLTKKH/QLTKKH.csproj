@@ -55,13 +55,30 @@
     <Compile Include="frmCIMAST.Designer.cs">
       <DependentUpon>frmCIMAST.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSEMAST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSEMAST.Designer.cs">
+      <DependentUpon>frmSEMAST.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUpdateCIMAST.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmUpdateCIMAST.Designer.cs">
       <DependentUpon>frmUpdateCIMAST.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUpdateSEMAST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateSEMAST.Designer.cs">
+      <DependentUpon>frmUpdateSEMAST.cs</DependentUpon>
+    </Compile>
     <Compile Include="Web References\afmastservice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\semastservice\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -111,11 +128,17 @@
     <EmbeddedResource Include="frmCIMAST.resx">
       <DependentUpon>frmCIMAST.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSEMAST.resx">
+      <DependentUpon>frmSEMAST.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUpdateAFMAST.resx">
       <DependentUpon>frmUpdateAFMAST.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpdateCIMAST.resx">
       <DependentUpon>frmUpdateCIMAST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateSEMAST.resx">
+      <DependentUpon>frmUpdateSEMAST.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="_frmMain.resx">
       <DependentUpon>_frmMain.cs</DependentUpon>
@@ -157,6 +180,11 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\cfmastservice\_CFMASTWebService.wsdl" />
+    <None Include="Web References\semastservice\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\semastservice\_SEMASTWebService.wsdl" />
     <None Include="Web References\webservice\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -206,6 +234,17 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>QLTKKH_cfmastservice_CFMASTWebService</CachedSettingsPropName>
     </WebReferenceUrl>
+    <WebReferenceUrl Include="https://localhost:44374/_SEMASTWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\semastservice\</RelPath>
+      <UpdateFromURL>https://localhost:44374/_SEMASTWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QLTKKH_semastservice__SEMASTWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
     <None Include="Web References\webservice\WebService1.disco" />
@@ -215,6 +254,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Web References\afmastservice\_AFMASTWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\semastservice\_SEMASTWebService.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

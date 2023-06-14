@@ -44,52 +44,52 @@
       <s:element name="SuaTruTienCIMASTResponse">
         <s:complexType />
       </s:element>
-      <s:element name="AddCustomer">
+      <s:element name="ThemCFMAST">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="makh" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="ten" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="soluuky" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="loaigiay" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="sogiay" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="ngaycap" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="diachi" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="dienthoai" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="somobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="custid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fullname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="custodycd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idtype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idcode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iddate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="AddCustomerResponse">
+      <s:element name="ThemCFMASTResponse">
         <s:complexType />
       </s:element>
-      <s:element name="FixCustomer">
+      <s:element name="SuaCFMAST">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="makh" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="ten" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="soluuky" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="loaigiay" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="sogiay" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="ngaycap" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="diachi" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="dienthoai" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="somobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="custid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fullname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="custodycd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idtype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idcode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iddate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="FixCustomerResponse">
+      <s:element name="SuaCFMASTResponse">
         <s:complexType />
       </s:element>
-      <s:element name="DeleteCustomer">
+      <s:element name="XoaCFMAST">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="MaKh" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="custid" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="DeleteCustomerResponse">
+      <s:element name="XoaCFMASTResponse">
         <s:complexType />
       </s:element>
     </s:schema>
@@ -112,23 +112,23 @@
   <wsdl:message name="SuaTruTienCIMASTSoapOut">
     <wsdl:part name="parameters" element="tns:SuaTruTienCIMASTResponse" />
   </wsdl:message>
-  <wsdl:message name="AddCustomerSoapIn">
-    <wsdl:part name="parameters" element="tns:AddCustomer" />
+  <wsdl:message name="ThemCFMASTSoapIn">
+    <wsdl:part name="parameters" element="tns:ThemCFMAST" />
   </wsdl:message>
-  <wsdl:message name="AddCustomerSoapOut">
-    <wsdl:part name="parameters" element="tns:AddCustomerResponse" />
+  <wsdl:message name="ThemCFMASTSoapOut">
+    <wsdl:part name="parameters" element="tns:ThemCFMASTResponse" />
   </wsdl:message>
-  <wsdl:message name="FixCustomerSoapIn">
-    <wsdl:part name="parameters" element="tns:FixCustomer" />
+  <wsdl:message name="SuaCFMASTSoapIn">
+    <wsdl:part name="parameters" element="tns:SuaCFMAST" />
   </wsdl:message>
-  <wsdl:message name="FixCustomerSoapOut">
-    <wsdl:part name="parameters" element="tns:FixCustomerResponse" />
+  <wsdl:message name="SuaCFMASTSoapOut">
+    <wsdl:part name="parameters" element="tns:SuaCFMASTResponse" />
   </wsdl:message>
-  <wsdl:message name="DeleteCustomerSoapIn">
-    <wsdl:part name="parameters" element="tns:DeleteCustomer" />
+  <wsdl:message name="XoaCFMASTSoapIn">
+    <wsdl:part name="parameters" element="tns:XoaCFMAST" />
   </wsdl:message>
-  <wsdl:message name="DeleteCustomerSoapOut">
-    <wsdl:part name="parameters" element="tns:DeleteCustomerResponse" />
+  <wsdl:message name="XoaCFMASTSoapOut">
+    <wsdl:part name="parameters" element="tns:XoaCFMASTResponse" />
   </wsdl:message>
   <wsdl:portType name="CFMASTWebServiceSoap">
     <wsdl:operation name="ReadProc">
@@ -143,17 +143,17 @@
       <wsdl:input message="tns:SuaTruTienCIMASTSoapIn" />
       <wsdl:output message="tns:SuaTruTienCIMASTSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="AddCustomer">
-      <wsdl:input message="tns:AddCustomerSoapIn" />
-      <wsdl:output message="tns:AddCustomerSoapOut" />
+    <wsdl:operation name="ThemCFMAST">
+      <wsdl:input message="tns:ThemCFMASTSoapIn" />
+      <wsdl:output message="tns:ThemCFMASTSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="FixCustomer">
-      <wsdl:input message="tns:FixCustomerSoapIn" />
-      <wsdl:output message="tns:FixCustomerSoapOut" />
+    <wsdl:operation name="SuaCFMAST">
+      <wsdl:input message="tns:SuaCFMASTSoapIn" />
+      <wsdl:output message="tns:SuaCFMASTSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="DeleteCustomer">
-      <wsdl:input message="tns:DeleteCustomerSoapIn" />
-      <wsdl:output message="tns:DeleteCustomerSoapOut" />
+    <wsdl:operation name="XoaCFMAST">
+      <wsdl:input message="tns:XoaCFMASTSoapIn" />
+      <wsdl:output message="tns:XoaCFMASTSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="CFMASTWebServiceSoap" type="tns:CFMASTWebServiceSoap">
@@ -185,8 +185,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="AddCustomer">
-      <soap:operation soapAction="http://tempuri.org/AddCustomer" style="document" />
+    <wsdl:operation name="ThemCFMAST">
+      <soap:operation soapAction="http://tempuri.org/ThemCFMAST" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -194,8 +194,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="FixCustomer">
-      <soap:operation soapAction="http://tempuri.org/FixCustomer" style="document" />
+    <wsdl:operation name="SuaCFMAST">
+      <soap:operation soapAction="http://tempuri.org/SuaCFMAST" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -203,8 +203,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="DeleteCustomer">
-      <soap:operation soapAction="http://tempuri.org/DeleteCustomer" style="document" />
+    <wsdl:operation name="XoaCFMAST">
+      <soap:operation soapAction="http://tempuri.org/XoaCFMAST" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -242,8 +242,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="AddCustomer">
-      <soap12:operation soapAction="http://tempuri.org/AddCustomer" style="document" />
+    <wsdl:operation name="ThemCFMAST">
+      <soap12:operation soapAction="http://tempuri.org/ThemCFMAST" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -251,8 +251,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="FixCustomer">
-      <soap12:operation soapAction="http://tempuri.org/FixCustomer" style="document" />
+    <wsdl:operation name="SuaCFMAST">
+      <soap12:operation soapAction="http://tempuri.org/SuaCFMAST" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -260,8 +260,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="DeleteCustomer">
-      <soap12:operation soapAction="http://tempuri.org/DeleteCustomer" style="document" />
+    <wsdl:operation name="XoaCFMAST">
+      <soap12:operation soapAction="http://tempuri.org/XoaCFMAST" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

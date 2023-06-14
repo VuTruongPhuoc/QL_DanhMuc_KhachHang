@@ -165,7 +165,7 @@
             this.btnBoSung.Name = "btnBoSung";
             this.btnBoSung.Size = new System.Drawing.Size(129, 37);
             this.btnBoSung.TabIndex = 35;
-            this.btnBoSung.Text = "Bổ sung";
+            this.btnBoSung.Text = "Nộp";
             this.btnBoSung.UseVisualStyleBackColor = true;
             this.btnBoSung.Click += new System.EventHandler(this.btnBoSung_Click);
             // 
@@ -228,7 +228,7 @@
             this.btnTruTien.Name = "btnTruTien";
             this.btnTruTien.Size = new System.Drawing.Size(129, 37);
             this.btnTruTien.TabIndex = 39;
-            this.btnTruTien.Text = "Trừ Tiền";
+            this.btnTruTien.Text = "Rút";
             this.btnTruTien.UseVisualStyleBackColor = true;
             this.btnTruTien.Click += new System.EventHandler(this.btnTruTien_Click);
             // 

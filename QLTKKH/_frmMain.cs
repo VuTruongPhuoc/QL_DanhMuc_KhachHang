@@ -25,13 +25,19 @@ namespace QLTKKH
 
         private void tiểuKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAFMAST frmAFMAST = new frmAFMAST();
-            frmAFMAST.Show();
+            frmAFMAST frm= new frmAFMAST();
+            frm.Show();
         }
 
         private void tiềnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCIMAST frm = new frmCIMAST();
+            frm.Show();
+        }
+
+        private void chứngKhoánToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSEMAST frm = new frmSEMAST();
             frm.Show();
         }
     }

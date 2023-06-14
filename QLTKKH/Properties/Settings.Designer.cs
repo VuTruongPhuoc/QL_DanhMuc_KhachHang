@@ -52,5 +52,15 @@ namespace QLTKKH.Properties {
                 return ((string)(this["QLTKKH_cfmastservice1__AFMASTWebService"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://localhost:44374/_SEMASTWebService.asmx")]
+        public string QLTKKH_semastservice__SEMASTWebService {
+            get {
+                return ((string)(this["QLTKKH_semastservice__SEMASTWebService"]));
+            }
+        }
     }
 }

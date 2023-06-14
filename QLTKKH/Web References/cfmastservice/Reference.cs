@@ -35,11 +35,11 @@ namespace QLTKKH.cfmastservice {
         
         private System.Threading.SendOrPostCallback SuaTruTienCIMASTOperationCompleted;
         
-        private System.Threading.SendOrPostCallback AddCustomerOperationCompleted;
+        private System.Threading.SendOrPostCallback ThemCFMASTOperationCompleted;
         
-        private System.Threading.SendOrPostCallback FixCustomerOperationCompleted;
+        private System.Threading.SendOrPostCallback SuaCFMASTOperationCompleted;
         
-        private System.Threading.SendOrPostCallback DeleteCustomerOperationCompleted;
+        private System.Threading.SendOrPostCallback XoaCFMASTOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -89,13 +89,13 @@ namespace QLTKKH.cfmastservice {
         public event SuaTruTienCIMASTCompletedEventHandler SuaTruTienCIMASTCompleted;
         
         /// <remarks/>
-        public event AddCustomerCompletedEventHandler AddCustomerCompleted;
+        public event ThemCFMASTCompletedEventHandler ThemCFMASTCompleted;
         
         /// <remarks/>
-        public event FixCustomerCompletedEventHandler FixCustomerCompleted;
+        public event SuaCFMASTCompletedEventHandler SuaCFMASTCompleted;
         
         /// <remarks/>
-        public event DeleteCustomerCompletedEventHandler DeleteCustomerCompleted;
+        public event XoaCFMASTCompletedEventHandler XoaCFMASTCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ReadProc", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -206,122 +206,122 @@ namespace QLTKKH.cfmastservice {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/AddCustomer", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void AddCustomer(string makh, string ten, string soluuky, string loaigiay, string sogiay, string ngaycap, string diachi, string dienthoai, string somobile, string email) {
-            this.Invoke("AddCustomer", new object[] {
-                        makh,
-                        ten,
-                        soluuky,
-                        loaigiay,
-                        sogiay,
-                        ngaycap,
-                        diachi,
-                        dienthoai,
-                        somobile,
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ThemCFMAST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void ThemCFMAST(string custid, string fullname, string custodycd, string idtype, string idcode, System.DateTime iddate, string address, string phone, string mobile, string email) {
+            this.Invoke("ThemCFMAST", new object[] {
+                        custid,
+                        fullname,
+                        custodycd,
+                        idtype,
+                        idcode,
+                        iddate,
+                        address,
+                        phone,
+                        mobile,
                         email});
         }
         
         /// <remarks/>
-        public void AddCustomerAsync(string makh, string ten, string soluuky, string loaigiay, string sogiay, string ngaycap, string diachi, string dienthoai, string somobile, string email) {
-            this.AddCustomerAsync(makh, ten, soluuky, loaigiay, sogiay, ngaycap, diachi, dienthoai, somobile, email, null);
+        public void ThemCFMASTAsync(string custid, string fullname, string custodycd, string idtype, string idcode, System.DateTime iddate, string address, string phone, string mobile, string email) {
+            this.ThemCFMASTAsync(custid, fullname, custodycd, idtype, idcode, iddate, address, phone, mobile, email, null);
         }
         
         /// <remarks/>
-        public void AddCustomerAsync(string makh, string ten, string soluuky, string loaigiay, string sogiay, string ngaycap, string diachi, string dienthoai, string somobile, string email, object userState) {
-            if ((this.AddCustomerOperationCompleted == null)) {
-                this.AddCustomerOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddCustomerOperationCompleted);
+        public void ThemCFMASTAsync(string custid, string fullname, string custodycd, string idtype, string idcode, System.DateTime iddate, string address, string phone, string mobile, string email, object userState) {
+            if ((this.ThemCFMASTOperationCompleted == null)) {
+                this.ThemCFMASTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnThemCFMASTOperationCompleted);
             }
-            this.InvokeAsync("AddCustomer", new object[] {
-                        makh,
-                        ten,
-                        soluuky,
-                        loaigiay,
-                        sogiay,
-                        ngaycap,
-                        diachi,
-                        dienthoai,
-                        somobile,
-                        email}, this.AddCustomerOperationCompleted, userState);
+            this.InvokeAsync("ThemCFMAST", new object[] {
+                        custid,
+                        fullname,
+                        custodycd,
+                        idtype,
+                        idcode,
+                        iddate,
+                        address,
+                        phone,
+                        mobile,
+                        email}, this.ThemCFMASTOperationCompleted, userState);
         }
         
-        private void OnAddCustomerOperationCompleted(object arg) {
-            if ((this.AddCustomerCompleted != null)) {
+        private void OnThemCFMASTOperationCompleted(object arg) {
+            if ((this.ThemCFMASTCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.AddCustomerCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.ThemCFMASTCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/FixCustomer", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void FixCustomer(string makh, string ten, string soluuky, string loaigiay, string sogiay, string ngaycap, string diachi, string dienthoai, string somobile, string email) {
-            this.Invoke("FixCustomer", new object[] {
-                        makh,
-                        ten,
-                        soluuky,
-                        loaigiay,
-                        sogiay,
-                        ngaycap,
-                        diachi,
-                        dienthoai,
-                        somobile,
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/SuaCFMAST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void SuaCFMAST(string custid, string fullname, string custodycd, string idtype, string idcode, System.DateTime iddate, string address, string phone, string mobile, string email) {
+            this.Invoke("SuaCFMAST", new object[] {
+                        custid,
+                        fullname,
+                        custodycd,
+                        idtype,
+                        idcode,
+                        iddate,
+                        address,
+                        phone,
+                        mobile,
                         email});
         }
         
         /// <remarks/>
-        public void FixCustomerAsync(string makh, string ten, string soluuky, string loaigiay, string sogiay, string ngaycap, string diachi, string dienthoai, string somobile, string email) {
-            this.FixCustomerAsync(makh, ten, soluuky, loaigiay, sogiay, ngaycap, diachi, dienthoai, somobile, email, null);
+        public void SuaCFMASTAsync(string custid, string fullname, string custodycd, string idtype, string idcode, System.DateTime iddate, string address, string phone, string mobile, string email) {
+            this.SuaCFMASTAsync(custid, fullname, custodycd, idtype, idcode, iddate, address, phone, mobile, email, null);
         }
         
         /// <remarks/>
-        public void FixCustomerAsync(string makh, string ten, string soluuky, string loaigiay, string sogiay, string ngaycap, string diachi, string dienthoai, string somobile, string email, object userState) {
-            if ((this.FixCustomerOperationCompleted == null)) {
-                this.FixCustomerOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFixCustomerOperationCompleted);
+        public void SuaCFMASTAsync(string custid, string fullname, string custodycd, string idtype, string idcode, System.DateTime iddate, string address, string phone, string mobile, string email, object userState) {
+            if ((this.SuaCFMASTOperationCompleted == null)) {
+                this.SuaCFMASTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSuaCFMASTOperationCompleted);
             }
-            this.InvokeAsync("FixCustomer", new object[] {
-                        makh,
-                        ten,
-                        soluuky,
-                        loaigiay,
-                        sogiay,
-                        ngaycap,
-                        diachi,
-                        dienthoai,
-                        somobile,
-                        email}, this.FixCustomerOperationCompleted, userState);
+            this.InvokeAsync("SuaCFMAST", new object[] {
+                        custid,
+                        fullname,
+                        custodycd,
+                        idtype,
+                        idcode,
+                        iddate,
+                        address,
+                        phone,
+                        mobile,
+                        email}, this.SuaCFMASTOperationCompleted, userState);
         }
         
-        private void OnFixCustomerOperationCompleted(object arg) {
-            if ((this.FixCustomerCompleted != null)) {
+        private void OnSuaCFMASTOperationCompleted(object arg) {
+            if ((this.SuaCFMASTCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.FixCustomerCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.SuaCFMASTCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DeleteCustomer", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void DeleteCustomer(string MaKh) {
-            this.Invoke("DeleteCustomer", new object[] {
-                        MaKh});
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/XoaCFMAST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void XoaCFMAST(string custid) {
+            this.Invoke("XoaCFMAST", new object[] {
+                        custid});
         }
         
         /// <remarks/>
-        public void DeleteCustomerAsync(string MaKh) {
-            this.DeleteCustomerAsync(MaKh, null);
+        public void XoaCFMASTAsync(string custid) {
+            this.XoaCFMASTAsync(custid, null);
         }
         
         /// <remarks/>
-        public void DeleteCustomerAsync(string MaKh, object userState) {
-            if ((this.DeleteCustomerOperationCompleted == null)) {
-                this.DeleteCustomerOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDeleteCustomerOperationCompleted);
+        public void XoaCFMASTAsync(string custid, object userState) {
+            if ((this.XoaCFMASTOperationCompleted == null)) {
+                this.XoaCFMASTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnXoaCFMASTOperationCompleted);
             }
-            this.InvokeAsync("DeleteCustomer", new object[] {
-                        MaKh}, this.DeleteCustomerOperationCompleted, userState);
+            this.InvokeAsync("XoaCFMAST", new object[] {
+                        custid}, this.XoaCFMASTOperationCompleted, userState);
         }
         
-        private void OnDeleteCustomerOperationCompleted(object arg) {
-            if ((this.DeleteCustomerCompleted != null)) {
+        private void OnXoaCFMASTOperationCompleted(object arg) {
+            if ((this.XoaCFMASTCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.DeleteCustomerCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.XoaCFMASTCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -358,15 +358,15 @@ namespace QLTKKH.cfmastservice {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void AddCustomerCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    public delegate void ThemCFMASTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void FixCustomerCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    public delegate void SuaCFMASTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void DeleteCustomerCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    public delegate void XoaCFMASTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591
