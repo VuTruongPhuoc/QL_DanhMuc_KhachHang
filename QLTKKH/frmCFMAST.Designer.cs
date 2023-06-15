@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.grbKhachHang = new System.Windows.Forms.GroupBox();
-            this.dgvCustomer = new System.Windows.Forms.DataGridView();
+            this.dgvCFMAST = new System.Windows.Forms.DataGridView();
             this.CUSTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FULLNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CUSTODYCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,13 +47,13 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.grbKhachHang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCFMAST)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbKhachHang
             // 
-            this.grbKhachHang.Controls.Add(this.dgvCustomer);
+            this.grbKhachHang.Controls.Add(this.dgvCFMAST);
             this.grbKhachHang.Dock = System.Windows.Forms.DockStyle.Top;
             this.grbKhachHang.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.grbKhachHang.Location = new System.Drawing.Point(0, 86);
@@ -63,11 +63,11 @@
             this.grbKhachHang.TabStop = false;
             this.grbKhachHang.Text = "Danh sách khách hàng";
             // 
-            // dgvCustomer
+            // dgvCFMAST
             // 
-            this.dgvCustomer.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCFMAST.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvCFMAST.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCFMAST.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CUSTID,
             this.FULLNAME,
             this.CUSTODYCD,
@@ -78,13 +78,13 @@
             this.Phone,
             this.MOBILE,
             this.EMAIL});
-            this.dgvCustomer.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCustomer.Location = new System.Drawing.Point(18, 30);
-            this.dgvCustomer.Name = "dgvCustomer";
-            this.dgvCustomer.RowHeadersWidth = 51;
-            this.dgvCustomer.RowTemplate.Height = 24;
-            this.dgvCustomer.Size = new System.Drawing.Size(1132, 349);
-            this.dgvCustomer.TabIndex = 0;
+            this.dgvCFMAST.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvCFMAST.Location = new System.Drawing.Point(18, 30);
+            this.dgvCFMAST.Name = "dgvCFMAST";
+            this.dgvCFMAST.RowHeadersWidth = 51;
+            this.dgvCFMAST.RowTemplate.Height = 24;
+            this.dgvCFMAST.Size = new System.Drawing.Size(1132, 349);
+            this.dgvCFMAST.TabIndex = 0;
             // 
             // CUSTID
             // 
@@ -242,7 +242,7 @@
             this.Text = "frmKhachHang";
             this.Load += new System.EventHandler(this.frmKhachHang_Load);
             this.grbKhachHang.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCFMAST)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -251,7 +251,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grbKhachHang;
-        private System.Windows.Forms.DataGridView dgvCustomer;
+        private System.Windows.Forms.DataGridView dgvCFMAST;
         private System.Windows.Forms.DataGridViewTextBoxColumn CUSTID;
         private System.Windows.Forms.DataGridViewTextBoxColumn FULLNAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn CUSTODYCD;

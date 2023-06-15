@@ -36,6 +36,8 @@
             this.AFACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BALANCE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CIDEPOFEEACR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DEPOFEEAMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LASTCHANGE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCIMAST)).BeginInit();
@@ -49,7 +51,7 @@
             this.grbKhachHang.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.grbKhachHang.Location = new System.Drawing.Point(0, 86);
             this.grbKhachHang.Name = "grbKhachHang";
-            this.grbKhachHang.Size = new System.Drawing.Size(869, 404);
+            this.grbKhachHang.Size = new System.Drawing.Size(868, 404);
             this.grbKhachHang.TabIndex = 12;
             this.grbKhachHang.TabStop = false;
             this.grbKhachHang.Text = "Danh sách tiều khoản";
@@ -62,6 +64,8 @@
             this.AFACCTNO,
             this.ACCTNO,
             this.BALANCE,
+            this.CIDEPOFEEACR,
+            this.DEPOFEEAMT,
             this.LASTCHANGE});
             this.dgvCIMAST.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvCIMAST.Location = new System.Drawing.Point(12, 30);
@@ -79,7 +83,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(869, 86);
+            this.panel1.Size = new System.Drawing.Size(868, 86);
             this.panel1.TabIndex = 11;
             // 
             // btnLamMoi
@@ -126,6 +130,22 @@
             this.BALANCE.Name = "BALANCE";
             this.BALANCE.Width = 125;
             // 
+            // CIDEPOFEEACR
+            // 
+            this.CIDEPOFEEACR.DataPropertyName = "CIDEPOFEEACR";
+            this.CIDEPOFEEACR.HeaderText = "Tổng phí hàng ngày";
+            this.CIDEPOFEEACR.MinimumWidth = 6;
+            this.CIDEPOFEEACR.Name = "CIDEPOFEEACR";
+            this.CIDEPOFEEACR.Width = 125;
+            // 
+            // DEPOFEEAMT
+            // 
+            this.DEPOFEEAMT.DataPropertyName = "DEPOFEEAMT";
+            this.DEPOFEEAMT.HeaderText = "Phí thu tháng";
+            this.DEPOFEEAMT.MinimumWidth = 6;
+            this.DEPOFEEAMT.Name = "DEPOFEEAMT";
+            this.DEPOFEEAMT.Width = 125;
+            // 
             // LASTCHANGE
             // 
             this.LASTCHANGE.DataPropertyName = "LASTCHANGE";
@@ -138,7 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 576);
+            this.ClientSize = new System.Drawing.Size(868, 539);
             this.Controls.Add(this.grbKhachHang);
             this.Controls.Add(this.panel1);
             this.Name = "frmCIMAST";
@@ -162,6 +182,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AFACCTNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ACCTNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn BALANCE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CIDEPOFEEACR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DEPOFEEAMT;
         private System.Windows.Forms.DataGridViewTextBoxColumn LASTCHANGE;
     }
 }

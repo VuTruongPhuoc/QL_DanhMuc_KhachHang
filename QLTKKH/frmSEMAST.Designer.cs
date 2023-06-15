@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.grbKhachHang = new System.Windows.Forms.GroupBox();
-            this.dgvCustomer = new System.Windows.Forms.DataGridView();
+            this.dgvSEMAST = new System.Windows.Forms.DataGridView();
+            this.CUSTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AFACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CODEID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TOTALBUYAMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OPNDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CLSDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LASTDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.CUSTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AFACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CODEID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TOTALSELLAMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OPNDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CLSDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LASTDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbKhachHang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSEMAST)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbKhachHang
             // 
-            this.grbKhachHang.Controls.Add(this.dgvCustomer);
+            this.grbKhachHang.Controls.Add(this.dgvSEMAST);
             this.grbKhachHang.Dock = System.Windows.Forms.DockStyle.Top;
             this.grbKhachHang.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.grbKhachHang.Location = new System.Drawing.Point(0, 86);
@@ -60,75 +60,26 @@
             this.grbKhachHang.TabStop = false;
             this.grbKhachHang.Text = "Tài sản CK KH";
             // 
-            // dgvCustomer
+            // dgvSEMAST
             // 
-            this.dgvCustomer.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvSEMAST.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvSEMAST.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSEMAST.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CUSTID,
             this.AFACCTNO,
             this.ACCTNO,
             this.CODEID,
-            this.TOTALSELLAMT,
+            this.TOTALBUYAMT,
             this.OPNDATE,
             this.CLSDATE,
             this.LASTDATE});
-            this.dgvCustomer.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCustomer.Location = new System.Drawing.Point(18, 30);
-            this.dgvCustomer.Name = "dgvCustomer";
-            this.dgvCustomer.RowHeadersWidth = 51;
-            this.dgvCustomer.RowTemplate.Height = 24;
-            this.dgvCustomer.Size = new System.Drawing.Size(1132, 349);
-            this.dgvCustomer.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel1.Controls.Add(this.btnLamMoi);
-            this.panel1.Controls.Add(this.btnThem);
-            this.panel1.Controls.Add(this.btnXoa);
-            this.panel1.Controls.Add(this.btnSua);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1166, 86);
-            this.panel1.TabIndex = 9;
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.Location = new System.Drawing.Point(548, 27);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(107, 30);
-            this.btnLamMoi.TabIndex = 6;
-            this.btnLamMoi.Text = "Làm Mới";
-            this.btnLamMoi.UseVisualStyleBackColor = true;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(47, 27);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(107, 30);
-            this.btnThem.TabIndex = 1;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(382, 27);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(107, 30);
-            this.btnXoa.TabIndex = 3;
-            this.btnXoa.Text = "Xoá";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(211, 27);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(107, 30);
-            this.btnSua.TabIndex = 2;
-            this.btnSua.Text = "Sửa ";
-            this.btnSua.UseVisualStyleBackColor = true;
+            this.dgvSEMAST.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvSEMAST.Location = new System.Drawing.Point(18, 30);
+            this.dgvSEMAST.Name = "dgvSEMAST";
+            this.dgvSEMAST.RowHeadersWidth = 51;
+            this.dgvSEMAST.RowTemplate.Height = 24;
+            this.dgvSEMAST.Size = new System.Drawing.Size(1132, 349);
+            this.dgvSEMAST.TabIndex = 0;
             // 
             // CUSTID
             // 
@@ -162,13 +113,13 @@
             this.CODEID.Name = "CODEID";
             this.CODEID.Width = 125;
             // 
-            // TOTALSELLAMT
+            // TOTALBUYAMT
             // 
-            this.TOTALSELLAMT.DataPropertyName = "TOTALSELLAMT";
-            this.TOTALSELLAMT.HeaderText = "Tổng giá trị CK";
-            this.TOTALSELLAMT.MinimumWidth = 6;
-            this.TOTALSELLAMT.Name = "TOTALSELLAMT";
-            this.TOTALSELLAMT.Width = 125;
+            this.TOTALBUYAMT.DataPropertyName = "TOTALBUYAMT";
+            this.TOTALBUYAMT.HeaderText = "Tổng số lượng CK";
+            this.TOTALBUYAMT.MinimumWidth = 6;
+            this.TOTALBUYAMT.Name = "TOTALBUYAMT";
+            this.TOTALBUYAMT.Width = 125;
             // 
             // OPNDATE
             // 
@@ -194,6 +145,59 @@
             this.LASTDATE.Name = "LASTDATE";
             this.LASTDATE.Width = 125;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel1.Controls.Add(this.btnLamMoi);
+            this.panel1.Controls.Add(this.btnThem);
+            this.panel1.Controls.Add(this.btnXoa);
+            this.panel1.Controls.Add(this.btnSua);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1166, 86);
+            this.panel1.TabIndex = 9;
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Location = new System.Drawing.Point(547, 27);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(107, 30);
+            this.btnLamMoi.TabIndex = 6;
+            this.btnLamMoi.Text = "Làm Mới";
+            this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(47, 27);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(107, 30);
+            this.btnThem.TabIndex = 1;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(382, 27);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(107, 30);
+            this.btnXoa.TabIndex = 3;
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(211, 27);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(107, 30);
+            this.btnSua.TabIndex = 2;
+            this.btnSua.Text = "Sửa ";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
             // frmSEMAST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -202,9 +206,11 @@
             this.Controls.Add(this.grbKhachHang);
             this.Controls.Add(this.panel1);
             this.Name = "frmSEMAST";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSEMAST";
+            this.Load += new System.EventHandler(this.frmSEMAST_Load);
             this.grbKhachHang.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSEMAST)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -213,7 +219,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grbKhachHang;
-        private System.Windows.Forms.DataGridView dgvCustomer;
+        private System.Windows.Forms.DataGridView dgvSEMAST;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Button btnThem;
@@ -223,7 +229,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AFACCTNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ACCTNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODEID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TOTALSELLAMT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TOTALBUYAMT;
         private System.Windows.Forms.DataGridViewTextBoxColumn OPNDATE;
         private System.Windows.Forms.DataGridViewTextBoxColumn CLSDATE;
         private System.Windows.Forms.DataGridViewTextBoxColumn LASTDATE;

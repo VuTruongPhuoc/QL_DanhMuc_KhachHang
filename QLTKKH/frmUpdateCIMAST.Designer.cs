@@ -30,7 +30,6 @@
         {
             this.btnExit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtpLASTCHANGE = new System.Windows.Forms.DateTimePicker();
             this.txtBALANCE = new System.Windows.Forms.TextBox();
             this.txtACCTNO = new System.Windows.Forms.TextBox();
             this.txtAFACCTNO = new System.Windows.Forms.TextBox();
@@ -45,6 +44,11 @@
             this.txtMONEY = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnTruTien = new System.Windows.Forms.Button();
+            this.dtpLASTCHANGE = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -53,7 +57,7 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(591, 475);
+            this.btnExit.Location = new System.Drawing.Point(592, 522);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(129, 37);
             this.btnExit.TabIndex = 37;
@@ -63,6 +67,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.dtpLASTCHANGE);
             this.groupBox1.Controls.Add(this.txtBALANCE);
             this.groupBox1.Controls.Add(this.txtACCTNO);
@@ -75,18 +83,10 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 72);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(857, 205);
+            this.groupBox1.Size = new System.Drawing.Size(875, 283);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
-            // 
-            // dtpLASTCHANGE
-            // 
-            this.dtpLASTCHANGE.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpLASTCHANGE.Location = new System.Drawing.Point(646, 130);
-            this.dtpLASTCHANGE.Name = "dtpLASTCHANGE";
-            this.dtpLASTCHANGE.Size = new System.Drawing.Size(188, 27);
-            this.dtpLASTCHANGE.TabIndex = 49;
             // 
             // txtBALANCE
             // 
@@ -122,7 +122,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(431, 133);
+            this.label4.Location = new System.Drawing.Point(431, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(198, 20);
             this.label4.TabIndex = 26;
@@ -161,7 +161,7 @@
             // btnBoSung
             // 
             this.btnBoSung.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBoSung.Location = new System.Drawing.Point(184, 475);
+            this.btnBoSung.Location = new System.Drawing.Point(184, 522);
             this.btnBoSung.Name = "btnBoSung";
             this.btnBoSung.Size = new System.Drawing.Size(129, 37);
             this.btnBoSung.TabIndex = 35;
@@ -176,7 +176,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(857, 72);
+            this.panel1.Size = new System.Drawing.Size(875, 72);
             this.panel1.TabIndex = 34;
             // 
             // lbTieuKhoan
@@ -195,9 +195,9 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(0, 277);
+            this.groupBox2.Location = new System.Drawing.Point(0, 355);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(857, 146);
+            this.groupBox2.Size = new System.Drawing.Size(875, 131);
             this.groupBox2.TabIndex = 38;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tiền";
@@ -224,7 +224,7 @@
             // btnTruTien
             // 
             this.btnTruTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTruTien.Location = new System.Drawing.Point(383, 475);
+            this.btnTruTien.Location = new System.Drawing.Point(385, 522);
             this.btnTruTien.Name = "btnTruTien";
             this.btnTruTien.Size = new System.Drawing.Size(129, 37);
             this.btnTruTien.TabIndex = 39;
@@ -232,11 +232,59 @@
             this.btnTruTien.UseVisualStyleBackColor = true;
             this.btnTruTien.Click += new System.EventHandler(this.btnTruTien_Click);
             // 
+            // dtpLASTCHANGE
+            // 
+            this.dtpLASTCHANGE.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpLASTCHANGE.Location = new System.Drawing.Point(646, 219);
+            this.dtpLASTCHANGE.Name = "dtpLASTCHANGE";
+            this.dtpLASTCHANGE.Size = new System.Drawing.Size(188, 27);
+            this.dtpLASTCHANGE.TabIndex = 50;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(646, 116);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(188, 33);
+            this.textBox1.TabIndex = 51;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(184, 213);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(188, 33);
+            this.textBox2.TabIndex = 52;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(424, 129);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(178, 20);
+            this.label2.TabIndex = 53;
+            this.label2.Text = "Tổng phí thu mỗi ngày:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(23, 224);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(112, 20);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "Phí thu tháng:";
+            // 
             // frmUpdateCIMAST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 541);
+            this.ClientSize = new System.Drawing.Size(875, 604);
             this.Controls.Add(this.btnTruTien);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnExit);
@@ -271,10 +319,14 @@
         private System.Windows.Forms.Button btnBoSung;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbTieuKhoan;
-        private System.Windows.Forms.DateTimePicker dtpLASTCHANGE;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtMONEY;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnTruTien;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker dtpLASTCHANGE;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
     }
 }

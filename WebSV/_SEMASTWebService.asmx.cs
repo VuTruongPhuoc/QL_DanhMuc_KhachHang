@@ -21,20 +21,20 @@ namespace WebSV
         WebService1 websv = new WebService1();
         [WebMethod]
         [Obsolete]
-        public void ThemSEMAST(string custid, string afacctno, string acctno, string codeid, Int64 totalsellamt, DateTime opndate, DateTime clsdate, DateTime lastdate)
+        public void ThemSEMAST(string custid, string afacctno, string acctno, string codeid, int totalbuyamt, DateTime opndate, DateTime clsdate, DateTime lastdate)
         {
             OracleConnection conn = null;
             OracleCommand command = new OracleCommand();
             conn = new OracleConnection(websv.getConnect());
             command.Connection = conn;
             command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "ThemCFMAST";
+            command.CommandText = "ThemSEMAST";
 
             command.Parameters.Add("p_custid", OracleDbType.Varchar2).Value = custid;
             command.Parameters.Add("p_afacctno", OracleDbType.Varchar2).Value = afacctno;
             command.Parameters.Add("p_acctno", OracleDbType.Varchar2).Value = acctno;
             command.Parameters.Add("p_codeid", OracleDbType.Varchar2).Value = codeid;
-            command.Parameters.Add("p_totalsellamt", OracleDbType.Int64).Value = totalsellamt;
+            command.Parameters.Add("p_totalbuyamt", OracleDbType.Int64).Value = totalbuyamt;
             command.Parameters.Add("p_opndate", OracleDbType.Date).Value = opndate;
             command.Parameters.Add("p_clsdate", OracleDbType.Date).Value = clsdate;
             command.Parameters.Add("p_lastdate", OracleDbType.Date).Value = lastdate;
@@ -44,20 +44,20 @@ namespace WebSV
         }
         [WebMethod]
         [Obsolete]
-        public void SuaSEMAST(string custid, string afacctno, string acctno, string codeid, Int64 totalsellamt, DateTime opndate, DateTime clsdate, DateTime lastdate)
+        public void SuaSEMAST(string custid, string afacctno, string acctno, string codeid, int totalbuyamt, DateTime opndate, DateTime clsdate, DateTime lastdate)
         {
             OracleConnection conn = null;
             OracleCommand command = new OracleCommand();
             conn = new OracleConnection(websv.getConnect());
             command.Connection = conn;
             command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "ThemCFMAST";
+            command.CommandText = "SuaSEMAST";
 
             command.Parameters.Add("p_custid", OracleDbType.Varchar2).Value = custid;
             command.Parameters.Add("p_afacctno", OracleDbType.Varchar2).Value = afacctno;
             command.Parameters.Add("p_acctno", OracleDbType.Varchar2).Value = acctno;
             command.Parameters.Add("p_codeid", OracleDbType.Varchar2).Value = codeid;
-            command.Parameters.Add("p_totalsellamt", OracleDbType.Int64).Value = totalsellamt;
+            command.Parameters.Add("p_totalbuyamt", OracleDbType.Int64).Value = totalbuyamt;
             command.Parameters.Add("p_opndate", OracleDbType.Date).Value = opndate;
             command.Parameters.Add("p_clsdate", OracleDbType.Date).Value = clsdate;
             command.Parameters.Add("p_lastdate", OracleDbType.Date).Value = lastdate;
@@ -67,7 +67,7 @@ namespace WebSV
         }
         [WebMethod]
         [Obsolete]
-        public void XoaCFMAST(string custid,string acctno)
+        public void XoaSEMAST(string custid,string acctno)
         {
             OracleConnection conn = null;
             OracleCommand command = new OracleCommand();

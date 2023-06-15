@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commonfunction.cs" />
+    <Compile Include="DataRead.cs" />
     <Compile Include="frmCIMAST.cs">
       <SubType>Form</SubType>
     </Compile>

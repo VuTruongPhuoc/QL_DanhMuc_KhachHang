@@ -29,7 +29,7 @@ namespace QLTKKH.cfmastservice {
     [System.Web.Services.WebServiceBindingAttribute(Name="CFMASTWebServiceSoap", Namespace="http://tempuri.org/")]
     public partial class CFMASTWebService : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
-        private System.Threading.SendOrPostCallback ReadProcOperationCompleted;
+        private System.Threading.SendOrPostCallback DuyetCFMASTOperationCompleted;
         
         private System.Threading.SendOrPostCallback SuaThemTienCIMASTOperationCompleted;
         
@@ -80,7 +80,7 @@ namespace QLTKKH.cfmastservice {
         }
         
         /// <remarks/>
-        public event ReadProcCompletedEventHandler ReadProcCompleted;
+        public event DuyetCFMASTCompletedEventHandler DuyetCFMASTCompleted;
         
         /// <remarks/>
         public event SuaThemTienCIMASTCompletedEventHandler SuaThemTienCIMASTCompleted;
@@ -98,42 +98,46 @@ namespace QLTKKH.cfmastservice {
         public event XoaCFMASTCompletedEventHandler XoaCFMASTCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ReadProc", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void ReadProc(string custid, string acctno, string martype, int mrcrlimitmax, string afacctno, int balance, System.DateTime lastchange) {
-            this.Invoke("ReadProc", new object[] {
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DuyetCFMAST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void DuyetCFMAST(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long cidepofeeacr, long depofeeamt, System.DateTime lastchange) {
+            this.Invoke("DuyetCFMAST", new object[] {
                         custid,
                         acctno,
                         martype,
                         mrcrlimitmax,
                         afacctno,
                         balance,
+                        cidepofeeacr,
+                        depofeeamt,
                         lastchange});
         }
         
         /// <remarks/>
-        public void ReadProcAsync(string custid, string acctno, string martype, int mrcrlimitmax, string afacctno, int balance, System.DateTime lastchange) {
-            this.ReadProcAsync(custid, acctno, martype, mrcrlimitmax, afacctno, balance, lastchange, null);
+        public void DuyetCFMASTAsync(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long cidepofeeacr, long depofeeamt, System.DateTime lastchange) {
+            this.DuyetCFMASTAsync(custid, acctno, martype, mrcrlimitmax, afacctno, balance, cidepofeeacr, depofeeamt, lastchange, null);
         }
         
         /// <remarks/>
-        public void ReadProcAsync(string custid, string acctno, string martype, int mrcrlimitmax, string afacctno, int balance, System.DateTime lastchange, object userState) {
-            if ((this.ReadProcOperationCompleted == null)) {
-                this.ReadProcOperationCompleted = new System.Threading.SendOrPostCallback(this.OnReadProcOperationCompleted);
+        public void DuyetCFMASTAsync(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long cidepofeeacr, long depofeeamt, System.DateTime lastchange, object userState) {
+            if ((this.DuyetCFMASTOperationCompleted == null)) {
+                this.DuyetCFMASTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDuyetCFMASTOperationCompleted);
             }
-            this.InvokeAsync("ReadProc", new object[] {
+            this.InvokeAsync("DuyetCFMAST", new object[] {
                         custid,
                         acctno,
                         martype,
                         mrcrlimitmax,
                         afacctno,
                         balance,
-                        lastchange}, this.ReadProcOperationCompleted, userState);
+                        cidepofeeacr,
+                        depofeeamt,
+                        lastchange}, this.DuyetCFMASTOperationCompleted, userState);
         }
         
-        private void OnReadProcOperationCompleted(object arg) {
-            if ((this.ReadProcCompleted != null)) {
+        private void OnDuyetCFMASTOperationCompleted(object arg) {
+            if ((this.DuyetCFMASTCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ReadProcCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.DuyetCFMASTCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -346,7 +350,7 @@ namespace QLTKKH.cfmastservice {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
-    public delegate void ReadProcCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    public delegate void DuyetCFMASTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]

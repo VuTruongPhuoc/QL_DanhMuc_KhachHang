@@ -13,8 +13,9 @@ namespace QLTKKH
 {
     public partial class frmCIMAST : Form
     {
-        public static int dem = 0;
+        public static int row = 0;
         webservice.WebService1 websv = new webservice.WebService1 ();
+        DataRead read = new DataRead ();
         public frmCIMAST()
         {
             InitializeComponent();
@@ -22,26 +23,15 @@ namespace QLTKKH
 
         private void btnQuanLy_Click(object sender, EventArgs e)
         {
-            dem = dgvCIMAST.CurrentCell.RowIndex;
+            row = dgvCIMAST.CurrentCell.RowIndex;
             frmUpdateCIMAST frm = new frmUpdateCIMAST(dgvCIMAST);
             frm.Show();
         }
         public void loadgdv()
         {
-            string xmlData = websv.DataReader("SELECT * FROM CIMAST");
-            DataSet dt = new DataSet();
-            dt.ReadXml(new StringReader(xmlData));
-            DataTable data = null;
-            if (dt != null && dt.Tables.Count > 0)
-            {
-                data = dt.Tables[0];
-            }
-            else
-            {
-                data = null;
-            }
-            dgvCIMAST.DataSource = data;
-            
+            DataTable dt = read.Reader("CIMAST");
+            dgvCIMAST.DataSource = dt;
+
         }
 
         private void frmCIMAST_Load(object sender, EventArgs e)

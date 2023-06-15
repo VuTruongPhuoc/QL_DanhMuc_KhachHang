@@ -16,6 +16,7 @@ namespace QLTKKH
     {
         webservice.WebService1 websv = new webservice.WebService1 ();
         afmastservice._AFMASTWebService afmastsv = new afmastservice._AFMASTWebService ();
+        DataRead read = new DataRead ();
         private DataGridView dgv;
         public frmUpdateAFMAST(DataGridView dgvAFMAST)
         {
@@ -43,11 +44,8 @@ namespace QLTKKH
         private void frmUpdateAFMAST_Load(object sender, EventArgs e)
         {
             Commonfunction comm = new Commonfunction();
-            string xmlData1 = websv.DataReader("SELECT * FROM CFMAST");
-            DataSet dt1 = new DataSet();
-            dt1.ReadXml(new StringReader(xmlData1));
-            DataTable data1 = dt1.Tables[0];
-            comm.FillCombo(data1, cboCUSTID, "FULLNAME", "CUSTID");
+            DataTable dt1= read.Reader("ALLCODE");
+            comm.FillCombo(dt1, cboCUSTID, "FULLNAME", "CUSTID");
 
             string xmlData = websv.DataReader("SELECT * FROM AFMAST");
             DataSet dt = new DataSet();

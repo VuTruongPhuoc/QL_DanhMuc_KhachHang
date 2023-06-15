@@ -22,10 +22,10 @@ namespace QLTKKH
 
         private void frmUpdateCIMAST_Load(object sender, EventArgs e)
         {
-            txtAFACCTNO.Text = dgv.Rows[frmCIMAST.dem].Cells[0].Value.ToString();
-            txtACCTNO.Text = dgv.Rows[frmCIMAST.dem].Cells[1].Value.ToString();
-            txtBALANCE.Text = dgv.Rows[frmCIMAST.dem].Cells[2].Value.ToString();
-            dtpLASTCHANGE.Text = dgv.Rows[frmCIMAST.dem].Cells[3].Value.ToString();
+            txtAFACCTNO.Text = dgv.Rows[frmCIMAST.row].Cells[0].Value.ToString();
+            txtACCTNO.Text = dgv.Rows[frmCIMAST.row].Cells[1].Value.ToString();
+            txtBALANCE.Text = dgv.Rows[frmCIMAST.row].Cells[2].Value.ToString();
+            dtpLASTCHANGE.Text = dgv.Rows[frmCIMAST.row].Cells[5].Value.ToString();
         }
 
         private void btnBoSung_Click(object sender, EventArgs e)

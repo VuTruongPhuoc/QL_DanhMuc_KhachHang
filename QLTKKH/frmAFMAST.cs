@@ -17,6 +17,7 @@ namespace QLTKKH
         public static int row;
         webservice.WebService1 websv = new webservice.WebService1();
         afmastservice._AFMASTWebService afmastsv = new afmastservice._AFMASTWebService();
+        DataRead read = new DataRead();
         public frmAFMAST()
         {
             InitializeComponent();
@@ -27,19 +28,8 @@ namespace QLTKKH
         }
         public void loadgdv()
         {
-            string xmlData = websv.DataReader("SELECT * FROM AFMAST");
-            DataSet dt = new DataSet();
-            dt.ReadXml(new StringReader(xmlData));
-            DataTable data = null;
-            if (dt != null && dt.Tables.Count > 0)
-            {
-                data = dt.Tables[0];
-            }
-            else
-            {
-                data = null;
-            }
-            dgvAFMAST.DataSource = data;
+            DataTable dt = read.Reader("CIMAST");
+            dgvAFMAST.DataSource = dt;
         }
 
         private void btnThem_Click(object sender, EventArgs e)

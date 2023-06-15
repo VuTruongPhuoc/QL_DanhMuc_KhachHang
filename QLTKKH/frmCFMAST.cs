@@ -16,6 +16,7 @@ namespace QLTKKH
         public static string str = "Thêm mới khách hàng.";
         webservice.WebService1 websv = new webservice.WebService1();
         cfmastservice.CFMASTWebService cfmastsv = new cfmastservice.CFMASTWebService();
+        DataRead read = new DataRead();
         public static int row;
         public frmCFMAST()
         {
@@ -23,11 +24,8 @@ namespace QLTKKH
         }
         public void loadgdv()
         {
-            string xmldata = websv.DataReader("select * from cfmast");
-            DataSet dt = new DataSet();
-            dt.ReadXml(new StringReader(xmldata));
-            DataTable data = dt.Tables[0];
-            dgvCustomer.DataSource = data;
+            DataTable dt = read.Reader("CFMAST");
+            dgvCFMAST.DataSource= dt;
         }
         private void frmKhachHang_Load(object sender, EventArgs e)
         {
@@ -37,21 +35,21 @@ namespace QLTKKH
         private void btnThem_Click(object sender, EventArgs e)
         {
             str = "Thêm mới khách hàng.";
-            frmUpdateCFMAST frm = new frmUpdateCFMAST(dgvCustomer);
+            frmUpdateCFMAST frm = new frmUpdateCFMAST(dgvCFMAST);
             frm.Show();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
             str = "Sửa khách hàng.";
-            row = dgvCustomer.CurrentCell.RowIndex;
-            frmUpdateCFMAST frmAddCustomer = new frmUpdateCFMAST(dgvCustomer);
+            row = dgvCFMAST.CurrentCell.RowIndex;
+            frmUpdateCFMAST frmAddCustomer = new frmUpdateCFMAST(dgvCFMAST);
             frmAddCustomer.Show();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string custid = dgvCustomer.CurrentRow.Cells[0].Value.ToString();
+            string custid = dgvCFMAST.CurrentRow.Cells[0].Value.ToString();
             cfmastsv.XoaCFMAST(custid);
             MessageBox.Show("Xoá thành công", "Thông báo");
             loadgdv();
@@ -59,36 +57,46 @@ namespace QLTKKH
 
         private void btnDuyet_Click(object sender, EventArgs e)
         {
-            try
+
+            string xmlData = websv.DataReader("SELECT * FROM CIMAST");
+            DataSet dt = new DataSet();
+            dt.ReadXml(new StringReader(xmlData));
+            string acctno;
+            if (dt.Tables.Count <= 0)
             {
-                string xmlData = websv.DataReader("SELECT * FROM AFMAST");
-                DataSet dt = new DataSet();
-                dt.ReadXml(new StringReader(xmlData));
-                string acctno;
-                if (dt.Tables.Count <= 0)
-                {
-                    acctno = "001D000001";
-                }
-                else
-                {
-                    DataTable data = dt.Tables[0];
-                    int k = Convert.ToInt32(data.Rows.Count.ToString().Trim());
-                    k++;
-                    acctno = "001D" + k.ToString("D6");
-                }
-                string custid = dgvCustomer.CurrentRow.Cells[0].Value.ToString();
-                string martype = "u".ToString();
-                int mrcrlimitmax = 1000000000;
-                string afacctno = acctno;
-                int balance = 13000000;
-                DateTime lastchange = DateTime.Now;
-                cfmastsv.ReadProc(custid, acctno, martype, mrcrlimitmax, afacctno, balance, lastchange);
-                MessageBox.Show("Thành công.", "Thông báo");
+                acctno = "001D000001";
             }
-            catch
+            else
             {
-                MessageBox.Show("Lỗi", "TB");
+                DataTable data = dt.Tables[0];
+                int k = Convert.ToInt32(data.Rows.Count.ToString().Trim());
+                k++;
+                acctno = "001D" + k.ToString("D6");
             }
+            string xmlData1 = websv.DataReader("SELECT * FROM AFMAST");
+            DataSet dt1 = new DataSet();
+            dt1.ReadXml(new StringReader(xmlData1));
+            string afacctno;
+            if (dt1.Tables.Count <= 0)
+            {
+                afacctno = "001H000001";
+            }
+            else
+            {
+                DataTable data1 = dt1.Tables[0];
+                int k = Convert.ToInt32(data1.Rows.Count.ToString().Trim());
+                k++;
+                afacctno = "001H" + k.ToString("D6");
+            }
+            string custid = dgvCFMAST.CurrentRow.Cells[0].Value.ToString();
+            string martype = "O".ToString();
+            int mrcrlimitmax = 1000000000;
+            int cidepofeeacr = 0;
+            int depofeeamt = 0;
+            int balance = 13000000;
+            DateTime lastchange = DateTime.Now;
+            cfmastsv.DuyetCFMAST(custid, acctno, martype, mrcrlimitmax, afacctno, balance, cidepofeeacr, depofeeamt, lastchange);
+            MessageBox.Show("Thành công.", "Thông báo");
             
         }
 

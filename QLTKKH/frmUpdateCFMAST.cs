@@ -16,6 +16,7 @@ namespace QLTKKH
     {
         webservice.WebService1 websv = new webservice.WebService1();
         cfmastservice.CFMASTWebService cfmastsv = new cfmastservice.CFMASTWebService();
+        DataRead read = new DataRead();
         DataGridView dgv;
         public frmUpdateCFMAST(DataGridView dgvCustomer)
         {
@@ -26,11 +27,8 @@ namespace QLTKKH
         private void frmAddCustomer_Load(object sender, EventArgs e)
         {
             Commonfunction comm = new Commonfunction();
-            string xmlData = websv.DataReader("SELECT * FROM ALLCODE");
-            DataSet dt = new DataSet();
-            dt.ReadXml(new StringReader(xmlData));
-            DataTable data = dt.Tables[0];
-            comm.FillCombo(data, cboIDTYPE, "CDCONTENT", "CDVAL");
+            DataTable dt = read.Reader("ALLCODE");
+            comm.FillCombo(dt,cboIDTYPE,"CDCONTENT", "CDVAL");
            
 
             string xmlData1 = websv.DataReader("SELECT * FROM CFMAST");
