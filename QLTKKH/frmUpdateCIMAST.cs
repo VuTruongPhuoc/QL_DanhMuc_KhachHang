@@ -25,28 +25,44 @@ namespace QLTKKH
             txtAFACCTNO.Text = dgv.Rows[frmCIMAST.row].Cells[0].Value.ToString();
             txtACCTNO.Text = dgv.Rows[frmCIMAST.row].Cells[1].Value.ToString();
             txtBALANCE.Text = dgv.Rows[frmCIMAST.row].Cells[2].Value.ToString();
-            dtpLASTCHANGE.Text = dgv.Rows[frmCIMAST.row].Cells[5].Value.ToString();
+            txtCIDEPOFEEACR.Text = dgv.Rows[frmCIMAST.row].Cells[3].Value.ToString();
+            txtDEPOFEEAMT.Text = dgv.Rows[frmCIMAST.row].Cells[4].Value.ToString();
+            dtpLASTCHANGE.Text = dgv.Rows[frmCIMAST.row].Cells[5].Value.ToString();            
+            txtMONEY.Text = txtDEPOFEEAMT.Text;
         }
 
         private void btnBoSung_Click(object sender, EventArgs e)
         {
+            if(MessageBox.Show("Bạn có muốn thực hiện nộp tiền không?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }    
             string afacctno = txtAFACCTNO.Text.ToString().Trim();
             string acctno = txtACCTNO.Text.ToString().Trim();
-            int money = Int32.Parse(txtMONEY.Text.ToString().Trim());
+            long money = long.Parse(txtMONEY.Text.ToString().Trim());
+            long depofeeamt = long.Parse(txtDEPOFEEAMT.Text.ToString().Trim());
             DateTime lastchange = DateTime.Now;
-            cfmastsv.SuaThemTienCIMAST(afacctno, acctno, money, lastchange);
-            MessageBox.Show("Bổ sung thành công", "Thông báo");
+            cfmastsv.SuaThemTienCIMAST(afacctno, acctno, money,depofeeamt, lastchange);
+            MessageBox.Show("Thành công.", "Thông báo");
         }
 
         private void btnTruTien_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Bạn có muốn thực hiện thu tiền không?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
+            if (long.Parse(txtBALANCE.Text.ToString()) < long.Parse(txtDEPOFEEAMT.Text.ToString()) || long.Parse(txtMONEY.Text.ToString().Trim()) > long.Parse(txtBALANCE.Text.ToString().Trim()))
+            {
+                MessageBox.Show("Không đủ tiền để thu!", "Thông báo");
+                return;
+            }
             string afacctno = txtAFACCTNO.Text.ToString().Trim();
             string acctno = txtACCTNO.Text.ToString().Trim();
-            int money = Int32.Parse(txtMONEY.Text.ToString().Trim());
+            long money = long.Parse(txtMONEY.Text.ToString().Trim());
             DateTime lastchange = DateTime.Now;
-            cfmastsv.SuaTruTienCIMAST(afacctno, acctno, money, lastchange);
-            MessageBox.Show("Trừ tiền thành công", "Thông báo");
-            dgv.Refresh();
+            cfmastsv.SuaTruTienCIMAST(afacctno, acctno, money, money, lastchange);
+            MessageBox.Show("Thành công", "Thông báo");
         }
 
         private void btnExit_Click(object sender, EventArgs e)

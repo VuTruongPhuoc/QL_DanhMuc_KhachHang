@@ -37,14 +37,14 @@ namespace QLTKKH
            
             if (dt1.Tables.Count <= 0)
             {
-                txtCUSTID.Text = "00000001";
+                txtCUSTID.Text = "0001000001";
             }
             else
             {
                 DataTable data1 = dt1.Tables[0];
                 int k = Convert.ToInt32(data1.Rows.Count.ToString().Trim());
                 k++;
-                txtCUSTID.Text = k.ToString("D8");
+                txtCUSTID.Text = "0001"+k.ToString("D6");
             }
             txtCUSTOYOCD.Text = "001C";
             txtCUSTID.ReadOnly = true;
@@ -105,21 +105,20 @@ namespace QLTKKH
 
         private void btnSoLuuKy_Click(object sender, EventArgs e)
         {
-            try
+            string xmlData = websv.DataReader("SELECT * FROM CFMAST");
+            DataSet dt = new DataSet();
+            dt.ReadXml(new StringReader(xmlData));
+            if (dt.Tables.Count <= 0)
             {
-                string xmlData = websv.DataReader("SELECT * FROM CFMAST");
-                DataSet dt = new DataSet();
-                dt.ReadXml(new StringReader(xmlData));
+                txtCUSTOYOCD.Text = "001C000001";
+            }
+            else
+            {
                 DataTable data = dt.Tables[0];
-                int k = Convert.ToInt32(data.Rows.Count.ToString());
+                int k = Convert.ToInt32(data.Rows.Count.ToString().Trim());
                 k++;
                 txtCUSTOYOCD.Text = "001C" + k.ToString("D6");
             }
-            catch
-            {
-
-            }
-           
         }
     }
 }

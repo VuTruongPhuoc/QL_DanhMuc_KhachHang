@@ -49,7 +49,6 @@ namespace QLTKKH
             }    
             
         }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if(txtACCTNO.TextLength == 11 || txtTOTALBUYAMT.TextLength == 0)
@@ -73,6 +72,8 @@ namespace QLTKKH
             }
             semastsv.ThemSEMAST(custid, afacctno, acctno, codeid, totalbuyamt, opndate, clsdate, lastdate);
             MessageBox.Show("Thêm thành công", "Thông báo");
+            txtACCTNO.Text = "001E.00001F";
+            txtTOTALBUYAMT.Text = "0".ToString();
         }
 
         private void cboCUSTID_SelectedIndexChanged(object sender, EventArgs e)

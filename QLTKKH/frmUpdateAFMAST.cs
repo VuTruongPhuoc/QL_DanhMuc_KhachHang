@@ -44,7 +44,7 @@ namespace QLTKKH
         private void frmUpdateAFMAST_Load(object sender, EventArgs e)
         {
             Commonfunction comm = new Commonfunction();
-            DataTable dt1= read.Reader("ALLCODE");
+            DataTable dt1= read.Reader("CFMAST");
             comm.FillCombo(dt1, cboCUSTID, "FULLNAME", "CUSTID");
 
             string xmlData = websv.DataReader("SELECT * FROM AFMAST");

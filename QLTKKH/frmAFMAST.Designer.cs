@@ -137,7 +137,7 @@
             // ACCTNO
             // 
             this.ACCTNO.DataPropertyName = "ACCTNO";
-            this.ACCTNO.HeaderText = "Mã hợp đồng";
+            this.ACCTNO.HeaderText = "Số tiểu khoản";
             this.ACCTNO.MinimumWidth = 6;
             this.ACCTNO.Name = "ACCTNO";
             this.ACCTNO.Width = 125;
@@ -167,7 +167,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmAFMAST";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCFMAST";
+            this.Text = "frmAFMAST";
             this.Load += new System.EventHandler(this.frmAFMAST_Load);
             this.grbKhachHang.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAFMAST)).EndInit();

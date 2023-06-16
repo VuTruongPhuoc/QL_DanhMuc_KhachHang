@@ -30,6 +30,11 @@
         {
             this.btnExit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtDEPOFEEAMT = new System.Windows.Forms.TextBox();
+            this.txtCIDEPOFEEACR = new System.Windows.Forms.TextBox();
+            this.dtpLASTCHANGE = new System.Windows.Forms.DateTimePicker();
             this.txtBALANCE = new System.Windows.Forms.TextBox();
             this.txtACCTNO = new System.Windows.Forms.TextBox();
             this.txtAFACCTNO = new System.Windows.Forms.TextBox();
@@ -44,11 +49,6 @@
             this.txtMONEY = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnTruTien = new System.Windows.Forms.Button();
-            this.dtpLASTCHANGE = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -69,8 +69,8 @@
             // 
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtDEPOFEEAMT);
+            this.groupBox1.Controls.Add(this.txtCIDEPOFEEACR);
             this.groupBox1.Controls.Add(this.dtpLASTCHANGE);
             this.groupBox1.Controls.Add(this.txtBALANCE);
             this.groupBox1.Controls.Add(this.txtACCTNO);
@@ -87,6 +87,55 @@
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(23, 224);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(112, 20);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "Phí thu tháng:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(424, 129);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(178, 20);
+            this.label2.TabIndex = 53;
+            this.label2.Text = "Tổng phí thu mỗi ngày:";
+            // 
+            // txtDEPOFEEAMT
+            // 
+            this.txtDEPOFEEAMT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDEPOFEEAMT.Location = new System.Drawing.Point(184, 213);
+            this.txtDEPOFEEAMT.Multiline = true;
+            this.txtDEPOFEEAMT.Name = "txtDEPOFEEAMT";
+            this.txtDEPOFEEAMT.ReadOnly = true;
+            this.txtDEPOFEEAMT.Size = new System.Drawing.Size(188, 33);
+            this.txtDEPOFEEAMT.TabIndex = 52;
+            // 
+            // txtCIDEPOFEEACR
+            // 
+            this.txtCIDEPOFEEACR.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCIDEPOFEEACR.Location = new System.Drawing.Point(646, 116);
+            this.txtCIDEPOFEEACR.Multiline = true;
+            this.txtCIDEPOFEEACR.Name = "txtCIDEPOFEEACR";
+            this.txtCIDEPOFEEACR.ReadOnly = true;
+            this.txtCIDEPOFEEACR.Size = new System.Drawing.Size(188, 33);
+            this.txtCIDEPOFEEACR.TabIndex = 51;
+            // 
+            // dtpLASTCHANGE
+            // 
+            this.dtpLASTCHANGE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpLASTCHANGE.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpLASTCHANGE.Location = new System.Drawing.Point(646, 219);
+            this.dtpLASTCHANGE.Name = "dtpLASTCHANGE";
+            this.dtpLASTCHANGE.Size = new System.Drawing.Size(188, 30);
+            this.dtpLASTCHANGE.TabIndex = 50;
             // 
             // txtBALANCE
             // 
@@ -122,7 +171,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(431, 226);
+            this.label4.Location = new System.Drawing.Point(424, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(198, 20);
             this.label4.TabIndex = 26;
@@ -142,7 +191,7 @@
             // 
             this.lbCUSTODYCD.AutoSize = true;
             this.lbCUSTODYCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCUSTODYCD.Location = new System.Drawing.Point(431, 43);
+            this.lbCUSTODYCD.Location = new System.Drawing.Point(424, 42);
             this.lbCUSTODYCD.Name = "lbCUSTODYCD";
             this.lbCUSTODYCD.Size = new System.Drawing.Size(118, 20);
             this.lbCUSTODYCD.TabIndex = 24;
@@ -215,11 +264,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(180, 72);
+            this.label1.Location = new System.Drawing.Point(148, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 20);
+            this.label1.Size = new System.Drawing.Size(155, 20);
             this.label1.TabIndex = 50;
-            this.label1.Text = "Nhập số tiền:";
+            this.label1.Text = "Số tiền cần nộp/rút:";
             // 
             // btnTruTien
             // 
@@ -228,57 +277,9 @@
             this.btnTruTien.Name = "btnTruTien";
             this.btnTruTien.Size = new System.Drawing.Size(129, 37);
             this.btnTruTien.TabIndex = 39;
-            this.btnTruTien.Text = "Rút";
+            this.btnTruTien.Text = "Thu";
             this.btnTruTien.UseVisualStyleBackColor = true;
             this.btnTruTien.Click += new System.EventHandler(this.btnTruTien_Click);
-            // 
-            // dtpLASTCHANGE
-            // 
-            this.dtpLASTCHANGE.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpLASTCHANGE.Location = new System.Drawing.Point(646, 219);
-            this.dtpLASTCHANGE.Name = "dtpLASTCHANGE";
-            this.dtpLASTCHANGE.Size = new System.Drawing.Size(188, 27);
-            this.dtpLASTCHANGE.TabIndex = 50;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(646, 116);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(188, 33);
-            this.textBox1.TabIndex = 51;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(184, 213);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(188, 33);
-            this.textBox2.TabIndex = 52;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(424, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(178, 20);
-            this.label2.TabIndex = 53;
-            this.label2.Text = "Tổng phí thu mỗi ngày:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 224);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 20);
-            this.label5.TabIndex = 54;
-            this.label5.Text = "Phí thu tháng:";
             // 
             // frmUpdateCIMAST
             // 
@@ -323,8 +324,8 @@
         private System.Windows.Forms.TextBox txtMONEY;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnTruTien;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDEPOFEEAMT;
+        private System.Windows.Forms.TextBox txtCIDEPOFEEACR;
         private System.Windows.Forms.DateTimePicker dtpLASTCHANGE;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;

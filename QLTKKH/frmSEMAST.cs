@@ -38,6 +38,7 @@ namespace QLTKKH
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            str = "Thêm mới tài sản chứng khoán.";
             frmUpdateSEMAST frm = new frmUpdateSEMAST(dgvSEMAST);
             frm.Show();
         }
@@ -56,6 +57,7 @@ namespace QLTKKH
             string acctno = dgvSEMAST.CurrentRow.Cells[2].Value.ToString();
             semastsv.XoaSEMAST(custid, acctno);
             MessageBox.Show("Xoá thành công", "Thông báo");
+            loaddgv();
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)

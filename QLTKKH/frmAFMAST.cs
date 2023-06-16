@@ -28,7 +28,7 @@ namespace QLTKKH
         }
         public void loadgdv()
         {
-            DataTable dt = read.Reader("CIMAST");
+            DataTable dt = read.Reader("AFMAST");
             dgvAFMAST.DataSource = dt;
         }
 
@@ -54,6 +54,7 @@ namespace QLTKKH
             string acctno = dgvAFMAST.CurrentRow.Cells[1].Value.ToString();
             afmastsv.XoaAFMAST(custid,acctno);
             MessageBox.Show("Xoá thành công", "Thông báo");
+            loadgdv();
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)

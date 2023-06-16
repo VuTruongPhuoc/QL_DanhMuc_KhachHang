@@ -143,21 +143,22 @@ namespace QLTKKH.cfmastservice {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/SuaThemTienCIMAST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void SuaThemTienCIMAST(string afacctno, string acctno, int money, System.DateTime lastchange) {
+        public void SuaThemTienCIMAST(string afacctno, string acctno, long money, long depofeeamt, System.DateTime lastchange) {
             this.Invoke("SuaThemTienCIMAST", new object[] {
                         afacctno,
                         acctno,
                         money,
+                        depofeeamt,
                         lastchange});
         }
         
         /// <remarks/>
-        public void SuaThemTienCIMASTAsync(string afacctno, string acctno, int money, System.DateTime lastchange) {
-            this.SuaThemTienCIMASTAsync(afacctno, acctno, money, lastchange, null);
+        public void SuaThemTienCIMASTAsync(string afacctno, string acctno, long money, long depofeeamt, System.DateTime lastchange) {
+            this.SuaThemTienCIMASTAsync(afacctno, acctno, money, depofeeamt, lastchange, null);
         }
         
         /// <remarks/>
-        public void SuaThemTienCIMASTAsync(string afacctno, string acctno, int money, System.DateTime lastchange, object userState) {
+        public void SuaThemTienCIMASTAsync(string afacctno, string acctno, long money, long depofeeamt, System.DateTime lastchange, object userState) {
             if ((this.SuaThemTienCIMASTOperationCompleted == null)) {
                 this.SuaThemTienCIMASTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSuaThemTienCIMASTOperationCompleted);
             }
@@ -165,6 +166,7 @@ namespace QLTKKH.cfmastservice {
                         afacctno,
                         acctno,
                         money,
+                        depofeeamt,
                         lastchange}, this.SuaThemTienCIMASTOperationCompleted, userState);
         }
         
@@ -177,21 +179,22 @@ namespace QLTKKH.cfmastservice {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/SuaTruTienCIMAST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void SuaTruTienCIMAST(string afacctno, string acctno, int money, System.DateTime lastchange) {
+        public void SuaTruTienCIMAST(string afacctno, string acctno, long money, long depofeeamt, System.DateTime lastchange) {
             this.Invoke("SuaTruTienCIMAST", new object[] {
                         afacctno,
                         acctno,
                         money,
+                        depofeeamt,
                         lastchange});
         }
         
         /// <remarks/>
-        public void SuaTruTienCIMASTAsync(string afacctno, string acctno, int money, System.DateTime lastchange) {
-            this.SuaTruTienCIMASTAsync(afacctno, acctno, money, lastchange, null);
+        public void SuaTruTienCIMASTAsync(string afacctno, string acctno, long money, long depofeeamt, System.DateTime lastchange) {
+            this.SuaTruTienCIMASTAsync(afacctno, acctno, money, depofeeamt, lastchange, null);
         }
         
         /// <remarks/>
-        public void SuaTruTienCIMASTAsync(string afacctno, string acctno, int money, System.DateTime lastchange, object userState) {
+        public void SuaTruTienCIMASTAsync(string afacctno, string acctno, long money, long depofeeamt, System.DateTime lastchange, object userState) {
             if ((this.SuaTruTienCIMASTOperationCompleted == null)) {
                 this.SuaTruTienCIMASTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSuaTruTienCIMASTOperationCompleted);
             }
@@ -199,6 +202,7 @@ namespace QLTKKH.cfmastservice {
                         afacctno,
                         acctno,
                         money,
+                        depofeeamt,
                         lastchange}, this.SuaTruTienCIMASTOperationCompleted, userState);
         }
         

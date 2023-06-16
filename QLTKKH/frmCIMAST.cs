@@ -31,7 +31,6 @@ namespace QLTKKH
         {
             DataTable dt = read.Reader("CIMAST");
             dgvCIMAST.DataSource = dt;
-
         }
 
         private void frmCIMAST_Load(object sender, EventArgs e)

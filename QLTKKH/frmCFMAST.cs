@@ -64,14 +64,14 @@ namespace QLTKKH
             string acctno;
             if (dt.Tables.Count <= 0)
             {
-                acctno = "001D000001";
+                acctno = "001C000001";
             }
             else
             {
                 DataTable data = dt.Tables[0];
                 int k = Convert.ToInt32(data.Rows.Count.ToString().Trim());
                 k++;
-                acctno = "001D" + k.ToString("D6");
+                acctno = "001C" + k.ToString("D6");
             }
             string xmlData1 = websv.DataReader("SELECT * FROM AFMAST");
             DataSet dt1 = new DataSet();
@@ -79,27 +79,26 @@ namespace QLTKKH
             string afacctno;
             if (dt1.Tables.Count <= 0)
             {
-                afacctno = "001H000001";
+                afacctno = "001C000001";
             }
             else
             {
                 DataTable data1 = dt1.Tables[0];
                 int k = Convert.ToInt32(data1.Rows.Count.ToString().Trim());
                 k++;
-                afacctno = "001H" + k.ToString("D6");
+                afacctno = "001C" + k.ToString("D6");
             }
             string custid = dgvCFMAST.CurrentRow.Cells[0].Value.ToString();
             string martype = "O".ToString();
-            int mrcrlimitmax = 1000000000;
-            int cidepofeeacr = 0;
-            int depofeeamt = 0;
-            int balance = 13000000;
+            long mrcrlimitmax = 1000000000;
+            long cidepofeeacr = 0;
+            long depofeeamt = 0;
+            long balance = 130000000;
             DateTime lastchange = DateTime.Now;
             cfmastsv.DuyetCFMAST(custid, acctno, martype, mrcrlimitmax, afacctno, balance, cidepofeeacr, depofeeamt, lastchange);
             MessageBox.Show("Thành công.", "Thông báo");
             
         }
-
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             loadgdv();

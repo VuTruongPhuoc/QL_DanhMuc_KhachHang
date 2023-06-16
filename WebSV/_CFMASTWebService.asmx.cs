@@ -21,7 +21,7 @@ namespace WebSV
         WebService1 websv = new WebService1();
         [WebMethod]
         [Obsolete]
-        public void DuyetCFMAST(string custid, string acctno, string martype, Int64 mrcrlimitmax, string afacctno, Int64 balance,Int64 cidepofeeacr,Int64 depofeeamt, DateTime lastchange)
+        public void DuyetCFMAST(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance,long cidepofeeacr,long depofeeamt, DateTime lastchange)
         {
             OracleConnection conn = null;
             OracleCommand command = new OracleCommand();
@@ -33,11 +33,11 @@ namespace WebSV
             command.Parameters.Add("p_custid", OracleDbType.Varchar2).Value = custid;
             command.Parameters.Add("p_acctno", OracleDbType.Varchar2).Value = acctno;
             command.Parameters.Add("p_martype", OracleDbType.Varchar2).Value = martype;
-            command.Parameters.Add("p_mrcrlimitmax", OracleDbType.Int64).Value = mrcrlimitmax;
+            command.Parameters.Add("p_mrcrlimitmax", OracleDbType.Long).Value = mrcrlimitmax;
             command.Parameters.Add("p_afacctno", OracleDbType.Varchar2).Value = afacctno;
-            command.Parameters.Add("p_balance", OracleDbType.Int64).Value = balance;
-            command.Parameters.Add("p_cidepofeeacr", OracleDbType.Int64).Value = cidepofeeacr;
-            command.Parameters.Add("p_depofeeamt", OracleDbType.Int64).Value = depofeeamt;
+            command.Parameters.Add("p_balance", OracleDbType.Long).Value = balance;
+            command.Parameters.Add("p_cidepofeeacr", OracleDbType.Long).Value = cidepofeeacr;
+            command.Parameters.Add("p_depofeeamt", OracleDbType.Long).Value = depofeeamt;
             command.Parameters.Add("p_lastchange", OracleDbType.Date).Value = lastchange;
             conn.Open();
             command.ExecuteNonQuery();
@@ -45,7 +45,7 @@ namespace WebSV
         }
         [WebMethod]
         [Obsolete]
-        public void SuaThemTienCIMAST(string afacctno, string acctno, int money, DateTime lastchange)
+        public void SuaThemTienCIMAST(string afacctno, string acctno, long money,long depofeeamt, DateTime lastchange)
         {
             OracleConnection conn = null;
             OracleCommand command = new OracleCommand();
@@ -56,7 +56,8 @@ namespace WebSV
 
             command.Parameters.Add("p_afacctno", OracleDbType.Varchar2).Value = afacctno;
             command.Parameters.Add("p_acctno", OracleDbType.Varchar2).Value = acctno;
-            command.Parameters.Add("p_money", OracleDbType.Int32).Value = money;
+            command.Parameters.Add("p_money", OracleDbType.Long).Value = money;
+            command.Parameters.Add("p_depofeeamt", OracleDbType.Long).Value = depofeeamt;
             command.Parameters.Add("p_lastchange", OracleDbType.Date).Value = lastchange;
             conn.Open();
             command.ExecuteNonQuery();
@@ -64,7 +65,7 @@ namespace WebSV
         }
         [WebMethod]
         [Obsolete]
-        public void SuaTruTienCIMAST(string afacctno, string acctno, int money, DateTime lastchange)
+        public void SuaTruTienCIMAST(string afacctno, string acctno, long money,long depofeeamt, DateTime lastchange)
         {
             OracleConnection conn = null;
             OracleCommand command = new OracleCommand();
@@ -75,7 +76,8 @@ namespace WebSV
 
             command.Parameters.Add("p_afacctno", OracleDbType.Varchar2).Value = afacctno;
             command.Parameters.Add("p_acctno", OracleDbType.Varchar2).Value = acctno;
-            command.Parameters.Add("p_money", OracleDbType.Int32).Value = money;
+            command.Parameters.Add("p_money", OracleDbType.Long).Value = money;
+            command.Parameters.Add("p_depofeeamt", OracleDbType.Long).Value = depofeeamt;
             command.Parameters.Add("p_lastchange", OracleDbType.Date).Value = lastchange;
             conn.Open();
             command.ExecuteNonQuery();
