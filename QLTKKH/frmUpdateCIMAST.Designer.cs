@@ -254,7 +254,7 @@
             // txtMONEY
             // 
             this.txtMONEY.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMONEY.Location = new System.Drawing.Point(321, 59);
+            this.txtMONEY.Location = new System.Drawing.Point(355, 59);
             this.txtMONEY.Multiline = true;
             this.txtMONEY.Name = "txtMONEY";
             this.txtMONEY.Size = new System.Drawing.Size(228, 33);
@@ -264,7 +264,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(148, 72);
+            this.label1.Location = new System.Drawing.Point(149, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(155, 20);
             this.label1.TabIndex = 50;

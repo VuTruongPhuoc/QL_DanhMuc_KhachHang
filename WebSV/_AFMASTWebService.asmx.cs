@@ -21,26 +21,31 @@ namespace WebSV
         WebService1 websv = new WebService1();
         [WebMethod]
         [Obsolete]
-        public void ThemAFMAST(string custid, string acctno, string martype, int mrcrlimitmax)
+        public void ThemAFMAST(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long cidepofeeacr, long depofeeamt, DateTime lastchange)
         {
             OracleConnection conn = null;
             OracleCommand command = new OracleCommand();
             conn = new OracleConnection(websv.getConnect());
             command.Connection = conn;
             command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "ThemAFMAST";
+            command.CommandText = "DuyetCFMAST";
 
             command.Parameters.Add("p_custid", OracleDbType.Varchar2).Value = custid;
             command.Parameters.Add("p_acctno", OracleDbType.Varchar2).Value = acctno;
             command.Parameters.Add("p_martype", OracleDbType.Varchar2).Value = martype;
-            command.Parameters.Add("p_mrcrlimitmax", OracleDbType.Int32).Value = mrcrlimitmax;
+            command.Parameters.Add("p_mrcrlimitmax", OracleDbType.Long).Value = mrcrlimitmax;
+            command.Parameters.Add("p_afacctno", OracleDbType.Varchar2).Value = afacctno;
+            command.Parameters.Add("p_balance", OracleDbType.Long).Value = balance;
+            command.Parameters.Add("p_cidepofeeacr", OracleDbType.Long).Value = cidepofeeacr;
+            command.Parameters.Add("p_depofeeamt", OracleDbType.Long).Value = depofeeamt;
+            command.Parameters.Add("p_lastchange", OracleDbType.Date).Value = lastchange;
             conn.Open();
-            OracleDataReader reader = command.ExecuteReader();
+            command.ExecuteNonQuery();
             conn.Close();
         }
         [WebMethod]
         [Obsolete]
-        public void SuaAFMAST(string custid, string acctno, string martype, int mrcrlimitmax)
+        public void SuaAFMAST(string custid, string acctno, string martype, long mrcrlimitmax)
         {
             OracleConnection conn = null;
             OracleCommand command = new OracleCommand();
@@ -52,7 +57,7 @@ namespace WebSV
             command.Parameters.Add("p_custid", OracleDbType.Varchar2).Value = custid;
             command.Parameters.Add("p_acctno", OracleDbType.Varchar2).Value = acctno;
             command.Parameters.Add("p_martype", OracleDbType.Varchar2).Value = martype;
-            command.Parameters.Add("p_mrcrlimitmax", OracleDbType.Int32).Value = mrcrlimitmax;
+            command.Parameters.Add("p_mrcrlimitmax", OracleDbType.Long).Value = mrcrlimitmax;
             conn.Open();
             command.ExecuteNonQuery();
             conn.Close();

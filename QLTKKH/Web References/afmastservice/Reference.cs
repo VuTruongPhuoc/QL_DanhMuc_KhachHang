@@ -84,21 +84,26 @@ namespace QLTKKH.afmastservice {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ThemAFMAST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void ThemAFMAST(string custid, string acctno, string martype, int mrcrlimitmax) {
+        public void ThemAFMAST(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long cidepofeeacr, long depofeeamt, System.DateTime lastchange) {
             this.Invoke("ThemAFMAST", new object[] {
                         custid,
                         acctno,
                         martype,
-                        mrcrlimitmax});
+                        mrcrlimitmax,
+                        afacctno,
+                        balance,
+                        cidepofeeacr,
+                        depofeeamt,
+                        lastchange});
         }
         
         /// <remarks/>
-        public void ThemAFMASTAsync(string custid, string acctno, string martype, int mrcrlimitmax) {
-            this.ThemAFMASTAsync(custid, acctno, martype, mrcrlimitmax, null);
+        public void ThemAFMASTAsync(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long cidepofeeacr, long depofeeamt, System.DateTime lastchange) {
+            this.ThemAFMASTAsync(custid, acctno, martype, mrcrlimitmax, afacctno, balance, cidepofeeacr, depofeeamt, lastchange, null);
         }
         
         /// <remarks/>
-        public void ThemAFMASTAsync(string custid, string acctno, string martype, int mrcrlimitmax, object userState) {
+        public void ThemAFMASTAsync(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long cidepofeeacr, long depofeeamt, System.DateTime lastchange, object userState) {
             if ((this.ThemAFMASTOperationCompleted == null)) {
                 this.ThemAFMASTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnThemAFMASTOperationCompleted);
             }
@@ -106,7 +111,12 @@ namespace QLTKKH.afmastservice {
                         custid,
                         acctno,
                         martype,
-                        mrcrlimitmax}, this.ThemAFMASTOperationCompleted, userState);
+                        mrcrlimitmax,
+                        afacctno,
+                        balance,
+                        cidepofeeacr,
+                        depofeeamt,
+                        lastchange}, this.ThemAFMASTOperationCompleted, userState);
         }
         
         private void OnThemAFMASTOperationCompleted(object arg) {
@@ -118,7 +128,7 @@ namespace QLTKKH.afmastservice {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/SuaAFMAST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void SuaAFMAST(string custid, string acctno, string martype, int mrcrlimitmax) {
+        public void SuaAFMAST(string custid, string acctno, string martype, long mrcrlimitmax) {
             this.Invoke("SuaAFMAST", new object[] {
                         custid,
                         acctno,
@@ -127,12 +137,12 @@ namespace QLTKKH.afmastservice {
         }
         
         /// <remarks/>
-        public void SuaAFMASTAsync(string custid, string acctno, string martype, int mrcrlimitmax) {
+        public void SuaAFMASTAsync(string custid, string acctno, string martype, long mrcrlimitmax) {
             this.SuaAFMASTAsync(custid, acctno, martype, mrcrlimitmax, null);
         }
         
         /// <remarks/>
-        public void SuaAFMASTAsync(string custid, string acctno, string martype, int mrcrlimitmax, object userState) {
+        public void SuaAFMASTAsync(string custid, string acctno, string martype, long mrcrlimitmax, object userState) {
             if ((this.SuaAFMASTOperationCompleted == null)) {
                 this.SuaAFMASTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSuaAFMASTOperationCompleted);
             }

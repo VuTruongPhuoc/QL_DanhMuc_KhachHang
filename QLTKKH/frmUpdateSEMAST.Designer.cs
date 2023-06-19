@@ -45,8 +45,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cboAFACCTNO = new System.Windows.Forms.ComboBox();
             this.lbCUSTODYCD = new System.Windows.Forms.Label();
-            this.lbCUSTID = new System.Windows.Forms.Label();
-            this.cboCUSTID = new System.Windows.Forms.ComboBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTaiSanCK = new System.Windows.Forms.Label();
@@ -82,8 +80,6 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.cboAFACCTNO);
             this.groupBox1.Controls.Add(this.lbCUSTODYCD);
-            this.groupBox1.Controls.Add(this.lbCUSTID);
-            this.groupBox1.Controls.Add(this.cboCUSTID);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 72);
@@ -172,7 +168,7 @@
             // txtACCTNO
             // 
             this.txtACCTNO.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtACCTNO.Location = new System.Drawing.Point(246, 120);
+            this.txtACCTNO.Location = new System.Drawing.Point(244, 120);
             this.txtACCTNO.Multiline = true;
             this.txtACCTNO.Name = "txtACCTNO";
             this.txtACCTNO.Size = new System.Drawing.Size(206, 35);
@@ -222,40 +218,20 @@
             // 
             this.cboAFACCTNO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboAFACCTNO.FormattingEnabled = true;
-            this.cboAFACCTNO.Location = new System.Drawing.Point(736, 35);
+            this.cboAFACCTNO.Location = new System.Drawing.Point(244, 32);
             this.cboAFACCTNO.Name = "cboAFACCTNO";
-            this.cboAFACCTNO.Size = new System.Drawing.Size(198, 33);
+            this.cboAFACCTNO.Size = new System.Drawing.Size(210, 33);
             this.cboAFACCTNO.TabIndex = 52;
             // 
             // lbCUSTODYCD
             // 
             this.lbCUSTODYCD.AutoSize = true;
             this.lbCUSTODYCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCUSTODYCD.Location = new System.Drawing.Point(540, 44);
+            this.lbCUSTODYCD.Location = new System.Drawing.Point(73, 39);
             this.lbCUSTODYCD.Name = "lbCUSTODYCD";
             this.lbCUSTODYCD.Size = new System.Drawing.Size(117, 20);
             this.lbCUSTODYCD.TabIndex = 51;
             this.lbCUSTODYCD.Text = "Tài khoản GD:";
-            // 
-            // lbCUSTID
-            // 
-            this.lbCUSTID.AutoSize = true;
-            this.lbCUSTID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCUSTID.Location = new System.Drawing.Point(64, 48);
-            this.lbCUSTID.Name = "lbCUSTID";
-            this.lbCUSTID.Size = new System.Drawing.Size(66, 20);
-            this.lbCUSTID.TabIndex = 50;
-            this.lbCUSTID.Text = "Mã KH:";
-            // 
-            // cboCUSTID
-            // 
-            this.cboCUSTID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCUSTID.FormattingEnabled = true;
-            this.cboCUSTID.Location = new System.Drawing.Point(244, 36);
-            this.cboCUSTID.Name = "cboCUSTID";
-            this.cboCUSTID.Size = new System.Drawing.Size(208, 33);
-            this.cboCUSTID.TabIndex = 0;
-            this.cboCUSTID.SelectedIndexChanged += new System.EventHandler(this.cboCUSTID_SelectedIndexChanged);
             // 
             // btnUpdate
             // 
@@ -317,8 +293,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbTaiSanCK;
         private System.Windows.Forms.Label lbCUSTODYCD;
-        private System.Windows.Forms.Label lbCUSTID;
-        private System.Windows.Forms.ComboBox cboCUSTID;
         private System.Windows.Forms.DateTimePicker dtpLASTDATE;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpCLSDATE;

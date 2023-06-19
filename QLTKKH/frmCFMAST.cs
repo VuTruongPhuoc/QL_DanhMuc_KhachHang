@@ -73,21 +73,8 @@ namespace QLTKKH
                 k++;
                 acctno = "001C" + k.ToString("D6");
             }
-            string xmlData1 = websv.DataReader("SELECT * FROM AFMAST");
-            DataSet dt1 = new DataSet();
-            dt1.ReadXml(new StringReader(xmlData1));
-            string afacctno;
-            if (dt1.Tables.Count <= 0)
-            {
-                afacctno = "001C000001";
-            }
-            else
-            {
-                DataTable data1 = dt1.Tables[0];
-                int k = Convert.ToInt32(data1.Rows.Count.ToString().Trim());
-                k++;
-                afacctno = "001C" + k.ToString("D6");
-            }
+            string afacctno = acctno;
+          
             string custid = dgvCFMAST.CurrentRow.Cells[0].Value.ToString();
             string martype = "O".ToString();
             long mrcrlimitmax = 1000000000;

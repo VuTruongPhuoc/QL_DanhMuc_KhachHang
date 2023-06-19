@@ -55,7 +55,7 @@ namespace QLTKKH
         {
             string custid = dgvSEMAST.CurrentRow.Cells[0].Value.ToString();
             string acctno = dgvSEMAST.CurrentRow.Cells[2].Value.ToString();
-            semastsv.XoaSEMAST(custid, acctno);
+            semastsv.XoaSEMAST( acctno);
             MessageBox.Show("Xoá thành công", "Thông báo");
             loaddgv();
         }

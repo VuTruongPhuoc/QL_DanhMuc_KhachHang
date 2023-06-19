@@ -30,7 +30,11 @@
         {
             this.grbKhachHang = new System.Windows.Forms.GroupBox();
             this.dgvSEMAST = new System.Windows.Forms.DataGridView();
-            this.CUSTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLamMoi = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
             this.AFACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CODEID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,11 +42,6 @@
             this.OPNDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CLSDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LASTDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLamMoi = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
             this.grbKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSEMAST)).BeginInit();
             this.panel1.SuspendLayout();
@@ -65,7 +64,6 @@
             this.dgvSEMAST.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvSEMAST.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSEMAST.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CUSTID,
             this.AFACCTNO,
             this.ACCTNO,
             this.CODEID,
@@ -81,13 +79,58 @@
             this.dgvSEMAST.Size = new System.Drawing.Size(1132, 349);
             this.dgvSEMAST.TabIndex = 0;
             // 
-            // CUSTID
+            // panel1
             // 
-            this.CUSTID.DataPropertyName = "CUSTID";
-            this.CUSTID.HeaderText = "Mã khách hàng";
-            this.CUSTID.MinimumWidth = 6;
-            this.CUSTID.Name = "CUSTID";
-            this.CUSTID.Width = 125;
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel1.Controls.Add(this.btnLamMoi);
+            this.panel1.Controls.Add(this.btnThem);
+            this.panel1.Controls.Add(this.btnXoa);
+            this.panel1.Controls.Add(this.btnSua);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1166, 86);
+            this.panel1.TabIndex = 9;
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Location = new System.Drawing.Point(547, 27);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(107, 30);
+            this.btnLamMoi.TabIndex = 6;
+            this.btnLamMoi.Text = "Làm Mới";
+            this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(47, 27);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(107, 30);
+            this.btnThem.TabIndex = 1;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(382, 27);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(107, 30);
+            this.btnXoa.TabIndex = 3;
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(211, 27);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(107, 30);
+            this.btnSua.TabIndex = 2;
+            this.btnSua.Text = "Sửa ";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // AFACCTNO
             // 
@@ -145,59 +188,6 @@
             this.LASTDATE.Name = "LASTDATE";
             this.LASTDATE.Width = 125;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel1.Controls.Add(this.btnLamMoi);
-            this.panel1.Controls.Add(this.btnThem);
-            this.panel1.Controls.Add(this.btnXoa);
-            this.panel1.Controls.Add(this.btnSua);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1166, 86);
-            this.panel1.TabIndex = 9;
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.Location = new System.Drawing.Point(547, 27);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(107, 30);
-            this.btnLamMoi.TabIndex = 6;
-            this.btnLamMoi.Text = "Làm Mới";
-            this.btnLamMoi.UseVisualStyleBackColor = true;
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(47, 27);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(107, 30);
-            this.btnThem.TabIndex = 1;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(382, 27);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(107, 30);
-            this.btnXoa.TabIndex = 3;
-            this.btnXoa.Text = "Xoá";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(211, 27);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(107, 30);
-            this.btnSua.TabIndex = 2;
-            this.btnSua.Text = "Sửa ";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
             // frmSEMAST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -225,7 +215,6 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CUSTID;
         private System.Windows.Forms.DataGridViewTextBoxColumn AFACCTNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ACCTNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODEID;

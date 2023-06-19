@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLTKKH
@@ -14,6 +7,7 @@ namespace QLTKKH
     {
         cfmastservice.CFMASTWebService cfmastsv = new cfmastservice.CFMASTWebService();
         private DataGridView dgv;
+        DataRead read = new DataRead();
         public frmUpdateCIMAST(DataGridView dgvCIMAST)
         {
             InitializeComponent();
@@ -27,22 +21,24 @@ namespace QLTKKH
             txtBALANCE.Text = dgv.Rows[frmCIMAST.row].Cells[2].Value.ToString();
             txtCIDEPOFEEACR.Text = dgv.Rows[frmCIMAST.row].Cells[3].Value.ToString();
             txtDEPOFEEAMT.Text = dgv.Rows[frmCIMAST.row].Cells[4].Value.ToString();
-            dtpLASTCHANGE.Text = dgv.Rows[frmCIMAST.row].Cells[5].Value.ToString();            
+            dtpLASTCHANGE.Text = dgv.Rows[frmCIMAST.row].Cells[5].Value.ToString();
             txtMONEY.Text = txtDEPOFEEAMT.Text;
         }
 
         private void btnBoSung_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Bạn có muốn thực hiện nộp tiền không?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.No)
+            if (MessageBox.Show("Bạn có muốn thực hiện nộp tiền không?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 return;
-            }    
+            }
             string afacctno = txtAFACCTNO.Text.ToString().Trim();
             string acctno = txtACCTNO.Text.ToString().Trim();
             long money = long.Parse(txtMONEY.Text.ToString().Trim());
             long depofeeamt = long.Parse(txtDEPOFEEAMT.Text.ToString().Trim());
             DateTime lastchange = DateTime.Now;
-            cfmastsv.SuaThemTienCIMAST(afacctno, acctno, money,depofeeamt, lastchange);
+            cfmastsv.SuaThemTienCIMAST(afacctno, acctno, money, depofeeamt, lastchange);
+            dgv.DataSource = read.Reader("CIMAST");
+            txtBALANCE.Text = dgv.Rows[frmCIMAST.row].Cells[2].Value.ToString();
             MessageBox.Show("Thành công.", "Thông báo");
         }
 
@@ -60,8 +56,12 @@ namespace QLTKKH
             string afacctno = txtAFACCTNO.Text.ToString().Trim();
             string acctno = txtACCTNO.Text.ToString().Trim();
             long money = long.Parse(txtMONEY.Text.ToString().Trim());
+            long depofeeamt = long.Parse(txtDEPOFEEAMT.Text.ToString().Trim());
             DateTime lastchange = DateTime.Now;
-            cfmastsv.SuaTruTienCIMAST(afacctno, acctno, money, money, lastchange);
+            cfmastsv.SuaTruTienCIMAST(afacctno, acctno, money, depofeeamt, lastchange);
+            dgv.DataSource = read.Reader("CIMAST");
+            txtBALANCE.Text = dgv.Rows[frmCIMAST.row].Cells[2].Value.ToString();
+            txtDEPOFEEAMT.Text = dgv.Rows[frmCIMAST.row].Cells[4].Value.ToString();
             MessageBox.Show("Thành công", "Thông báo");
         }
 

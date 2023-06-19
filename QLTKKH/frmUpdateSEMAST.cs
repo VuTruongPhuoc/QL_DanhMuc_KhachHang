@@ -27,9 +27,7 @@ namespace QLTKKH
         private void frmUpdateSEMAST_Load(object sender, EventArgs e)
         {
             lbTaiSanCK.Text = frmSEMAST.str.ToString().Trim();
-            DataTable dt = read.Reader("CFMAST");
-            comm.FillCombo(dt, cboCUSTID, "FULLNAME", "CUSTID");
-            DataTable dt1 = read.Reader("AFMAST WHERE CUSTID = '" + cboCUSTID.SelectedValue.ToString().Trim() + "'");
+            DataTable dt1 = read.Reader("AFMAST");
             comm.FillCombo(dt1, cboAFACCTNO, "ACCTNO", "ACCTNO");
             DataTable dt2 = read.Reader("SECURITIES_INFO");
             comm.FillCombo(dt2, cboCODEID, "SYMBOL", "CODEID");
@@ -37,7 +35,6 @@ namespace QLTKKH
             txtACCTNO.Text = "001E.00001F";
             if (lbTaiSanCK.Text == "Sửa tài sản chứng khoán.")
             {
-                cboCUSTID.SelectedItem = dgv.Rows[frmSEMAST.row].Cells[0].Value.ToString().Trim();
                 cboAFACCTNO.SelectedItem = dgv.Rows[frmSEMAST.row].Cells[1].Value.ToString().Trim();
                 txtACCTNO.Text = dgv.Rows[frmSEMAST.row].Cells[2].Value.ToString().Trim();
                 btnACCTNO.Enabled = false;
@@ -56,7 +53,6 @@ namespace QLTKKH
                 MessageBox.Show("Vui lòng nhập đủ thông tin", "Thông báo");
                 return;
             }    
-            string custid = cboCUSTID.SelectedValue.ToString().Trim();
             string afacctno = cboAFACCTNO.Text.ToString().Trim();
             string acctno = txtACCTNO.Text.ToString().Trim();
             string codeid = cboCODEID.SelectedValue.ToString().Trim();
@@ -66,22 +62,16 @@ namespace QLTKKH
             DateTime lastdate = dtpLASTDATE.Value;
             if (lbTaiSanCK.Text == "Sửa tài sản chứng khoán.")
             {
-                semastsv.SuaSEMAST(custid, afacctno, acctno, codeid, totalbuyamt, opndate, clsdate, lastdate);
+                semastsv.SuaSEMAST(afacctno, acctno, codeid, totalbuyamt, opndate, clsdate, lastdate);
                 MessageBox.Show("Sửa thành công", "Thông báo");
                 return;
             }
-            semastsv.ThemSEMAST(custid, afacctno, acctno, codeid, totalbuyamt, opndate, clsdate, lastdate);
+            semastsv.ThemSEMAST(afacctno, acctno, codeid, totalbuyamt, opndate, clsdate, lastdate);
             MessageBox.Show("Thêm thành công", "Thông báo");
             txtACCTNO.Text = "001E.00001F";
             txtTOTALBUYAMT.Text = "0".ToString();
+            dgv.DataSource = read.Reader("SEMAST");
         }
-
-        private void cboCUSTID_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            DataTable dt1 = read.Reader("AFMAST WHERE CUSTID = '" + cboCUSTID.SelectedValue.ToString().Trim() + "'");
-            comm.FillCombo(dt1, cboAFACCTNO, "ACCTNO", "ACCTNO");
-        }
-
         private void btnACCTNO_Click(object sender, EventArgs e)
         {
             string xmlData1 = websv.DataReader("SELECT * FROM SEMAST");

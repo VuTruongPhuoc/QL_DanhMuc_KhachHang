@@ -21,7 +21,7 @@ namespace WebSV
         WebService1 websv = new WebService1();
         [WebMethod]
         [Obsolete]
-        public void ThemSEMAST(string custid, string afacctno, string acctno, string codeid, int totalbuyamt, DateTime opndate, DateTime clsdate, DateTime lastdate)
+        public void ThemSEMAST(string afacctno, string acctno, string codeid, int totalbuyamt, DateTime opndate, DateTime clsdate, DateTime lastdate)
         {
             OracleConnection conn = null;
             OracleCommand command = new OracleCommand();
@@ -30,7 +30,6 @@ namespace WebSV
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "ThemSEMAST";
 
-            command.Parameters.Add("p_custid", OracleDbType.Varchar2).Value = custid;
             command.Parameters.Add("p_afacctno", OracleDbType.Varchar2).Value = afacctno;
             command.Parameters.Add("p_acctno", OracleDbType.Varchar2).Value = acctno;
             command.Parameters.Add("p_codeid", OracleDbType.Varchar2).Value = codeid;
@@ -44,7 +43,7 @@ namespace WebSV
         }
         [WebMethod]
         [Obsolete]
-        public void SuaSEMAST(string custid, string afacctno, string acctno, string codeid, int totalbuyamt, DateTime opndate, DateTime clsdate, DateTime lastdate)
+        public void SuaSEMAST(string afacctno, string acctno, string codeid, int totalbuyamt, DateTime opndate, DateTime clsdate, DateTime lastdate)
         {
             OracleConnection conn = null;
             OracleCommand command = new OracleCommand();
@@ -53,7 +52,6 @@ namespace WebSV
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "SuaSEMAST";
 
-            command.Parameters.Add("p_custid", OracleDbType.Varchar2).Value = custid;
             command.Parameters.Add("p_afacctno", OracleDbType.Varchar2).Value = afacctno;
             command.Parameters.Add("p_acctno", OracleDbType.Varchar2).Value = acctno;
             command.Parameters.Add("p_codeid", OracleDbType.Varchar2).Value = codeid;
@@ -67,7 +65,7 @@ namespace WebSV
         }
         [WebMethod]
         [Obsolete]
-        public void XoaSEMAST(string custid,string acctno)
+        public void XoaSEMAST(string acctno)
         {
             OracleConnection conn = null;
             OracleCommand command = new OracleCommand();
@@ -76,7 +74,6 @@ namespace WebSV
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "XoaSEMAST";
 
-            command.Parameters.Add("p_custid", OracleDbType.Varchar2).Value = custid;
             command.Parameters.Add("p_acctno", OracleDbType.Varchar2).Value = acctno;
             conn.Open();
             command.ExecuteNonQuery();
