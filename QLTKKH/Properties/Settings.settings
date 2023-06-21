@@ -14,5 +14,8 @@
     <Setting Name="QLTKKH_semastservice__SEMASTWebService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://localhost:44374/_SEMASTWebService.asmx</Value>
     </Setting>
+    <Setting Name="QLTKKH_securities_infoservice__SECURITIES_INFOWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://localhost:44374/_SECURITIES_INFOWebService.asmx</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

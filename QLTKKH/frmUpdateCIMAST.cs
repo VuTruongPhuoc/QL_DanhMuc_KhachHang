@@ -19,9 +19,9 @@ namespace QLTKKH
             txtAFACCTNO.Text = dgv.Rows[frmCIMAST.row].Cells[0].Value.ToString();
             txtACCTNO.Text = dgv.Rows[frmCIMAST.row].Cells[1].Value.ToString();
             txtBALANCE.Text = dgv.Rows[frmCIMAST.row].Cells[2].Value.ToString();
-            txtCIDEPOFEEACR.Text = dgv.Rows[frmCIMAST.row].Cells[3].Value.ToString();
-            txtDEPOFEEAMT.Text = dgv.Rows[frmCIMAST.row].Cells[4].Value.ToString();
-            dtpLASTCHANGE.Text = dgv.Rows[frmCIMAST.row].Cells[5].Value.ToString();
+            txtCIDEPOFEEACR.Text = dgv.Rows[frmCIMAST.row].Cells[4].Value.ToString();
+            txtDEPOFEEAMT.Text = dgv.Rows[frmCIMAST.row].Cells[5].Value.ToString();
+            dtpLASTCHANGE.Text = dgv.Rows[frmCIMAST.row].Cells[7].Value.ToString();
             txtMONEY.Text = txtDEPOFEEAMT.Text;
         }
 
@@ -40,6 +40,7 @@ namespace QLTKKH
             dgv.DataSource = read.Reader("CIMAST");
             txtBALANCE.Text = dgv.Rows[frmCIMAST.row].Cells[2].Value.ToString();
             MessageBox.Show("Thành công.", "Thông báo");
+            cfmastsv.SucMua();
         }
 
         private void btnTruTien_Click(object sender, EventArgs e)
@@ -61,8 +62,9 @@ namespace QLTKKH
             cfmastsv.SuaTruTienCIMAST(afacctno, acctno, money, depofeeamt, lastchange);
             dgv.DataSource = read.Reader("CIMAST");
             txtBALANCE.Text = dgv.Rows[frmCIMAST.row].Cells[2].Value.ToString();
-            txtDEPOFEEAMT.Text = dgv.Rows[frmCIMAST.row].Cells[4].Value.ToString();
+            txtDEPOFEEAMT.Text = dgv.Rows[frmCIMAST.row].Cells[5].Value.ToString();
             MessageBox.Show("Thành công", "Thông báo");
+            cfmastsv.SucMua();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

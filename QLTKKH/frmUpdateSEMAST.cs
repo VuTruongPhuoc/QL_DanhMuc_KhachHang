@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLTKKH
@@ -15,6 +9,7 @@ namespace QLTKKH
     {
         webservice.WebService1 websv = new webservice.WebService1 ();
         semastservice._SEMASTWebService semastsv = new semastservice._SEMASTWebService ();
+        cfmastservice.CFMASTWebService cfmastsv = new cfmastservice.CFMASTWebService ();
         private DataGridView dgv;
         DataRead read = new DataRead ();
         Commonfunction comm = new Commonfunction ();
@@ -35,14 +30,14 @@ namespace QLTKKH
             txtACCTNO.Text = "001E.00001F";
             if (lbTaiSanCK.Text == "Sửa tài sản chứng khoán.")
             {
-                cboAFACCTNO.SelectedItem = dgv.Rows[frmSEMAST.row].Cells[1].Value.ToString().Trim();
-                txtACCTNO.Text = dgv.Rows[frmSEMAST.row].Cells[2].Value.ToString().Trim();
+                cboAFACCTNO.SelectedValue = dgv.Rows[frmSEMAST.row].Cells[0].Value.ToString().Trim();
+                txtACCTNO.Text = dgv.Rows[frmSEMAST.row].Cells[1].Value.ToString().Trim();
                 btnACCTNO.Enabled = false;
-                cboCODEID.SelectedItem = dgv.Rows[frmSEMAST.row].Cells[3].Value.ToString().Trim();
-                txtTOTALBUYAMT.Text = dgv.Rows[frmSEMAST.row].Cells[4].Value.ToString().Trim();
-                dtpOPNDATE.Text = dgv.Rows[frmSEMAST.row].Cells[5].Value.ToString().Trim();
-                dtpCLSDATE.Text = dgv.Rows[frmSEMAST.row].Cells[6].Value.ToString().Trim();
-                dtpLASTDATE.Text = dgv.Rows[frmSEMAST.row].Cells[7].Value.ToString().Trim();
+                cboCODEID.SelectedValue = dgv.Rows[frmSEMAST.row].Cells[2].Value.ToString().Trim();
+                txtTOTALBUYAMT.Text = dgv.Rows[frmSEMAST.row].Cells[3].Value.ToString().Trim();
+                dtpOPNDATE.Text = dgv.Rows[frmSEMAST.row].Cells[4].Value.ToString().Trim();
+                dtpCLSDATE.Text = dgv.Rows[frmSEMAST.row].Cells[5].Value.ToString().Trim();
+                dtpLASTDATE.Text = dgv.Rows[frmSEMAST.row].Cells[6].Value.ToString().Trim();
             }    
             
         }
@@ -53,7 +48,7 @@ namespace QLTKKH
                 MessageBox.Show("Vui lòng nhập đủ thông tin", "Thông báo");
                 return;
             }    
-            string afacctno = cboAFACCTNO.Text.ToString().Trim();
+            string afacctno = cboAFACCTNO.SelectedValue.ToString().Trim();
             string acctno = txtACCTNO.Text.ToString().Trim();
             string codeid = cboCODEID.SelectedValue.ToString().Trim();
             int totalbuyamt = int.Parse(txtTOTALBUYAMT.Text.ToString().Trim());
@@ -64,6 +59,8 @@ namespace QLTKKH
             {
                 semastsv.SuaSEMAST(afacctno, acctno, codeid, totalbuyamt, opndate, clsdate, lastdate);
                 MessageBox.Show("Sửa thành công", "Thông báo");
+                dgv.DataSource = read.Reader("SEMAST");
+                cfmastsv.SucMua();
                 return;
             }
             semastsv.ThemSEMAST(afacctno, acctno, codeid, totalbuyamt, opndate, clsdate, lastdate);
@@ -71,6 +68,7 @@ namespace QLTKKH
             txtACCTNO.Text = "001E.00001F";
             txtTOTALBUYAMT.Text = "0".ToString();
             dgv.DataSource = read.Reader("SEMAST");
+            cfmastsv.SucMua();
         }
         private void btnACCTNO_Click(object sender, EventArgs e)
         {

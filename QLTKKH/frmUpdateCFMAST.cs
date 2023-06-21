@@ -56,7 +56,7 @@ namespace QLTKKH
                 string luuky = dgv.Rows[frmCFMAST.row].Cells[2].Value.ToString();
                 txtCUSTOYOCD.Text = luuky.Substring(0, 10);
                 txtCUSTOYOCD.ReadOnly = true;
-                cboIDTYPE.SelectedItem = dgv.Rows[frmCFMAST.row].Cells[3].Value.ToString();
+                cboIDTYPE.SelectedValue = dgv.Rows[frmCFMAST.row].Cells[3].Value.ToString();
                 txtIDCODE.Text = dgv.Rows[frmCFMAST.row].Cells[4].Value.ToString();
                 dtpIDDATE.Text = dgv.Rows[frmCFMAST.row].Cells[5].Value.ToString();
                 txtADDRESS.Text = dgv.Rows[frmCFMAST.row].Cells[6].Value.ToString();

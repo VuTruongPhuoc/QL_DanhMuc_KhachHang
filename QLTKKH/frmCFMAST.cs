@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLTKKH
@@ -25,7 +19,7 @@ namespace QLTKKH
         public void loadgdv()
         {
             DataTable dt = read.Reader("CFMAST");
-            dgvCFMAST.DataSource= dt;
+            dgvCFMAST.DataSource = dt;
         }
         private void frmKhachHang_Load(object sender, EventArgs e)
         {
@@ -64,31 +58,29 @@ namespace QLTKKH
             string acctno;
             if (dt.Tables.Count <= 0)
             {
-                acctno = "001C000001";
+                acctno = "0001000001";
             }
             else
             {
                 DataTable data = dt.Tables[0];
                 int k = Convert.ToInt32(data.Rows.Count.ToString().Trim());
                 k++;
-                acctno = "001C" + k.ToString("D6");
+                acctno = "0001" + k.ToString("D6");
             }
             string afacctno = acctno;
-          
+
             string custid = dgvCFMAST.CurrentRow.Cells[0].Value.ToString();
             string martype = "O".ToString();
             long mrcrlimitmax = 1000000000;
             long cidepofeeacr = 0;
             long depofeeamt = 0;
+            long currentdebt = 0;
             long balance = 130000000;
+            long pp = balance - depofeeamt - currentdebt;
             DateTime lastchange = DateTime.Now;
-            cfmastsv.DuyetCFMAST(custid, acctno, martype, mrcrlimitmax, afacctno, balance, cidepofeeacr, depofeeamt, lastchange);
+            cfmastsv.DuyetCFMAST(custid, acctno, martype, mrcrlimitmax, afacctno, balance,pp, cidepofeeacr, depofeeamt,currentdebt, lastchange);
             MessageBox.Show("Thành công.", "Thông báo");
-            
-        }
-        private void btnLamMoi_Click(object sender, EventArgs e)
-        {
-            loadgdv();
+            cfmastsv.SucMua();
         }
     }
 }

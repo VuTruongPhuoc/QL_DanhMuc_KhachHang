@@ -50,11 +50,29 @@
   <ItemGroup>
     <Compile Include="Commonfunction.cs" />
     <Compile Include="DataRead.cs" />
+    <Compile Include="frmAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccount.Designer.cs">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCIMAST.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCIMAST.Designer.cs">
       <DependentUpon>frmCIMAST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEnterAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnterAccount.Designer.cs">
+      <DependentUpon>frmEnterAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSECURITIES_INFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSECURITIES_INFO.Designer.cs">
+      <DependentUpon>frmSECURITIES_INFO.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSEMAST.cs">
       <SubType>Form</SubType>
@@ -68,6 +86,12 @@
     <Compile Include="frmUpdateCIMAST.Designer.cs">
       <DependentUpon>frmUpdateCIMAST.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUpdateSECURITIES_INFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateSECURITIES_INFO.Designer.cs">
+      <DependentUpon>frmUpdateSECURITIES_INFO.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUpdateSEMAST.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +99,11 @@
       <DependentUpon>frmUpdateSEMAST.cs</DependentUpon>
     </Compile>
     <Compile Include="Web References\afmastservice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\securities_infoservice\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -126,8 +155,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmAccount.resx">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCIMAST.resx">
       <DependentUpon>frmCIMAST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEnterAccount.resx">
+      <DependentUpon>frmEnterAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSECURITIES_INFO.resx">
+      <DependentUpon>frmSECURITIES_INFO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSEMAST.resx">
       <DependentUpon>frmSEMAST.cs</DependentUpon>
@@ -137,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpdateCIMAST.resx">
       <DependentUpon>frmUpdateCIMAST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateSECURITIES_INFO.resx">
+      <DependentUpon>frmUpdateSECURITIES_INFO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpdateSEMAST.resx">
       <DependentUpon>frmUpdateSEMAST.cs</DependentUpon>
@@ -181,6 +222,11 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\cfmastservice\_CFMASTWebService.wsdl" />
+    <None Include="Web References\securities_infoservice\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\securities_infoservice\_SECURITIES_INFOWebService.wsdl" />
     <None Include="Web References\semastservice\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -235,6 +281,17 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>QLTKKH_cfmastservice_CFMASTWebService</CachedSettingsPropName>
     </WebReferenceUrl>
+    <WebReferenceUrl Include="https://localhost:44374/_SECURITIES_INFOWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\securities_infoservice\</RelPath>
+      <UpdateFromURL>https://localhost:44374/_SECURITIES_INFOWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QLTKKH_securities_infoservice__SECURITIES_INFOWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="https://localhost:44374/_SEMASTWebService.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\semastservice\</RelPath>
@@ -258,6 +315,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Web References\semastservice\_SEMASTWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\securities_infoservice\_SECURITIES_INFOWebService.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

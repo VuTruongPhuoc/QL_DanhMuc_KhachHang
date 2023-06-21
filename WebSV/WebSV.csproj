@@ -103,6 +103,7 @@
     <Content Include="_CFMASTWebService.asmx" />
     <Content Include="Web.config" />
     <Content Include="WebService1.asmx" />
+    <Content Include="_SECURITIES_INFOWebService.asmx" />
     <Content Include="_SEMASTWebService.asmx" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +118,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebService1.asmx.cs">
       <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_SECURITIES_INFOWebService.asmx.cs">
+      <DependentUpon>_SECURITIES_INFOWebService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="_SEMASTWebService.asmx.cs">

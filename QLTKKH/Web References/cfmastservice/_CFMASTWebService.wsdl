@@ -11,8 +11,10 @@
             <s:element minOccurs="1" maxOccurs="1" name="mrcrlimitmax" type="s:long" />
             <s:element minOccurs="0" maxOccurs="1" name="afacctno" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="balance" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="pp" type="s:long" />
             <s:element minOccurs="1" maxOccurs="1" name="cidepofeeacr" type="s:long" />
             <s:element minOccurs="1" maxOccurs="1" name="depofeeamt" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="currentdebt" type="s:long" />
             <s:element minOccurs="1" maxOccurs="1" name="lastchange" type="s:dateTime" />
           </s:sequence>
         </s:complexType>
@@ -46,6 +48,12 @@
         </s:complexType>
       </s:element>
       <s:element name="SuaTruTienCIMASTResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SucMua">
+        <s:complexType />
+      </s:element>
+      <s:element name="SucMuaResponse">
         <s:complexType />
       </s:element>
       <s:element name="ThemCFMAST">
@@ -116,6 +124,12 @@
   <wsdl:message name="SuaTruTienCIMASTSoapOut">
     <wsdl:part name="parameters" element="tns:SuaTruTienCIMASTResponse" />
   </wsdl:message>
+  <wsdl:message name="SucMuaSoapIn">
+    <wsdl:part name="parameters" element="tns:SucMua" />
+  </wsdl:message>
+  <wsdl:message name="SucMuaSoapOut">
+    <wsdl:part name="parameters" element="tns:SucMuaResponse" />
+  </wsdl:message>
   <wsdl:message name="ThemCFMASTSoapIn">
     <wsdl:part name="parameters" element="tns:ThemCFMAST" />
   </wsdl:message>
@@ -146,6 +160,10 @@
     <wsdl:operation name="SuaTruTienCIMAST">
       <wsdl:input message="tns:SuaTruTienCIMASTSoapIn" />
       <wsdl:output message="tns:SuaTruTienCIMASTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SucMua">
+      <wsdl:input message="tns:SucMuaSoapIn" />
+      <wsdl:output message="tns:SucMuaSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="ThemCFMAST">
       <wsdl:input message="tns:ThemCFMASTSoapIn" />
@@ -182,6 +200,15 @@
     </wsdl:operation>
     <wsdl:operation name="SuaTruTienCIMAST">
       <soap:operation soapAction="http://tempuri.org/SuaTruTienCIMAST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SucMua">
+      <soap:operation soapAction="http://tempuri.org/SucMua" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -239,6 +266,15 @@
     </wsdl:operation>
     <wsdl:operation name="SuaTruTienCIMAST">
       <soap12:operation soapAction="http://tempuri.org/SuaTruTienCIMAST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SucMua">
+      <soap12:operation soapAction="http://tempuri.org/SucMua" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

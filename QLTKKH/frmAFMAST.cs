@@ -17,6 +17,7 @@ namespace QLTKKH
         public static int row;
         webservice.WebService1 websv = new webservice.WebService1();
         afmastservice._AFMASTWebService afmastsv = new afmastservice._AFMASTWebService();
+        cfmastservice.CFMASTWebService cfmast = new cfmastservice.CFMASTWebService();
         DataRead read = new DataRead();
         public frmAFMAST()
         {
@@ -55,11 +56,14 @@ namespace QLTKKH
             afmastsv.XoaAFMAST(custid,acctno);
             MessageBox.Show("Xoá thành công", "Thông báo");
             loadgdv();
+            cfmast.SucMua();
         }
 
-        private void btnLamMoi_Click(object sender, EventArgs e)
+        private void dgvAFMAST_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            loadgdv();
+            row = dgvAFMAST.CurrentCell.RowIndex;
+            frmAccount frm = new frmAccount(dgvAFMAST);
+            frm.Show();
         }
     }
 }

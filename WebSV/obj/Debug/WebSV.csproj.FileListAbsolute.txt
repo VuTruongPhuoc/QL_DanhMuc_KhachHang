@@ -50,14 +50,8 @@ P:\C#\QLTKKH\WebSV\bin\roslyn\vbc.exe.config
 P:\C#\QLTKKH\WebSV\bin\roslyn\vbc.rsp
 P:\C#\QLTKKH\WebSV\bin\roslyn\VBCSCompiler.exe
 P:\C#\QLTKKH\WebSV\bin\roslyn\VBCSCompiler.exe.config
-P:\C#\QLTKKH\WebSV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-P:\C#\QLTKKH\WebSV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-P:\C#\QLTKKH\WebSV\obj\Debug\WebSV.csproj.AssemblyReference.cache
-P:\C#\QLTKKH\WebSV\obj\Debug\WebSV.csproj.CoreCompileInputs.cache
-P:\C#\QLTKKH\WebSV\obj\Debug\WebSV.csproj.CopyComplete
-P:\C#\QLTKKH\WebSV\obj\Debug\WebSV.dll
-P:\C#\QLTKKH\WebSV\obj\Debug\WebSV.pdb
 P:\C#\QLTKKH\WebSV\bin\Microsoft.Bcl.AsyncInterfaces.dll
+P:\C#\QLTKKH\WebSV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 P:\C#\QLTKKH\WebSV\bin\Oracle.ManagedDataAccess.dll
 P:\C#\QLTKKH\WebSV\bin\System.Buffers.dll
 P:\C#\QLTKKH\WebSV\bin\System.Memory.dll
@@ -76,3 +70,9 @@ P:\C#\QLTKKH\WebSV\bin\System.Text.Encodings.Web.xml
 P:\C#\QLTKKH\WebSV\bin\System.Text.Json.xml
 P:\C#\QLTKKH\WebSV\bin\System.Threading.Tasks.Extensions.xml
 P:\C#\QLTKKH\WebSV\bin\System.ValueTuple.xml
+P:\C#\QLTKKH\WebSV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+P:\C#\QLTKKH\WebSV\obj\Debug\WebSV.csproj.AssemblyReference.cache
+P:\C#\QLTKKH\WebSV\obj\Debug\WebSV.csproj.CoreCompileInputs.cache
+P:\C#\QLTKKH\WebSV\obj\Debug\WebSV.csproj.CopyComplete
+P:\C#\QLTKKH\WebSV\obj\Debug\WebSV.dll
+P:\C#\QLTKKH\WebSV\obj\Debug\WebSV.pdb

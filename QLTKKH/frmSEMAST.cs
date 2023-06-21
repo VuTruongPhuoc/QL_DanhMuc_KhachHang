@@ -18,6 +18,7 @@ namespace QLTKKH
         public static string str = "Thêm mới tài sản chứng khoán.";
         webservice.WebService1 websv = new webservice.WebService1 ();
         semastservice._SEMASTWebService semastsv = new semastservice._SEMASTWebService ();
+        cfmastservice.CFMASTWebService cfmastsv = new cfmastservice.CFMASTWebService ();
         DataRead read = new DataRead ();
         public static int row = 0;
         public frmSEMAST()
@@ -31,7 +32,6 @@ namespace QLTKKH
         }
         public void loaddgv()
         {
-
             DataTable dt = read.Reader("SEMAST");
             dgvSEMAST.DataSource = dt;
         }
@@ -53,16 +53,17 @@ namespace QLTKKH
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string custid = dgvSEMAST.CurrentRow.Cells[0].Value.ToString();
-            string acctno = dgvSEMAST.CurrentRow.Cells[2].Value.ToString();
-            semastsv.XoaSEMAST( acctno);
+            string acctno = dgvSEMAST.CurrentRow.Cells[1].Value.ToString();
+            semastsv.XoaSEMAST(acctno);
             MessageBox.Show("Xoá thành công", "Thông báo");
             loaddgv();
+            cfmastsv.SucMua();
         }
 
-        private void btnLamMoi_Click(object sender, EventArgs e)
+        private void btnSECURITIES_INFO_Click(object sender, EventArgs e)
         {
-            loaddgv();
+            frmSECURITIES_INFO frm = new frmSECURITIES_INFO();
+            frm.Show();
         }
     }
 }

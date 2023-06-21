@@ -41,7 +41,6 @@
             this.MOBILE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EMAIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnDuyet = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -79,7 +78,7 @@
             this.MOBILE,
             this.EMAIL});
             this.dgvCFMAST.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCFMAST.Location = new System.Drawing.Point(18, 30);
+            this.dgvCFMAST.Location = new System.Drawing.Point(28, 40);
             this.dgvCFMAST.Name = "dgvCFMAST";
             this.dgvCFMAST.RowHeadersWidth = 51;
             this.dgvCFMAST.RowTemplate.Height = 24;
@@ -169,7 +168,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel1.Controls.Add(this.btnLamMoi);
             this.panel1.Controls.Add(this.btnDuyet);
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnXoa);
@@ -179,16 +177,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1172, 86);
             this.panel1.TabIndex = 7;
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.Location = new System.Drawing.Point(692, 27);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(107, 30);
-            this.btnLamMoi.TabIndex = 6;
-            this.btnLamMoi.Text = "Làm Mới";
-            this.btnLamMoi.UseVisualStyleBackColor = true;
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnDuyet
             // 
@@ -266,7 +254,6 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Button btnDuyet;
     }
 }

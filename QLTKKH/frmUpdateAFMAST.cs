@@ -9,6 +9,7 @@ namespace QLTKKH
     {
         webservice.WebService1 websv = new webservice.WebService1();
         afmastservice._AFMASTWebService afmastsv = new afmastservice._AFMASTWebService();
+        cfmastservice.CFMASTWebService cfmast  = new cfmastservice.CFMASTWebService();
         DataRead read = new DataRead();
         private DataGridView dgv;
         public frmUpdateAFMAST(DataGridView dgvAFMAST)
@@ -30,6 +31,7 @@ namespace QLTKKH
             string afacctno = acctno;
             long cidepofeeacr = 0;
             long depofeeamt = 0;
+            long currentdebt = 0;
             long balance = 130000000;
             DateTime lastchange = DateTime.Now;
 
@@ -38,11 +40,14 @@ namespace QLTKKH
                 afmastsv.SuaAFMAST(custid, acctno, martype, mrcrlimitmax);
 
                 MessageBox.Show("Sửa thành công", "Thông báo");
+                dgv.DataSource = read.Reader("AFMAST");
+                cfmast.SucMua();
                 return;
             }
-            afmastsv.ThemAFMAST(custid, acctno, martype, mrcrlimitmax, afacctno, balance, cidepofeeacr, depofeeamt, lastchange);
+            afmastsv.ThemAFMAST(custid, acctno, martype, mrcrlimitmax, afacctno, balance, cidepofeeacr, depofeeamt,currentdebt, lastchange);
             MessageBox.Show("Thêm thành công", "Thông báo");
             dgv.DataSource = read.Reader("AFMAST");
+            cfmast.SucMua();
         }
 
         private void frmUpdateAFMAST_Load(object sender, EventArgs e)
@@ -57,19 +62,19 @@ namespace QLTKKH
 
             if (dt.Tables.Count <= 0)
             {
-                txtACCTNO.Text = "001C000001";
+                txtACCTNO.Text = "0001000001";
             }
             else
             {
                 DataTable data = dt.Tables[0];
                 int k = Convert.ToInt32(data.Rows.Count.ToString().Trim());
                 k++;
-                txtACCTNO.Text = "001C" + k.ToString("D6");
+                txtACCTNO.Text = "0001" + k.ToString("D6");
             }
             if (frmAFMAST.str.Trim() == "Sửa tiểu khoản.")
             {
                 lbTieuKhoan.Text = frmAFMAST.str.Trim();
-                cboCUSTID.SelectedItem = dgv.Rows[frmAFMAST.row].Cells[0].Value.ToString();
+                cboCUSTID.SelectedValue = dgv.Rows[frmAFMAST.row].Cells[0].Value.ToString();
                 txtACCTNO.Text = dgv.Rows[frmAFMAST.row].Cells[1].Value.ToString();
                 txtMARTYPE.Text = dgv.Rows[frmAFMAST.row].Cells[2].Value.ToString();
                 txtMRCRLIMITMAX.Text = dgv.Rows[frmAFMAST.row].Cells[3].Value.ToString();
