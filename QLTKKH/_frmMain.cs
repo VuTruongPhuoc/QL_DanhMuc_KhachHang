@@ -40,5 +40,11 @@ namespace QLTKKH
             frmSEMAST frm = new frmSEMAST();
             frm.Show();
         }
+
+        private void đặtLệnhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmODMAST frm = new frmODMAST();
+            frm.Show();
+        }
     }
 }

@@ -41,6 +41,7 @@
             this.AFACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CODEID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SYMBOL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TOTALBUYAMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LASTDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbKhachHang.SuspendLayout();
@@ -68,6 +69,7 @@
             this.AFACCTNO,
             this.ACCTNO,
             this.CODEID,
+            this.SYMBOL,
             this.TOTALBUYAMT,
             this.LASTDATE});
             this.dgvSEAccount.GridColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -188,6 +190,14 @@
             this.CODEID.Name = "CODEID";
             this.CODEID.Width = 125;
             // 
+            // SYMBOL
+            // 
+            this.SYMBOL.DataPropertyName = "SYMBOL";
+            this.SYMBOL.HeaderText = "Mã niêm yết";
+            this.SYMBOL.MinimumWidth = 6;
+            this.SYMBOL.Name = "SYMBOL";
+            this.SYMBOL.Width = 125;
+            // 
             // TOTALBUYAMT
             // 
             this.TOTALBUYAMT.DataPropertyName = "TOTALBUYAMT";
@@ -238,6 +248,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AFACCTNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ACCTNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODEID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SYMBOL;
         private System.Windows.Forms.DataGridViewTextBoxColumn TOTALBUYAMT;
         private System.Windows.Forms.DataGridViewTextBoxColumn LASTDATE;
     }

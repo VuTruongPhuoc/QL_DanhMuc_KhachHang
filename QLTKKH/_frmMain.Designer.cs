@@ -34,6 +34,7 @@
             this.tiểuKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiềnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chứngKhoánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đặtLệnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +55,8 @@
             this.kháchHàngToolStripMenuItem,
             this.tiểuKhoảnToolStripMenuItem,
             this.tiềnToolStripMenuItem,
-            this.chứngKhoánToolStripMenuItem});
+            this.chứngKhoánToolStripMenuItem,
+            this.đặtLệnhToolStripMenuItem});
             this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
             this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
             this.danhMụcToolStripMenuItem.Text = "Danh Mục";
@@ -87,6 +89,13 @@
             this.chứngKhoánToolStripMenuItem.Text = "Chứng khoán";
             this.chứngKhoánToolStripMenuItem.Click += new System.EventHandler(this.chứngKhoánToolStripMenuItem_Click);
             // 
+            // đặtLệnhToolStripMenuItem
+            // 
+            this.đặtLệnhToolStripMenuItem.Name = "đặtLệnhToolStripMenuItem";
+            this.đặtLệnhToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đặtLệnhToolStripMenuItem.Text = "Đặt lệnh";
+            this.đặtLệnhToolStripMenuItem.Click += new System.EventHandler(this.đặtLệnhToolStripMenuItem_Click);
+            // 
             // _frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -112,6 +121,7 @@
         private System.Windows.Forms.ToolStripMenuItem tiểuKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tiềnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chứngKhoánToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đặtLệnhToolStripMenuItem;
     }
 }
 

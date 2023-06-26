@@ -30,18 +30,19 @@
         {
             this.grbKhachHang = new System.Windows.Forms.GroupBox();
             this.dgvSEMAST = new System.Windows.Forms.DataGridView();
-            this.AFACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CODEID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TOTALBUYAMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OPNDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CLSDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LASTDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSECURITIES_INFO = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
+            this.AFACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CODEID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SYMBOL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TOTALBUYAMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OPNDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CLSDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LASTDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSEMAST)).BeginInit();
             this.panel1.SuspendLayout();
@@ -62,11 +63,13 @@
             // dgvSEMAST
             // 
             this.dgvSEMAST.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvSEMAST.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgvSEMAST.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSEMAST.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AFACCTNO,
             this.ACCTNO,
             this.CODEID,
+            this.SYMBOL,
             this.TOTALBUYAMT,
             this.OPNDATE,
             this.CLSDATE,
@@ -78,62 +81,6 @@
             this.dgvSEMAST.RowTemplate.Height = 24;
             this.dgvSEMAST.Size = new System.Drawing.Size(1132, 349);
             this.dgvSEMAST.TabIndex = 0;
-            // 
-            // AFACCTNO
-            // 
-            this.AFACCTNO.DataPropertyName = "AFACCTNO";
-            this.AFACCTNO.HeaderText = "Tài khoản giao dịch";
-            this.AFACCTNO.MinimumWidth = 6;
-            this.AFACCTNO.Name = "AFACCTNO";
-            this.AFACCTNO.Width = 125;
-            // 
-            // ACCTNO
-            // 
-            this.ACCTNO.DataPropertyName = "ACCTNO";
-            this.ACCTNO.HeaderText = "Số tài khoán CK";
-            this.ACCTNO.MinimumWidth = 6;
-            this.ACCTNO.Name = "ACCTNO";
-            this.ACCTNO.Width = 125;
-            // 
-            // CODEID
-            // 
-            this.CODEID.DataPropertyName = "CODEID";
-            this.CODEID.HeaderText = "ID chứng khoán ";
-            this.CODEID.MinimumWidth = 6;
-            this.CODEID.Name = "CODEID";
-            this.CODEID.Width = 125;
-            // 
-            // TOTALBUYAMT
-            // 
-            this.TOTALBUYAMT.DataPropertyName = "TOTALBUYAMT";
-            this.TOTALBUYAMT.HeaderText = "Tổng số lượng CK";
-            this.TOTALBUYAMT.MinimumWidth = 6;
-            this.TOTALBUYAMT.Name = "TOTALBUYAMT";
-            this.TOTALBUYAMT.Width = 125;
-            // 
-            // OPNDATE
-            // 
-            this.OPNDATE.DataPropertyName = "OPNDATE";
-            this.OPNDATE.HeaderText = "Ngày mở TK";
-            this.OPNDATE.MinimumWidth = 6;
-            this.OPNDATE.Name = "OPNDATE";
-            this.OPNDATE.Width = 125;
-            // 
-            // CLSDATE
-            // 
-            this.CLSDATE.DataPropertyName = "CLSDATE";
-            this.CLSDATE.HeaderText = "Ngày đóng TK";
-            this.CLSDATE.MinimumWidth = 6;
-            this.CLSDATE.Name = "CLSDATE";
-            this.CLSDATE.Width = 125;
-            // 
-            // LASTDATE
-            // 
-            this.LASTDATE.DataPropertyName = "LASTDATE";
-            this.LASTDATE.HeaderText = "Ngày GD cuối cùng";
-            this.LASTDATE.MinimumWidth = 6;
-            this.LASTDATE.Name = "LASTDATE";
-            this.LASTDATE.Width = 125;
             // 
             // panel1
             // 
@@ -188,6 +135,70 @@
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
+            // AFACCTNO
+            // 
+            this.AFACCTNO.DataPropertyName = "AFACCTNO";
+            this.AFACCTNO.HeaderText = "Tài khoản giao dịch";
+            this.AFACCTNO.MinimumWidth = 6;
+            this.AFACCTNO.Name = "AFACCTNO";
+            this.AFACCTNO.Width = 125;
+            // 
+            // ACCTNO
+            // 
+            this.ACCTNO.DataPropertyName = "ACCTNO";
+            this.ACCTNO.HeaderText = "Số tài khoán CK";
+            this.ACCTNO.MinimumWidth = 6;
+            this.ACCTNO.Name = "ACCTNO";
+            this.ACCTNO.Width = 125;
+            // 
+            // CODEID
+            // 
+            this.CODEID.DataPropertyName = "CODEID";
+            this.CODEID.HeaderText = "ID chứng khoán ";
+            this.CODEID.MinimumWidth = 6;
+            this.CODEID.Name = "CODEID";
+            this.CODEID.Width = 125;
+            // 
+            // SYMBOL
+            // 
+            this.SYMBOL.DataPropertyName = "SYMBOL";
+            this.SYMBOL.HeaderText = "Mã niêm yết";
+            this.SYMBOL.MinimumWidth = 6;
+            this.SYMBOL.Name = "SYMBOL";
+            this.SYMBOL.Width = 125;
+            // 
+            // TOTALBUYAMT
+            // 
+            this.TOTALBUYAMT.DataPropertyName = "TOTALBUYAMT";
+            this.TOTALBUYAMT.HeaderText = "Tổng số lượng CK";
+            this.TOTALBUYAMT.MinimumWidth = 6;
+            this.TOTALBUYAMT.Name = "TOTALBUYAMT";
+            this.TOTALBUYAMT.Width = 125;
+            // 
+            // OPNDATE
+            // 
+            this.OPNDATE.DataPropertyName = "OPNDATE";
+            this.OPNDATE.HeaderText = "Ngày mở TK";
+            this.OPNDATE.MinimumWidth = 6;
+            this.OPNDATE.Name = "OPNDATE";
+            this.OPNDATE.Width = 125;
+            // 
+            // CLSDATE
+            // 
+            this.CLSDATE.DataPropertyName = "CLSDATE";
+            this.CLSDATE.HeaderText = "Ngày đóng TK";
+            this.CLSDATE.MinimumWidth = 6;
+            this.CLSDATE.Name = "CLSDATE";
+            this.CLSDATE.Width = 125;
+            // 
+            // LASTDATE
+            // 
+            this.LASTDATE.DataPropertyName = "LASTDATE";
+            this.LASTDATE.HeaderText = "Ngày GD cuối cùng";
+            this.LASTDATE.MinimumWidth = 6;
+            this.LASTDATE.Name = "LASTDATE";
+            this.LASTDATE.Width = 125;
+            // 
             // frmSEMAST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -214,13 +225,14 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnSECURITIES_INFO;
         private System.Windows.Forms.DataGridViewTextBoxColumn AFACCTNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ACCTNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODEID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SYMBOL;
         private System.Windows.Forms.DataGridViewTextBoxColumn TOTALBUYAMT;
         private System.Windows.Forms.DataGridViewTextBoxColumn OPNDATE;
         private System.Windows.Forms.DataGridViewTextBoxColumn CLSDATE;
         private System.Windows.Forms.DataGridViewTextBoxColumn LASTDATE;
-        private System.Windows.Forms.Button btnSECURITIES_INFO;
     }
 }

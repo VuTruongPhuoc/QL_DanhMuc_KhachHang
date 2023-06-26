@@ -8,6 +8,7 @@
             <s:element minOccurs="0" maxOccurs="1" name="afacctno" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="acctno" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="codeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="symbol" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="totalbuyamt" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="opndate" type="s:dateTime" />
             <s:element minOccurs="1" maxOccurs="1" name="clsdate" type="s:dateTime" />
@@ -24,6 +25,7 @@
             <s:element minOccurs="0" maxOccurs="1" name="afacctno" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="acctno" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="codeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="symbol" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="totalbuyamt" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="opndate" type="s:dateTime" />
             <s:element minOccurs="1" maxOccurs="1" name="clsdate" type="s:dateTime" />

@@ -40,7 +40,6 @@ namespace QLTKKH
             dgv.DataSource = read.Reader("CIMAST");
             txtBALANCE.Text = dgv.Rows[frmCIMAST.row].Cells[2].Value.ToString();
             MessageBox.Show("Thành công.", "Thông báo");
-            cfmastsv.SucMua();
         }
 
         private void btnTruTien_Click(object sender, EventArgs e)
@@ -64,7 +63,6 @@ namespace QLTKKH
             txtBALANCE.Text = dgv.Rows[frmCIMAST.row].Cells[2].Value.ToString();
             txtDEPOFEEAMT.Text = dgv.Rows[frmCIMAST.row].Cells[5].Value.ToString();
             MessageBox.Show("Thành công", "Thông báo");
-            cfmastsv.SucMua();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

@@ -84,11 +84,12 @@ namespace QLTKKH.semastservice {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ThemSEMAST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void ThemSEMAST(string afacctno, string acctno, string codeid, int totalbuyamt, System.DateTime opndate, System.DateTime clsdate, System.DateTime lastdate) {
+        public void ThemSEMAST(string afacctno, string acctno, string codeid, string symbol, int totalbuyamt, System.DateTime opndate, System.DateTime clsdate, System.DateTime lastdate) {
             this.Invoke("ThemSEMAST", new object[] {
                         afacctno,
                         acctno,
                         codeid,
+                        symbol,
                         totalbuyamt,
                         opndate,
                         clsdate,
@@ -96,12 +97,12 @@ namespace QLTKKH.semastservice {
         }
         
         /// <remarks/>
-        public void ThemSEMASTAsync(string afacctno, string acctno, string codeid, int totalbuyamt, System.DateTime opndate, System.DateTime clsdate, System.DateTime lastdate) {
-            this.ThemSEMASTAsync(afacctno, acctno, codeid, totalbuyamt, opndate, clsdate, lastdate, null);
+        public void ThemSEMASTAsync(string afacctno, string acctno, string codeid, string symbol, int totalbuyamt, System.DateTime opndate, System.DateTime clsdate, System.DateTime lastdate) {
+            this.ThemSEMASTAsync(afacctno, acctno, codeid, symbol, totalbuyamt, opndate, clsdate, lastdate, null);
         }
         
         /// <remarks/>
-        public void ThemSEMASTAsync(string afacctno, string acctno, string codeid, int totalbuyamt, System.DateTime opndate, System.DateTime clsdate, System.DateTime lastdate, object userState) {
+        public void ThemSEMASTAsync(string afacctno, string acctno, string codeid, string symbol, int totalbuyamt, System.DateTime opndate, System.DateTime clsdate, System.DateTime lastdate, object userState) {
             if ((this.ThemSEMASTOperationCompleted == null)) {
                 this.ThemSEMASTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnThemSEMASTOperationCompleted);
             }
@@ -109,6 +110,7 @@ namespace QLTKKH.semastservice {
                         afacctno,
                         acctno,
                         codeid,
+                        symbol,
                         totalbuyamt,
                         opndate,
                         clsdate,
@@ -124,11 +126,12 @@ namespace QLTKKH.semastservice {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/SuaSEMAST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void SuaSEMAST(string afacctno, string acctno, string codeid, int totalbuyamt, System.DateTime opndate, System.DateTime clsdate, System.DateTime lastdate) {
+        public void SuaSEMAST(string afacctno, string acctno, string codeid, string symbol, int totalbuyamt, System.DateTime opndate, System.DateTime clsdate, System.DateTime lastdate) {
             this.Invoke("SuaSEMAST", new object[] {
                         afacctno,
                         acctno,
                         codeid,
+                        symbol,
                         totalbuyamt,
                         opndate,
                         clsdate,
@@ -136,12 +139,12 @@ namespace QLTKKH.semastservice {
         }
         
         /// <remarks/>
-        public void SuaSEMASTAsync(string afacctno, string acctno, string codeid, int totalbuyamt, System.DateTime opndate, System.DateTime clsdate, System.DateTime lastdate) {
-            this.SuaSEMASTAsync(afacctno, acctno, codeid, totalbuyamt, opndate, clsdate, lastdate, null);
+        public void SuaSEMASTAsync(string afacctno, string acctno, string codeid, string symbol, int totalbuyamt, System.DateTime opndate, System.DateTime clsdate, System.DateTime lastdate) {
+            this.SuaSEMASTAsync(afacctno, acctno, codeid, symbol, totalbuyamt, opndate, clsdate, lastdate, null);
         }
         
         /// <remarks/>
-        public void SuaSEMASTAsync(string afacctno, string acctno, string codeid, int totalbuyamt, System.DateTime opndate, System.DateTime clsdate, System.DateTime lastdate, object userState) {
+        public void SuaSEMASTAsync(string afacctno, string acctno, string codeid, string symbol, int totalbuyamt, System.DateTime opndate, System.DateTime clsdate, System.DateTime lastdate, object userState) {
             if ((this.SuaSEMASTOperationCompleted == null)) {
                 this.SuaSEMASTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSuaSEMASTOperationCompleted);
             }
@@ -149,6 +152,7 @@ namespace QLTKKH.semastservice {
                         afacctno,
                         acctno,
                         codeid,
+                        symbol,
                         totalbuyamt,
                         opndate,
                         clsdate,

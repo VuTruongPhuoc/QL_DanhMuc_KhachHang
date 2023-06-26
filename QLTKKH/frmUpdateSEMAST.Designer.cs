@@ -145,7 +145,6 @@
             this.btnACCTNO.TabIndex = 75;
             this.btnACCTNO.Text = "....";
             this.btnACCTNO.UseVisualStyleBackColor = true;
-            this.btnACCTNO.Click += new System.EventHandler(this.btnACCTNO_Click);
             // 
             // cboCODEID
             // 
@@ -155,10 +154,11 @@
             this.cboCODEID.Name = "cboCODEID";
             this.cboCODEID.Size = new System.Drawing.Size(200, 33);
             this.cboCODEID.TabIndex = 73;
+            this.cboCODEID.SelectedIndexChanged += new System.EventHandler(this.cboCODEID_SelectedIndexChanged);
             // 
             // txtTOTALBUYAMT
             // 
-            this.txtTOTALBUYAMT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTOTALBUYAMT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTOTALBUYAMT.Location = new System.Drawing.Point(246, 220);
             this.txtTOTALBUYAMT.Multiline = true;
             this.txtTOTALBUYAMT.Name = "txtTOTALBUYAMT";
@@ -167,7 +167,7 @@
             // 
             // txtACCTNO
             // 
-            this.txtACCTNO.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtACCTNO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtACCTNO.Location = new System.Drawing.Point(244, 120);
             this.txtACCTNO.Multiline = true;
             this.txtACCTNO.Name = "txtACCTNO";
@@ -222,6 +222,7 @@
             this.cboAFACCTNO.Name = "cboAFACCTNO";
             this.cboAFACCTNO.Size = new System.Drawing.Size(210, 33);
             this.cboAFACCTNO.TabIndex = 52;
+            this.cboAFACCTNO.SelectedIndexChanged += new System.EventHandler(this.cboAFACCTNO_SelectedIndexChanged);
             // 
             // lbCUSTODYCD
             // 
