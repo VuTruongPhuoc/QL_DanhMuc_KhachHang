@@ -38,6 +38,7 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
+            this.btnDatLenh = new System.Windows.Forms.Button();
             this.grbKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAFMAST)).BeginInit();
             this.panel1.SuspendLayout();
@@ -108,6 +109,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel1.Controls.Add(this.btnDatLenh);
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnSua);
@@ -147,6 +149,16 @@
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
+            // btnDatLenh
+            // 
+            this.btnDatLenh.Location = new System.Drawing.Point(756, 27);
+            this.btnDatLenh.Name = "btnDatLenh";
+            this.btnDatLenh.Size = new System.Drawing.Size(132, 30);
+            this.btnDatLenh.TabIndex = 4;
+            this.btnDatLenh.Text = "Đặt lệnh";
+            this.btnDatLenh.UseVisualStyleBackColor = true;
+            this.btnDatLenh.Click += new System.EventHandler(this.btnDatLenh_Click);
+            // 
             // frmAFMAST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -177,5 +189,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ACCTNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn MARTYPE;
         private System.Windows.Forms.DataGridViewTextBoxColumn MRCRLIMITMAX;
+        private System.Windows.Forms.Button btnDatLenh;
     }
 }

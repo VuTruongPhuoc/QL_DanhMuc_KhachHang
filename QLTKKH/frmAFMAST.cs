@@ -62,7 +62,14 @@ namespace QLTKKH
         private void dgvAFMAST_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             row = dgvAFMAST.CurrentCell.RowIndex;
-            frmAccount frm = new frmAccount(dgvAFMAST);
+            frmSECURITIES_Account frm = new frmSECURITIES_Account(dgvAFMAST);
+            frm.Show();
+        }
+
+        private void btnDatLenh_Click(object sender, EventArgs e)
+        {
+            row = dgvAFMAST.CurrentCell.RowIndex;
+            frmSetCommand frm = new frmSetCommand(dgvAFMAST);
             frm.Show();
         }
     }

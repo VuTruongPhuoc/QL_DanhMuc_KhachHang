@@ -50,11 +50,11 @@
   <ItemGroup>
     <Compile Include="Commonfunction.cs" />
     <Compile Include="DataRead.cs" />
-    <Compile Include="frmAccount.cs">
+    <Compile Include="frmSECURITIES_Account.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAccount.Designer.cs">
-      <DependentUpon>frmAccount.cs</DependentUpon>
+    <Compile Include="frmSECURITIES_Account.Designer.cs">
+      <DependentUpon>frmSECURITIES_Account.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCIMAST.cs">
       <SubType>Form</SubType>
@@ -115,6 +115,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\odmastservice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\securities_infoservice\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -167,8 +172,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmAccount.resx">
-      <DependentUpon>frmAccount.cs</DependentUpon>
+    <EmbeddedResource Include="frmSECURITIES_Account.resx">
+      <DependentUpon>frmSECURITIES_Account.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCIMAST.resx">
       <DependentUpon>frmCIMAST.cs</DependentUpon>
@@ -176,11 +181,17 @@
     <EmbeddedResource Include="frmEnterAccount.resx">
       <DependentUpon>frmEnterAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmODMAST.resx">
+      <DependentUpon>frmODMAST.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSECURITIES_INFO.resx">
       <DependentUpon>frmSECURITIES_INFO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSEMAST.resx">
       <DependentUpon>frmSEMAST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetCommand.resx">
+      <DependentUpon>frmSetCommand.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpdateAFMAST.resx">
       <DependentUpon>frmUpdateAFMAST.cs</DependentUpon>
@@ -234,6 +245,11 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\cfmastservice\_CFMASTWebService.wsdl" />
+    <None Include="Web References\odmastservice\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\odmastservice\_ODMASTWebService.wsdl" />
     <None Include="Web References\securities_infoservice\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -293,6 +309,17 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>QLTKKH_cfmastservice_CFMASTWebService</CachedSettingsPropName>
     </WebReferenceUrl>
+    <WebReferenceUrl Include="https://localhost:44374/_ODMASTWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\odmastservice\</RelPath>
+      <UpdateFromURL>https://localhost:44374/_ODMASTWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QLTKKH_odmastservice__ODMASTWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="https://localhost:44374/_SECURITIES_INFOWebService.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\securities_infoservice\</RelPath>
@@ -330,6 +357,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Web References\securities_infoservice\_SECURITIES_INFOWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\odmastservice\_ODMASTWebService.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

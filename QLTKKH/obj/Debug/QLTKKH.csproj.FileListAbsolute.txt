@@ -3,7 +3,6 @@ P:\C#\QLTKKH\QLTKKH\bin\Debug\QLTKKH.exe
 P:\C#\QLTKKH\QLTKKH\bin\Debug\QLTKKH.pdb
 P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.csproj.AssemblyReference.cache
 P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.csproj.SuggestedBindingRedirects.cache
-P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmAccount.resources
 P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmCIMAST.resources
 P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmEnterAccount.resources
 P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmSECURITIES_INFO.resources
@@ -21,3 +20,6 @@ P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.csproj.GenerateResource.cache
 P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.csproj.CoreCompileInputs.cache
 P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.exe
 P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.pdb
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmODMAST.resources
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmSetCommand.resources
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmSECURITIES_Account.resources

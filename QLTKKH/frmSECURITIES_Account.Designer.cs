@@ -1,6 +1,6 @@
 ﻿namespace QLTKKH
 {
-    partial class frmAccount
+    partial class frmSECURITIES_Account
     {
         /// <summary>
         /// Required designer variable.

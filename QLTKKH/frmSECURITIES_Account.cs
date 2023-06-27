@@ -5,12 +5,12 @@ using System.Windows.Forms;
 
 namespace QLTKKH
 {
-    public partial class frmAccount : Form
+    public partial class frmSECURITIES_Account : Form
     {
         webservice.WebService1 websv = new webservice.WebService1 ();
         DataRead read = new DataRead();
         DataGridView dgv = new DataGridView ();
-        public frmAccount(DataGridView dgvCFMAST)
+        public frmSECURITIES_Account(DataGridView dgvCFMAST)
         {
             InitializeComponent();
             dgv = dgvCFMAST;

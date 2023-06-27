@@ -94,7 +94,6 @@
             this.đặtLệnhToolStripMenuItem.Name = "đặtLệnhToolStripMenuItem";
             this.đặtLệnhToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.đặtLệnhToolStripMenuItem.Text = "Đặt lệnh";
-            this.đặtLệnhToolStripMenuItem.Click += new System.EventHandler(this.đặtLệnhToolStripMenuItem_Click);
             // 
             // _frmMain
             // 
