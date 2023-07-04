@@ -36,10 +36,10 @@ namespace QLTKKH
                 txtACCTNO.Text = dgv.Rows[frmSEMAST.row].Cells[1].Value.ToString().Trim();
                 btnACCTNO.Enabled = false;
                 cboCODEID.SelectedValue = dgv.Rows[frmSEMAST.row].Cells[2].Value.ToString().Trim();
-                txtTOTALBUYAMT.Text = dgv.Rows[frmSEMAST.row].Cells[3].Value.ToString().Trim();
-                dtpOPNDATE.Text = dgv.Rows[frmSEMAST.row].Cells[4].Value.ToString().Trim();
-                dtpCLSDATE.Text = dgv.Rows[frmSEMAST.row].Cells[5].Value.ToString().Trim();
-                dtpLASTDATE.Text = dgv.Rows[frmSEMAST.row].Cells[6].Value.ToString().Trim();
+                txtTOTALBUYAMT.Text = dgv.Rows[frmSEMAST.row].Cells[4].Value.ToString().Trim();
+                dtpOPNDATE.Text = dgv.Rows[frmSEMAST.row].Cells[5].Value.ToString().Trim();
+                dtpCLSDATE.Text = dgv.Rows[frmSEMAST.row].Cells[6].Value.ToString().Trim();
+                dtpLASTDATE.Text = dgv.Rows[frmSEMAST.row].Cells[7].Value.ToString().Trim();
             }    
             
         }

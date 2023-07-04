@@ -33,6 +33,10 @@ namespace QLTKKH.odmastservice {
         
         private System.Threading.SendOrPostCallback HuyODMASTOperationCompleted;
         
+        private System.Threading.SendOrPostCallback Update_ODMASTOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ThanhToanOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -78,9 +82,16 @@ namespace QLTKKH.odmastservice {
         public event HuyODMASTCompletedEventHandler HuyODMASTCompleted;
         
         /// <remarks/>
+        public event Update_ODMASTCompletedEventHandler Update_ODMASTCompleted;
+        
+        /// <remarks/>
+        public event ThanhToanCompletedEventHandler ThanhToanCompleted;
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ThemODMAST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void ThemODMAST(string afacctno, string orderid, System.DateTime lastchange, string exectype, string codeid, string symbol, long orderqtty, long price, long execqtty, long execamt, long remainqtty, long cancelqtty) {
+        public void ThemODMAST(string custid, string afacctno, string orderid, System.DateTime lastchange, string exectype, string codeid, string symbol, long orderqtty, long quoteprice, long execqtty, long execamt, long remainqtty, long cancelqtty, double bratio, char edstatus) {
             this.Invoke("ThemODMAST", new object[] {
+                        custid,
                         afacctno,
                         orderid,
                         lastchange,
@@ -88,24 +99,43 @@ namespace QLTKKH.odmastservice {
                         codeid,
                         symbol,
                         orderqtty,
-                        price,
+                        quoteprice,
                         execqtty,
                         execamt,
                         remainqtty,
-                        cancelqtty});
+                        cancelqtty,
+                        bratio,
+                        edstatus});
         }
         
         /// <remarks/>
-        public void ThemODMASTAsync(string afacctno, string orderid, System.DateTime lastchange, string exectype, string codeid, string symbol, long orderqtty, long price, long execqtty, long execamt, long remainqtty, long cancelqtty) {
-            this.ThemODMASTAsync(afacctno, orderid, lastchange, exectype, codeid, symbol, orderqtty, price, execqtty, execamt, remainqtty, cancelqtty, null);
+        public void ThemODMASTAsync(string custid, string afacctno, string orderid, System.DateTime lastchange, string exectype, string codeid, string symbol, long orderqtty, long quoteprice, long execqtty, long execamt, long remainqtty, long cancelqtty, double bratio, char edstatus) {
+            this.ThemODMASTAsync(custid, afacctno, orderid, lastchange, exectype, codeid, symbol, orderqtty, quoteprice, execqtty, execamt, remainqtty, cancelqtty, bratio, edstatus, null);
         }
         
         /// <remarks/>
-        public void ThemODMASTAsync(string afacctno, string orderid, System.DateTime lastchange, string exectype, string codeid, string symbol, long orderqtty, long price, long execqtty, long execamt, long remainqtty, long cancelqtty, object userState) {
+        public void ThemODMASTAsync(
+                    string custid, 
+                    string afacctno, 
+                    string orderid, 
+                    System.DateTime lastchange, 
+                    string exectype, 
+                    string codeid, 
+                    string symbol, 
+                    long orderqtty, 
+                    long quoteprice, 
+                    long execqtty, 
+                    long execamt, 
+                    long remainqtty, 
+                    long cancelqtty, 
+                    double bratio, 
+                    char edstatus, 
+                    object userState) {
             if ((this.ThemODMASTOperationCompleted == null)) {
                 this.ThemODMASTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnThemODMASTOperationCompleted);
             }
             this.InvokeAsync("ThemODMAST", new object[] {
+                        custid,
                         afacctno,
                         orderid,
                         lastchange,
@@ -113,11 +143,13 @@ namespace QLTKKH.odmastservice {
                         codeid,
                         symbol,
                         orderqtty,
-                        price,
+                        quoteprice,
                         execqtty,
                         execamt,
                         remainqtty,
-                        cancelqtty}, this.ThemODMASTOperationCompleted, userState);
+                        cancelqtty,
+                        bratio,
+                        edstatus}, this.ThemODMASTOperationCompleted, userState);
         }
         
         private void OnThemODMASTOperationCompleted(object arg) {
@@ -156,6 +188,76 @@ namespace QLTKKH.odmastservice {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Update_ODMAST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Update_ODMAST(string custid, string orderid, string exectype, string symbol, long orderqtty, long quoteprice, long execqtty, long execamt, long remainqtty) {
+            this.Invoke("Update_ODMAST", new object[] {
+                        custid,
+                        orderid,
+                        exectype,
+                        symbol,
+                        orderqtty,
+                        quoteprice,
+                        execqtty,
+                        execamt,
+                        remainqtty});
+        }
+        
+        /// <remarks/>
+        public void Update_ODMASTAsync(string custid, string orderid, string exectype, string symbol, long orderqtty, long quoteprice, long execqtty, long execamt, long remainqtty) {
+            this.Update_ODMASTAsync(custid, orderid, exectype, symbol, orderqtty, quoteprice, execqtty, execamt, remainqtty, null);
+        }
+        
+        /// <remarks/>
+        public void Update_ODMASTAsync(string custid, string orderid, string exectype, string symbol, long orderqtty, long quoteprice, long execqtty, long execamt, long remainqtty, object userState) {
+            if ((this.Update_ODMASTOperationCompleted == null)) {
+                this.Update_ODMASTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdate_ODMASTOperationCompleted);
+            }
+            this.InvokeAsync("Update_ODMAST", new object[] {
+                        custid,
+                        orderid,
+                        exectype,
+                        symbol,
+                        orderqtty,
+                        quoteprice,
+                        execqtty,
+                        execamt,
+                        remainqtty}, this.Update_ODMASTOperationCompleted, userState);
+        }
+        
+        private void OnUpdate_ODMASTOperationCompleted(object arg) {
+            if ((this.Update_ODMASTCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.Update_ODMASTCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ThanhToan", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void ThanhToan() {
+            this.Invoke("ThanhToan", new object[0]);
+        }
+        
+        /// <remarks/>
+        public void ThanhToanAsync() {
+            this.ThanhToanAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ThanhToanAsync(object userState) {
+            if ((this.ThanhToanOperationCompleted == null)) {
+                this.ThanhToanOperationCompleted = new System.Threading.SendOrPostCallback(this.OnThanhToanOperationCompleted);
+            }
+            this.InvokeAsync("ThanhToan", new object[0], this.ThanhToanOperationCompleted, userState);
+        }
+        
+        private void OnThanhToanOperationCompleted(object arg) {
+            if ((this.ThanhToanCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ThanhToanCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -181,6 +283,14 @@ namespace QLTKKH.odmastservice {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void HuyODMASTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void Update_ODMASTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void ThanhToanCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591

@@ -84,7 +84,7 @@ namespace QLTKKH.afmastservice {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ThemAFMAST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void ThemAFMAST(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long cidepofeeacr, long depofeeamt, long currentdebt, System.DateTime lastchange) {
+        public void ThemAFMAST(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long pp, long cidepofeeacr, long depofeeamt, long currentdebt, System.DateTime lastchange) {
             this.Invoke("ThemAFMAST", new object[] {
                         custid,
                         acctno,
@@ -92,6 +92,7 @@ namespace QLTKKH.afmastservice {
                         mrcrlimitmax,
                         afacctno,
                         balance,
+                        pp,
                         cidepofeeacr,
                         depofeeamt,
                         currentdebt,
@@ -99,12 +100,12 @@ namespace QLTKKH.afmastservice {
         }
         
         /// <remarks/>
-        public void ThemAFMASTAsync(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long cidepofeeacr, long depofeeamt, long currentdebt, System.DateTime lastchange) {
-            this.ThemAFMASTAsync(custid, acctno, martype, mrcrlimitmax, afacctno, balance, cidepofeeacr, depofeeamt, currentdebt, lastchange, null);
+        public void ThemAFMASTAsync(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long pp, long cidepofeeacr, long depofeeamt, long currentdebt, System.DateTime lastchange) {
+            this.ThemAFMASTAsync(custid, acctno, martype, mrcrlimitmax, afacctno, balance, pp, cidepofeeacr, depofeeamt, currentdebt, lastchange, null);
         }
         
         /// <remarks/>
-        public void ThemAFMASTAsync(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long cidepofeeacr, long depofeeamt, long currentdebt, System.DateTime lastchange, object userState) {
+        public void ThemAFMASTAsync(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long pp, long cidepofeeacr, long depofeeamt, long currentdebt, System.DateTime lastchange, object userState) {
             if ((this.ThemAFMASTOperationCompleted == null)) {
                 this.ThemAFMASTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnThemAFMASTOperationCompleted);
             }
@@ -115,6 +116,7 @@ namespace QLTKKH.afmastservice {
                         mrcrlimitmax,
                         afacctno,
                         balance,
+                        pp,
                         cidepofeeacr,
                         depofeeamt,
                         currentdebt,

@@ -70,17 +70,16 @@ namespace QLTKKH
             string afacctno = acctno;
 
             string custid = dgvCFMAST.CurrentRow.Cells[0].Value.ToString();
-            string martype = "O".ToString();
+            string martype = "O";
             long mrcrlimitmax = 1000000000;
             long cidepofeeacr = 0;
             long depofeeamt = 0;
             long currentdebt = 0;
             long balance = 130000000;
-            long pp = balance - depofeeamt - currentdebt;
+            long pp = 0;
             DateTime lastchange = DateTime.Now;
             cfmastsv.DuyetCFMAST(custid, acctno, martype, mrcrlimitmax, afacctno, balance,pp, cidepofeeacr, depofeeamt,currentdebt, lastchange);
             MessageBox.Show("Thành công.", "Thông báo");
-            cfmastsv.SucMua();
         }
     }
 }

@@ -41,5 +41,15 @@ namespace QLTKKH
             frm.Show();
         }
 
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void đặtLệnhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmODMAST frm = new frmODMAST();
+            frm.Show();
+        }
     }
 }

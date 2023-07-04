@@ -23,7 +23,7 @@ namespace QLTKKH
 
         private void frmAccount_Load(object sender, EventArgs e)
         {
-            DataTable dt = read.Reader("CustomerAccount where AFACCTNO = '" + dgv.Rows[frmAFMAST.row].Cells[1].Value.ToString() + "'");
+            DataTable dt = read.Reader("CustomerAccount where AFACCTNO = '" + dgv.Rows[frmAFMAST.row].Cells["ACCTNO"].Value.ToString() + "'");
             lbBALANCE.Text = dt.Rows[0][4].ToString();
             lbDEPOFEEAMT.Text = dt.Rows[0][5].ToString();
             lbPP.Text = dt.Rows[0][6].ToString();

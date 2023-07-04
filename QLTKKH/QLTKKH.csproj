@@ -50,6 +50,12 @@
   <ItemGroup>
     <Compile Include="Commonfunction.cs" />
     <Compile Include="DataRead.cs" />
+    <Compile Include="frmODMAST_SHORT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmODMAST_SHORT.Designer.cs">
+      <DependentUpon>frmODMAST_SHORT.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSECURITIES_Account.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmODMAST_SHORT.resx">
+      <DependentUpon>frmODMAST_SHORT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSECURITIES_Account.resx">
       <DependentUpon>frmSECURITIES_Account.cs</DependentUpon>
     </EmbeddedResource>

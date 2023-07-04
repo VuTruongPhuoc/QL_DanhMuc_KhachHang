@@ -13,6 +13,7 @@ namespace QLTKKH
     public partial class frmODMAST : Form
     {
         odmastservice._ODMASTWebService odmastsv = new odmastservice._ODMASTWebService();
+        cfmastservice.CFMASTWebService cfmastsv = new cfmastservice.CFMASTWebService();
         DataRead read = new DataRead();
         public frmODMAST()
         {
@@ -53,12 +54,47 @@ namespace QLTKKH
 
         private void btnHuyLenh_Click(object sender, EventArgs e)
         {
-            string orderid = dgvODMAST.CurrentRow.Cells[1].Value.ToString();
-            if (!(MessageBox.Show("Bạn có muốn huỷ lệnh không? ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+            string orderid = dgvODMAST.CurrentRow.Cells["ORDERID"].Value.ToString();
+            if (!(MessageBox.Show("Bạn có muốn huỷ lệnh không? ", "Thông báo " + dgvODMAST.CurrentRow.Cells["CUSTID"].Value.ToString(), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
                 return;
             odmastsv.HuyODMAST(orderid);
+            cfmastsv.SucMua();
             MessageBox.Show("Thành công", "Thông báo");
             loaddgv();
+        }
+
+        private void dgvODMAST_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            if(dgvODMAST.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                if (dgvODMAST.Columns[e.ColumnIndex].Name == "ORDERMATCH")
+                {
+                    string custid = dgvODMAST.CurrentRow.Cells["CUSTID"].Value.ToString();
+                    string orderid = dgvODMAST.CurrentRow.Cells["ORDERID"].Value.ToString();
+                    string exectype = dgvODMAST.CurrentRow.Cells["EXECTYPE"].Value.ToString();
+                    string symbol = dgvODMAST.CurrentRow.Cells["SYMBOL"].Value.ToString(); ;
+                    long orderqtty = long.Parse(dgvODMAST.CurrentRow.Cells["ORDERQTTY"].Value.ToString());
+                    long quoteprice = long.Parse(dgvODMAST.CurrentRow.Cells["QUOTEPRICE"].Value.ToString());
+                    long execqtty = long.Parse(dgvODMAST.CurrentRow.Cells["EXECQTTY"].Value.ToString());
+                    long execamt = long.Parse(dgvODMAST.CurrentRow.Cells["EXECAMT"].Value.ToString());
+                    long remainqtty = long.Parse(dgvODMAST.CurrentRow.Cells["REMAINQTTY"].Value.ToString());
+                    odmastsv.Update_ODMAST(custid,orderid, exectype, symbol, orderqtty, quoteprice, execqtty, execamt, remainqtty);
+                    loaddgv();
+                }
+            }    
+             
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            if (!(MessageBox.Show("Bạn có muốn thực hiện thanh toán không? ", "Thông báo ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+                return;
+            odmastsv.ThanhToan();
+            cfmastsv.SucMua();
+            MessageBox.Show("Thành công.", "Thông báo");
+            loaddgv();
+            
         }
     }
 }

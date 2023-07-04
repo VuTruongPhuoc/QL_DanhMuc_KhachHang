@@ -21,14 +21,14 @@ namespace WebSV
         WebService1 websv = new WebService1();
         [WebMethod]
         [Obsolete]
-        public void ThemAFMAST(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long cidepofeeacr, long depofeeamt,long currentdebt, DateTime lastchange)
+        public void ThemAFMAST(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance,long pp, long cidepofeeacr, long depofeeamt,long currentdebt, DateTime lastchange)
         {
             OracleConnection conn = null;
             OracleCommand command = new OracleCommand();
             conn = new OracleConnection(websv.getConnect());
             command.Connection = conn;
             command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "DuyetCFMAST";
+            command.CommandText = "ThemAFMAST";
 
             command.Parameters.Add("p_custid", OracleDbType.Varchar2).Value = custid;
             command.Parameters.Add("p_acctno", OracleDbType.Varchar2).Value = acctno;
@@ -36,6 +36,7 @@ namespace WebSV
             command.Parameters.Add("p_mrcrlimitmax", OracleDbType.Long).Value = mrcrlimitmax;
             command.Parameters.Add("p_afacctno", OracleDbType.Varchar2).Value = afacctno;
             command.Parameters.Add("p_balance", OracleDbType.Long).Value = balance;
+            command.Parameters.Add("p_pp",OracleDbType.Long).Value = pp;
             command.Parameters.Add("p_cidepofeeacr", OracleDbType.Long).Value = cidepofeeacr;
             command.Parameters.Add("p_depofeeamt", OracleDbType.Long).Value = depofeeamt;
             command.Parameters.Add("p_currentdebt", OracleDbType.Long).Value = currentdebt;

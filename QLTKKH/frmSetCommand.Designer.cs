@@ -30,7 +30,7 @@
         {
             this.btnMua = new System.Windows.Forms.Button();
             this.btnBan = new System.Windows.Forms.Button();
-            this.txtPRICE = new System.Windows.Forms.TextBox();
+            this.txtQUOTEPRICE = new System.Windows.Forms.TextBox();
             this.txtORDERQTTY = new System.Windows.Forms.TextBox();
             this.txtSYMBOL = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -68,15 +68,14 @@
             this.btnBan.UseVisualStyleBackColor = true;
             this.btnBan.Click += new System.EventHandler(this.btnBan_Click);
             // 
-            // txtPRICE
+            // txtQUOTEPRICE
             // 
-            this.txtPRICE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPRICE.Location = new System.Drawing.Point(278, 275);
-            this.txtPRICE.Multiline = true;
-            this.txtPRICE.Name = "txtPRICE";
-            this.txtPRICE.ReadOnly = true;
-            this.txtPRICE.Size = new System.Drawing.Size(238, 40);
-            this.txtPRICE.TabIndex = 55;
+            this.txtQUOTEPRICE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQUOTEPRICE.Location = new System.Drawing.Point(278, 275);
+            this.txtQUOTEPRICE.Multiline = true;
+            this.txtQUOTEPRICE.Name = "txtQUOTEPRICE";
+            this.txtQUOTEPRICE.Size = new System.Drawing.Size(238, 40);
+            this.txtQUOTEPRICE.TabIndex = 55;
             // 
             // txtORDERQTTY
             // 
@@ -86,7 +85,6 @@
             this.txtORDERQTTY.Name = "txtORDERQTTY";
             this.txtORDERQTTY.Size = new System.Drawing.Size(238, 38);
             this.txtORDERQTTY.TabIndex = 54;
-            this.txtORDERQTTY.TextChanged += new System.EventHandler(this.txtORDERQTTY_TextChanged);
             // 
             // txtSYMBOL
             // 
@@ -104,9 +102,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(80, 290);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 25);
+            this.label4.Size = new System.Drawing.Size(122, 25);
             this.label4.TabIndex = 51;
-            this.label4.Text = "Giá:";
+            this.label4.Text = "Giá đặt lệnh:";
             // 
             // label3
             // 
@@ -164,12 +162,12 @@
             // 
             // grbLenhDat
             // 
-            this.grbLenhDat.Controls.Add(this.label1);
             this.grbLenhDat.Controls.Add(this.txtAFACCTNO);
+            this.grbLenhDat.Controls.Add(this.label1);
             this.grbLenhDat.Controls.Add(this.lbCUSTODYCD);
             this.grbLenhDat.Controls.Add(this.label3);
             this.grbLenhDat.Controls.Add(this.txtSYMBOL);
-            this.grbLenhDat.Controls.Add(this.txtPRICE);
+            this.grbLenhDat.Controls.Add(this.txtQUOTEPRICE);
             this.grbLenhDat.Controls.Add(this.txtORDERQTTY);
             this.grbLenhDat.Controls.Add(this.label4);
             this.grbLenhDat.Dock = System.Windows.Forms.DockStyle.Top;
@@ -199,7 +197,7 @@
             this.txtAFACCTNO.Name = "txtAFACCTNO";
             this.txtAFACCTNO.ReadOnly = true;
             this.txtAFACCTNO.Size = new System.Drawing.Size(238, 39);
-            this.txtAFACCTNO.TabIndex = 57;
+            this.txtAFACCTNO.TabIndex = 58;
             // 
             // frmSetCommand
             // 
@@ -224,7 +222,7 @@
 
         private System.Windows.Forms.Button btnMua;
         private System.Windows.Forms.Button btnBan;
-        private System.Windows.Forms.TextBox txtPRICE;
+        private System.Windows.Forms.TextBox txtQUOTEPRICE;
         private System.Windows.Forms.TextBox txtORDERQTTY;
         private System.Windows.Forms.TextBox txtSYMBOL;
         private System.Windows.Forms.Label label4;

@@ -37,6 +37,7 @@ namespace QLTKKH
             long depofeeamt = long.Parse(txtDEPOFEEAMT.Text.ToString().Trim());
             DateTime lastchange = DateTime.Now;
             cfmastsv.SuaThemTienCIMAST(afacctno, acctno, money, depofeeamt, lastchange);
+            cfmastsv.SucMua();
             dgv.DataSource = read.Reader("CIMAST");
             txtBALANCE.Text = dgv.Rows[frmCIMAST.row].Cells[2].Value.ToString();
             MessageBox.Show("Thành công.", "Thông báo");
@@ -59,6 +60,7 @@ namespace QLTKKH
             long depofeeamt = long.Parse(txtDEPOFEEAMT.Text.ToString().Trim());
             DateTime lastchange = DateTime.Now;
             cfmastsv.SuaTruTienCIMAST(afacctno, acctno, money, depofeeamt, lastchange);
+            cfmastsv.SucMua();
             dgv.DataSource = read.Reader("CIMAST");
             txtBALANCE.Text = dgv.Rows[frmCIMAST.row].Cells[2].Value.ToString();
             txtDEPOFEEAMT.Text = dgv.Rows[frmCIMAST.row].Cells[5].Value.ToString();

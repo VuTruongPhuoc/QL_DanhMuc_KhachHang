@@ -21,7 +21,7 @@ namespace WebSV
         WebService1 websv = new WebService1();
         [WebMethod]
         [Obsolete]
-        public void DuyetCFMAST(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance,long pp,long cidepofeeacr,long depofeeamt,long currentdebt, DateTime lastchange)
+        public void DuyetCFMAST(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long pp , long cidepofeeacr,long depofeeamt,long currentdebt, DateTime lastchange)
         {
             OracleConnection conn = null;
             OracleCommand command = new OracleCommand();

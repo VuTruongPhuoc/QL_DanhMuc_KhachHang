@@ -1,6 +1,6 @@
 ﻿namespace QLTKKH
 {
-    partial class frmODMAST
+    partial class frmODMAST_SHORT
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,13 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnHuyLenh = new System.Windows.Forms.Button();
-            this.lbDatLenh = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvODMAST = new System.Windows.Forms.DataGridView();
-            this.btnThanhToan = new System.Windows.Forms.Button();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CUSTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AFACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ORDERID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LAST_CHANGE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CODEID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EXECTYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SYMBOL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ORDERQTTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,47 +44,13 @@
             this.EXECAMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.REMAINQTTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CANCELQTTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BRATIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EDSTATUS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AFACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CODEID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ORDERMATCH = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.panel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHuyLenh = new System.Windows.Forms.Button();
+            this.lbDatLenh = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvODMAST)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel1.Controls.Add(this.btnHuyLenh);
-            this.panel1.Controls.Add(this.lbDatLenh);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1340, 72);
-            this.panel1.TabIndex = 34;
-            // 
-            // btnHuyLenh
-            // 
-            this.btnHuyLenh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuyLenh.Location = new System.Drawing.Point(1058, 14);
-            this.btnHuyLenh.Name = "btnHuyLenh";
-            this.btnHuyLenh.Size = new System.Drawing.Size(165, 42);
-            this.btnHuyLenh.TabIndex = 1;
-            this.btnHuyLenh.Text = "Huỷ lệnh";
-            this.btnHuyLenh.UseVisualStyleBackColor = true;
-            this.btnHuyLenh.Click += new System.EventHandler(this.btnHuyLenh_Click);
-            // 
-            // lbDatLenh
-            // 
-            this.lbDatLenh.AutoSize = true;
-            this.lbDatLenh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDatLenh.Location = new System.Drawing.Point(3, 24);
-            this.lbDatLenh.Name = "lbDatLenh";
-            this.lbDatLenh.Size = new System.Drawing.Size(165, 20);
-            this.lbDatLenh.TabIndex = 0;
-            this.lbDatLenh.Text = "Thông tin đặt lệnh.";
             // 
             // groupBox1
             // 
@@ -97,8 +59,8 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 72);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1340, 417);
-            this.groupBox1.TabIndex = 35;
+            this.groupBox1.Size = new System.Drawing.Size(1128, 486);
+            this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách đặt lệnh";
             // 
@@ -108,9 +70,10 @@
             this.dgvODMAST.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvODMAST.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
-            this.CUSTID,
+            this.AFACCTNO,
             this.ORDERID,
             this.LAST_CHANGE,
+            this.CODEID,
             this.EXECTYPE,
             this.SYMBOL,
             this.ORDERQTTY,
@@ -118,31 +81,14 @@
             this.EXECQTTY,
             this.EXECAMT,
             this.REMAINQTTY,
-            this.CANCELQTTY,
-            this.BRATIO,
-            this.EDSTATUS,
-            this.AFACCTNO,
-            this.CODEID,
-            this.ORDERMATCH});
+            this.CANCELQTTY});
             this.dgvODMAST.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvODMAST.Location = new System.Drawing.Point(12, 39);
             this.dgvODMAST.Name = "dgvODMAST";
             this.dgvODMAST.RowHeadersWidth = 51;
             this.dgvODMAST.RowTemplate.Height = 24;
-            this.dgvODMAST.Size = new System.Drawing.Size(1306, 358);
+            this.dgvODMAST.Size = new System.Drawing.Size(1072, 415);
             this.dgvODMAST.TabIndex = 2;
-            this.dgvODMAST.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvODMAST_CellContentClick);
-            this.dgvODMAST.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvODMAST_CellFormatting);
-            // 
-            // btnThanhToan
-            // 
-            this.btnThanhToan.Location = new System.Drawing.Point(1075, 509);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(176, 43);
-            this.btnThanhToan.TabIndex = 36;
-            this.btnThanhToan.Text = "Thanh toán";
-            this.btnThanhToan.UseVisualStyleBackColor = true;
-            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // STT
             // 
@@ -152,13 +98,13 @@
             this.STT.Name = "STT";
             this.STT.Width = 50;
             // 
-            // CUSTID
+            // AFACCTNO
             // 
-            this.CUSTID.DataPropertyName = "CUSTID";
-            this.CUSTID.HeaderText = "Mã KH";
-            this.CUSTID.MinimumWidth = 6;
-            this.CUSTID.Name = "CUSTID";
-            this.CUSTID.Width = 125;
+            this.AFACCTNO.DataPropertyName = "AFACCTNO";
+            this.AFACCTNO.HeaderText = "Số tài khoản";
+            this.AFACCTNO.MinimumWidth = 6;
+            this.AFACCTNO.Name = "AFACCTNO";
+            this.AFACCTNO.Width = 125;
             // 
             // ORDERID
             // 
@@ -177,6 +123,14 @@
             this.LAST_CHANGE.MinimumWidth = 6;
             this.LAST_CHANGE.Name = "LAST_CHANGE";
             this.LAST_CHANGE.Width = 125;
+            // 
+            // CODEID
+            // 
+            this.CODEID.DataPropertyName = "CODEID";
+            this.CODEID.HeaderText = "ID Chứng khoán";
+            this.CODEID.MinimumWidth = 6;
+            this.CODEID.Name = "CODEID";
+            this.CODEID.Width = 125;
             // 
             // EXECTYPE
             // 
@@ -242,81 +196,63 @@
             this.CANCELQTTY.Name = "CANCELQTTY";
             this.CANCELQTTY.Width = 125;
             // 
-            // BRATIO
+            // panel1
             // 
-            this.BRATIO.DataPropertyName = "BRATIO";
-            this.BRATIO.HeaderText = "Phí";
-            this.BRATIO.MinimumWidth = 6;
-            this.BRATIO.Name = "BRATIO";
-            this.BRATIO.Width = 125;
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel1.Controls.Add(this.btnHuyLenh);
+            this.panel1.Controls.Add(this.lbDatLenh);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1128, 72);
+            this.panel1.TabIndex = 36;
             // 
-            // EDSTATUS
+            // btnHuyLenh
             // 
-            this.EDSTATUS.DataPropertyName = "EDSTATUS";
-            this.EDSTATUS.HeaderText = "Trạng thái";
-            this.EDSTATUS.MinimumWidth = 6;
-            this.EDSTATUS.Name = "EDSTATUS";
-            this.EDSTATUS.Width = 125;
+            this.btnHuyLenh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuyLenh.Location = new System.Drawing.Point(660, 11);
+            this.btnHuyLenh.Name = "btnHuyLenh";
+            this.btnHuyLenh.Size = new System.Drawing.Size(165, 42);
+            this.btnHuyLenh.TabIndex = 1;
+            this.btnHuyLenh.Text = "Huỷ lệnh";
+            this.btnHuyLenh.UseVisualStyleBackColor = true;
             // 
-            // AFACCTNO
+            // lbDatLenh
             // 
-            this.AFACCTNO.DataPropertyName = "AFACCTNO";
-            this.AFACCTNO.HeaderText = "Số tài khoản";
-            this.AFACCTNO.MinimumWidth = 6;
-            this.AFACCTNO.Name = "AFACCTNO";
-            this.AFACCTNO.Width = 125;
+            this.lbDatLenh.AutoSize = true;
+            this.lbDatLenh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDatLenh.Location = new System.Drawing.Point(3, 24);
+            this.lbDatLenh.Name = "lbDatLenh";
+            this.lbDatLenh.Size = new System.Drawing.Size(165, 20);
+            this.lbDatLenh.TabIndex = 0;
+            this.lbDatLenh.Text = "Thông tin đặt lệnh.";
             // 
-            // CODEID
-            // 
-            this.CODEID.DataPropertyName = "CODEID";
-            this.CODEID.HeaderText = "ID Chứng khoán";
-            this.CODEID.MinimumWidth = 6;
-            this.CODEID.Name = "CODEID";
-            this.CODEID.Width = 125;
-            // 
-            // ORDERMATCH
-            // 
-            this.ORDERMATCH.DataPropertyName = "ORDERMATCH";
-            this.ORDERMATCH.HeaderText = "Thực hiện";
-            this.ORDERMATCH.MinimumWidth = 6;
-            this.ORDERMATCH.Name = "ORDERMATCH";
-            this.ORDERMATCH.Text = "Khớp lệnh";
-            this.ORDERMATCH.UseColumnTextForButtonValue = true;
-            this.ORDERMATCH.Width = 125;
-            // 
-            // frmODMAST
+            // frmODMAST_SHORT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1340, 577);
-            this.Controls.Add(this.btnThanhToan);
+            this.ClientSize = new System.Drawing.Size(1128, 569);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Name = "frmODMAST";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmODMAST";
-            this.Load += new System.EventHandler(this.frmODMAST_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Name = "frmODMAST_SHORT";
+            this.Text = "frmODMAST_SHORT";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvODMAST)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lbDatLenh;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvODMAST;
-        private System.Windows.Forms.Button btnHuyLenh;
-        private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CUSTID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AFACCTNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ORDERID;
         private System.Windows.Forms.DataGridViewTextBoxColumn LAST_CHANGE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CODEID;
         private System.Windows.Forms.DataGridViewTextBoxColumn EXECTYPE;
         private System.Windows.Forms.DataGridViewTextBoxColumn SYMBOL;
         private System.Windows.Forms.DataGridViewTextBoxColumn ORDERQTTY;
@@ -325,10 +261,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn EXECAMT;
         private System.Windows.Forms.DataGridViewTextBoxColumn REMAINQTTY;
         private System.Windows.Forms.DataGridViewTextBoxColumn CANCELQTTY;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BRATIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EDSTATUS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AFACCTNO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CODEID;
-        private System.Windows.Forms.DataGridViewButtonColumn ORDERMATCH;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnHuyLenh;
+        private System.Windows.Forms.Label lbDatLenh;
     }
 }

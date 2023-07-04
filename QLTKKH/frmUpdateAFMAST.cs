@@ -33,6 +33,7 @@ namespace QLTKKH
             long depofeeamt = 0;
             long currentdebt = 0;
             long balance = 130000000;
+            long pp = 0;
             DateTime lastchange = DateTime.Now;
 
             if (frmAFMAST.str.Trim() == "Sửa tiểu khoản.")
@@ -44,7 +45,7 @@ namespace QLTKKH
                 cfmast.SucMua();
                 return;
             }
-            afmastsv.ThemAFMAST(custid, acctno, martype, mrcrlimitmax, afacctno, balance, cidepofeeacr, depofeeamt,currentdebt, lastchange);
+            afmastsv.ThemAFMAST(custid, acctno, martype, mrcrlimitmax, afacctno, balance,pp, cidepofeeacr, depofeeamt,currentdebt, lastchange);
             MessageBox.Show("Thêm thành công", "Thông báo");
             dgv.DataSource = read.Reader("AFMAST");
             cfmast.SucMua();
