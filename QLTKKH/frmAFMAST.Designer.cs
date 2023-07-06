@@ -30,15 +30,16 @@
         {
             this.grbKhachHang = new System.Windows.Forms.GroupBox();
             this.dgvAFMAST = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDatLenh = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
             this.CUSTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MARTYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MRCRLIMITMAX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnDatLenh = new System.Windows.Forms.Button();
+            this.btnThemLNMAST = new System.Windows.Forms.DataGridViewButtonColumn();
             this.grbKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAFMAST)).BeginInit();
             this.panel1.SuspendLayout();
@@ -64,7 +65,8 @@
             this.CUSTID,
             this.ACCTNO,
             this.MARTYPE,
-            this.MRCRLIMITMAX});
+            this.MRCRLIMITMAX,
+            this.btnThemLNMAST});
             this.dgvAFMAST.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvAFMAST.Location = new System.Drawing.Point(18, 30);
             this.dgvAFMAST.Name = "dgvAFMAST";
@@ -72,7 +74,61 @@
             this.dgvAFMAST.RowTemplate.Height = 24;
             this.dgvAFMAST.Size = new System.Drawing.Size(936, 365);
             this.dgvAFMAST.TabIndex = 0;
+            this.dgvAFMAST.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAFMAST_CellContentClick);
             this.dgvAFMAST.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAFMAST_CellDoubleClick);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel1.Controls.Add(this.btnDatLenh);
+            this.panel1.Controls.Add(this.btnThem);
+            this.panel1.Controls.Add(this.btnXoa);
+            this.panel1.Controls.Add(this.btnSua);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(961, 86);
+            this.panel1.TabIndex = 9;
+            // 
+            // btnDatLenh
+            // 
+            this.btnDatLenh.Location = new System.Drawing.Point(756, 27);
+            this.btnDatLenh.Name = "btnDatLenh";
+            this.btnDatLenh.Size = new System.Drawing.Size(132, 30);
+            this.btnDatLenh.TabIndex = 4;
+            this.btnDatLenh.Text = "Đặt lệnh";
+            this.btnDatLenh.UseVisualStyleBackColor = true;
+            this.btnDatLenh.Click += new System.EventHandler(this.btnDatLenh_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(47, 27);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(107, 30);
+            this.btnThem.TabIndex = 1;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(382, 27);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(107, 30);
+            this.btnXoa.TabIndex = 3;
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(216, 27);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(107, 30);
+            this.btnSua.TabIndex = 2;
+            this.btnSua.Text = "Sửa ";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // CUSTID
             // 
@@ -106,58 +162,17 @@
             this.MRCRLIMITMAX.Name = "MRCRLIMITMAX";
             this.MRCRLIMITMAX.Width = 125;
             // 
-            // panel1
+            // btnThemLNMAST
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel1.Controls.Add(this.btnDatLenh);
-            this.panel1.Controls.Add(this.btnThem);
-            this.panel1.Controls.Add(this.btnXoa);
-            this.panel1.Controls.Add(this.btnSua);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(961, 86);
-            this.panel1.TabIndex = 9;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(47, 27);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(107, 30);
-            this.btnThem.TabIndex = 1;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(382, 27);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(107, 30);
-            this.btnXoa.TabIndex = 3;
-            this.btnXoa.Text = "Xoá";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(216, 27);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(107, 30);
-            this.btnSua.TabIndex = 2;
-            this.btnSua.Text = "Sửa ";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnDatLenh
-            // 
-            this.btnDatLenh.Location = new System.Drawing.Point(756, 27);
-            this.btnDatLenh.Name = "btnDatLenh";
-            this.btnDatLenh.Size = new System.Drawing.Size(132, 30);
-            this.btnDatLenh.TabIndex = 4;
-            this.btnDatLenh.Text = "Đặt lệnh";
-            this.btnDatLenh.UseVisualStyleBackColor = true;
-            this.btnDatLenh.Click += new System.EventHandler(this.btnDatLenh_Click);
+            this.btnThemLNMAST.DataPropertyName = "btnThemLNMAST";
+            this.btnThemLNMAST.HeaderText = "Thực hiện";
+            this.btnThemLNMAST.MinimumWidth = 6;
+            this.btnThemLNMAST.Name = "btnThemLNMAST";
+            this.btnThemLNMAST.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnThemLNMAST.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btnThemLNMAST.Text = "Thêm tài khoản nợ";
+            this.btnThemLNMAST.UseColumnTextForButtonValue = true;
+            this.btnThemLNMAST.Width = 125;
             // 
             // frmAFMAST
             // 
@@ -185,10 +200,11 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnDatLenh;
         private System.Windows.Forms.DataGridViewTextBoxColumn CUSTID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ACCTNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn MARTYPE;
         private System.Windows.Forms.DataGridViewTextBoxColumn MRCRLIMITMAX;
-        private System.Windows.Forms.Button btnDatLenh;
+        private System.Windows.Forms.DataGridViewButtonColumn btnThemLNMAST;
     }
 }

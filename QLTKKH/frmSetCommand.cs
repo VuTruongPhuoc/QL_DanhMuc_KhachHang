@@ -18,7 +18,7 @@ namespace QLTKKH
         }
         private void frmSetCommand_Load(object sender, EventArgs e)
         {
-            txtAFACCTNO.Text = dgv.Rows[frmAFMAST.row].Cells[1].Value.ToString();
+            txtAFACCTNO.Text = dgv.Rows[frmAFMAST.row].Cells["ACCTNO"].Value.ToString();
             txtQUOTEPRICE.Text = "0";
             AutoCompleteStringCollection mcollection = new AutoCompleteStringCollection();
             DataTable dt = read.Reader("SECURITIES_INFO");
@@ -51,8 +51,8 @@ namespace QLTKKH
                 MessageBox.Show("Vui lòng nhập đủ thông tin !", "Thông báo");
                 return;
             }
-            string custid = dgv.Rows[frmAFMAST.row].Cells[0].Value.ToString();
-            string afacctno = dgv.Rows[frmAFMAST.row].Cells[1].Value.ToString();
+            string custid = dgv.Rows[frmAFMAST.row].Cells["CUSTID"].Value.ToString();
+            string afacctno = dgv.Rows[frmAFMAST.row].Cells["ACCTNO"].Value.ToString();
             string datenow = DateTime.Now.ToString("ddMMyy");
             string orderid = "0001" + datenow;
             DateTime lastchange = DateTime.Now;
@@ -88,7 +88,7 @@ namespace QLTKKH
                 }
                 DataTable dt3 = read.Reader("SEMAST WHERE AFACCTNO = '" + txtAFACCTNO.Text.ToString().Trim() + "' AND SYMBOL = '" + txtSYMBOL.Text.ToString().Trim().ToUpper() + "'");
                 long totalbuyamt = long.Parse(dt3.Rows[0]["TOTALBUYAMT"].ToString().Trim());
-                DataTable dt4 = read.Reader("ODMAST WHERE AFACCTNO = '" + txtAFACCTNO.Text.ToString().Trim() + "' AND SYMBOL = '" + txtSYMBOL.Text.ToString().Trim().ToUpper() + "' AND EXECTYPE = 'NS'");
+                DataTable dt4 = read.Reader("ODMAST WHERE AFACCTNO = '" + txtAFACCTNO.Text.ToString().Trim() + "' AND SYMBOL = '" + txtSYMBOL.Text.ToString().Trim().ToUpper() + "' AND EXECTYPE = 'NS' AND EDSTATUS = 'N'");
                 if (dt4 != null)
                 {
                     foreach (DataRow row in dt4.Rows)

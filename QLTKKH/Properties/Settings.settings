@@ -20,5 +20,8 @@
     <Setting Name="QLTKKH_odmastservice__ODMASTWebService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://localhost:44374/_ODMASTWebService.asmx</Value>
     </Setting>
+    <Setting Name="QLTKKH_lnmastservice__LNMASTWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://localhost:44374/_LNMASTWebService.asmx</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

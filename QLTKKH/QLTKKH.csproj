@@ -50,6 +50,18 @@
   <ItemGroup>
     <Compile Include="Commonfunction.cs" />
     <Compile Include="DataRead.cs" />
+    <Compile Include="frmLNMAST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLNMAST.Designer.cs">
+      <DependentUpon>frmLNMAST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLNSCHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLNSCHD.Designer.cs">
+      <DependentUpon>frmLNSCHD.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmODMAST_SHORT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +133,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\lnmastservice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\odmastservice\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -178,6 +195,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmLNMAST.resx">
+      <DependentUpon>frmLNMAST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLNSCHD.resx">
+      <DependentUpon>frmLNSCHD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmODMAST_SHORT.resx">
       <DependentUpon>frmODMAST_SHORT.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,6 +277,11 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\cfmastservice\_CFMASTWebService.wsdl" />
+    <None Include="Web References\lnmastservice\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\lnmastservice\_LNMASTWebService.wsdl" />
     <None Include="Web References\odmastservice\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -318,6 +346,17 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>QLTKKH_cfmastservice_CFMASTWebService</CachedSettingsPropName>
     </WebReferenceUrl>
+    <WebReferenceUrl Include="https://localhost:44374/_LNMASTWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\lnmastservice\</RelPath>
+      <UpdateFromURL>https://localhost:44374/_LNMASTWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QLTKKH_lnmastservice__LNMASTWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="https://localhost:44374/_ODMASTWebService.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\odmastservice\</RelPath>
@@ -369,6 +408,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Web References\odmastservice\_ODMASTWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\lnmastservice\_LNMASTWebService.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

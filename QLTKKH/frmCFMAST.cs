@@ -75,7 +75,7 @@ namespace QLTKKH
             long cidepofeeacr = 0;
             long depofeeamt = 0;
             long currentdebt = 0;
-            long balance = 130000000;
+            long balance = 20000000;
             long pp = 0;
             DateTime lastchange = DateTime.Now;
             cfmastsv.DuyetCFMAST(custid, acctno, martype, mrcrlimitmax, afacctno, balance,pp, cidepofeeacr, depofeeamt,currentdebt, lastchange);

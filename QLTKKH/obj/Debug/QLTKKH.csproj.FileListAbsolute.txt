@@ -24,3 +24,5 @@ P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmODMAST.resources
 P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmSetCommand.resources
 P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmSECURITIES_Account.resources
 P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmODMAST_SHORT.resources
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmLNMAST.resources
+P:\C#\QLTKKH\QLTKKH\obj\Debug\QLTKKH.frmLNSCHD.resources

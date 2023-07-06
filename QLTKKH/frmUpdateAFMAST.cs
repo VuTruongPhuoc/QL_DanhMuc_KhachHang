@@ -32,7 +32,7 @@ namespace QLTKKH
             long cidepofeeacr = 0;
             long depofeeamt = 0;
             long currentdebt = 0;
-            long balance = 130000000;
+            long balance = 20000000;
             long pp = 0;
             DateTime lastchange = DateTime.Now;
 
@@ -75,10 +75,10 @@ namespace QLTKKH
             if (frmAFMAST.str.Trim() == "Sửa tiểu khoản.")
             {
                 lbTieuKhoan.Text = frmAFMAST.str.Trim();
-                cboCUSTID.SelectedValue = dgv.Rows[frmAFMAST.row].Cells[0].Value.ToString();
-                txtACCTNO.Text = dgv.Rows[frmAFMAST.row].Cells[1].Value.ToString();
-                txtMARTYPE.Text = dgv.Rows[frmAFMAST.row].Cells[2].Value.ToString();
-                txtMRCRLIMITMAX.Text = dgv.Rows[frmAFMAST.row].Cells[3].Value.ToString();
+                cboCUSTID.SelectedValue = dgv.Rows[frmAFMAST.row].Cells["CUSTID"].Value.ToString();
+                txtACCTNO.Text = dgv.Rows[frmAFMAST.row].Cells["ACCTNO"].Value.ToString();
+                txtMARTYPE.Text = dgv.Rows[frmAFMAST.row].Cells["MARTYPE"].Value.ToString();
+                txtMRCRLIMITMAX.Text = dgv.Rows[frmAFMAST.row].Cells["MRCRLIMITMAX"].Value.ToString();
             }
             txtACCTNO.Enabled = false;
         }

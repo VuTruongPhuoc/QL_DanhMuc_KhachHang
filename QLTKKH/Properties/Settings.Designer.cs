@@ -82,5 +82,15 @@ namespace QLTKKH.Properties {
                 return ((string)(this["QLTKKH_odmastservice__ODMASTWebService"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://localhost:44374/_LNMASTWebService.asmx")]
+        public string QLTKKH_lnmastservice__LNMASTWebService {
+            get {
+                return ((string)(this["QLTKKH_lnmastservice__LNMASTWebService"]));
+            }
+        }
     }
 }

@@ -51,5 +51,11 @@ namespace QLTKKH
             frmODMAST frm = new frmODMAST();
             frm.Show();
         }
+
+        private void nợToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLNMAST frm = new frmLNMAST();
+            frm.Show();
+        }
     }
 }

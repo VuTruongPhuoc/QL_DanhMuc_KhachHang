@@ -85,7 +85,7 @@ namespace QLTKKH
             }    
              
         }
-
+            
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             if (!(MessageBox.Show("Bạn có muốn thực hiện thanh toán không? ", "Thông báo ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
