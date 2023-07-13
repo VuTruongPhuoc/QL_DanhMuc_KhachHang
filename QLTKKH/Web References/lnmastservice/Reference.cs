@@ -23,7 +23,7 @@ namespace QLTKKH.lnmastservice {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="_LNMASTWebServiceSoap", Namespace="http://tempuri.org/")]
@@ -74,12 +74,17 @@ namespace QLTKKH.lnmastservice {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ThemLNMAST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void ThemLNMAST(string acctno, long prinnml, long intdue, long intnmlacr, long rate1, long rate2, long rate3, System.DateTime lastdate, System.DateTime opndate, System.DateTime rlsdate) {
+        public void ThemLNMAST(string acctno, long prinnml, long intdue, long intnmlacr, long prinpaid, long intpaid, long prinovd, long intnmlovd, long intovdacr, long rate1, long rate2, long rate3, System.DateTime lastdate, System.DateTime opndate, System.DateTime rlsdate) {
             this.Invoke("ThemLNMAST", new object[] {
                         acctno,
                         prinnml,
                         intdue,
                         intnmlacr,
+                        prinpaid,
+                        intpaid,
+                        prinovd,
+                        intnmlovd,
+                        intovdacr,
                         rate1,
                         rate2,
                         rate3,
@@ -89,12 +94,28 @@ namespace QLTKKH.lnmastservice {
         }
         
         /// <remarks/>
-        public void ThemLNMASTAsync(string acctno, long prinnml, long intdue, long intnmlacr, long rate1, long rate2, long rate3, System.DateTime lastdate, System.DateTime opndate, System.DateTime rlsdate) {
-            this.ThemLNMASTAsync(acctno, prinnml, intdue, intnmlacr, rate1, rate2, rate3, lastdate, opndate, rlsdate, null);
+        public void ThemLNMASTAsync(string acctno, long prinnml, long intdue, long intnmlacr, long prinpaid, long intpaid, long prinovd, long intnmlovd, long intovdacr, long rate1, long rate2, long rate3, System.DateTime lastdate, System.DateTime opndate, System.DateTime rlsdate) {
+            this.ThemLNMASTAsync(acctno, prinnml, intdue, intnmlacr, prinpaid, intpaid, prinovd, intnmlovd, intovdacr, rate1, rate2, rate3, lastdate, opndate, rlsdate, null);
         }
         
         /// <remarks/>
-        public void ThemLNMASTAsync(string acctno, long prinnml, long intdue, long intnmlacr, long rate1, long rate2, long rate3, System.DateTime lastdate, System.DateTime opndate, System.DateTime rlsdate, object userState) {
+        public void ThemLNMASTAsync(
+                    string acctno, 
+                    long prinnml, 
+                    long intdue, 
+                    long intnmlacr, 
+                    long prinpaid, 
+                    long intpaid, 
+                    long prinovd, 
+                    long intnmlovd, 
+                    long intovdacr, 
+                    long rate1, 
+                    long rate2, 
+                    long rate3, 
+                    System.DateTime lastdate, 
+                    System.DateTime opndate, 
+                    System.DateTime rlsdate, 
+                    object userState) {
             if ((this.ThemLNMASTOperationCompleted == null)) {
                 this.ThemLNMASTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnThemLNMASTOperationCompleted);
             }
@@ -103,6 +124,11 @@ namespace QLTKKH.lnmastservice {
                         prinnml,
                         intdue,
                         intnmlacr,
+                        prinpaid,
+                        intpaid,
+                        prinovd,
+                        intnmlovd,
+                        intovdacr,
                         rate1,
                         rate2,
                         rate3,
@@ -138,7 +164,7 @@ namespace QLTKKH.lnmastservice {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void ThemLNMASTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 

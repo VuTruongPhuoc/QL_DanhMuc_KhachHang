@@ -18,6 +18,7 @@ namespace QLTKKH
         }
         private void frmSetCommand_Load(object sender, EventArgs e)
         {
+            txtSYMBOL.Focus();
             txtAFACCTNO.Text = dgv.Rows[frmAFMAST.row].Cells["ACCTNO"].Value.ToString();
             txtQUOTEPRICE.Text = "0";
             AutoCompleteStringCollection mcollection = new AutoCompleteStringCollection();

@@ -9,6 +9,11 @@
             <s:element minOccurs="1" maxOccurs="1" name="prinnml" type="s:long" />
             <s:element minOccurs="1" maxOccurs="1" name="intdue" type="s:long" />
             <s:element minOccurs="1" maxOccurs="1" name="intnmlacr" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="prinpaid" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="intpaid" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="prinovd" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="intnmlovd" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="intovdacr" type="s:long" />
             <s:element minOccurs="1" maxOccurs="1" name="rate1" type="s:long" />
             <s:element minOccurs="1" maxOccurs="1" name="rate2" type="s:long" />
             <s:element minOccurs="1" maxOccurs="1" name="rate3" type="s:long" />

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grbNO = new System.Windows.Forms.GroupBox();
             this.dgvLNSCHD = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -38,10 +38,14 @@
             this.NML = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FEE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.INTNMLACR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OVD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PAID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OVERDUEDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.INTPAID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OVD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.INTOVD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.INTOVDPRIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RLSDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DUEDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OVERDUEDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbNO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLNSCHD)).BeginInit();
             this.panel1.SuspendLayout();
@@ -69,10 +73,14 @@
             this.NML,
             this.FEE,
             this.INTNMLACR,
-            this.OVD,
             this.PAID,
-            this.OVERDUEDATE,
-            this.RLSDATE});
+            this.INTPAID,
+            this.OVD,
+            this.INTOVD,
+            this.INTOVDPRIN,
+            this.RLSDATE,
+            this.DUEDATE,
+            this.OVERDUEDATE});
             this.dgvLNSCHD.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvLNSCHD.Location = new System.Drawing.Point(28, 40);
             this.dgvLNSCHD.Name = "dgvLNSCHD";
@@ -128,8 +136,8 @@
             // FEE
             // 
             this.FEE.DataPropertyName = "FEE";
-            dataGridViewCellStyle2.Format = "N2";
-            this.FEE.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Format = "N2";
+            this.FEE.DefaultCellStyle = dataGridViewCellStyle1;
             this.FEE.HeaderText = "Phí";
             this.FEE.MinimumWidth = 6;
             this.FEE.Name = "FEE";
@@ -143,14 +151,6 @@
             this.INTNMLACR.Name = "INTNMLACR";
             this.INTNMLACR.Width = 125;
             // 
-            // OVD
-            // 
-            this.OVD.DataPropertyName = "OVD";
-            this.OVD.HeaderText = "Gốc quá hạn";
-            this.OVD.MinimumWidth = 6;
-            this.OVD.Name = "OVD";
-            this.OVD.Width = 125;
-            // 
             // PAID
             // 
             this.PAID.DataPropertyName = "PAID";
@@ -159,13 +159,37 @@
             this.PAID.Name = "PAID";
             this.PAID.Width = 125;
             // 
-            // OVERDUEDATE
+            // INTPAID
             // 
-            this.OVERDUEDATE.DataPropertyName = "OVERDUEDATE";
-            this.OVERDUEDATE.HeaderText = "Ngày đến hạn";
-            this.OVERDUEDATE.MinimumWidth = 6;
-            this.OVERDUEDATE.Name = "OVERDUEDATE";
-            this.OVERDUEDATE.Width = 125;
+            this.INTPAID.DataPropertyName = "INTPAID";
+            this.INTPAID.HeaderText = "Lãi đã trả";
+            this.INTPAID.MinimumWidth = 6;
+            this.INTPAID.Name = "INTPAID";
+            this.INTPAID.Width = 125;
+            // 
+            // OVD
+            // 
+            this.OVD.DataPropertyName = "OVD";
+            this.OVD.HeaderText = "Gốc quá hạn";
+            this.OVD.MinimumWidth = 6;
+            this.OVD.Name = "OVD";
+            this.OVD.Width = 125;
+            // 
+            // INTOVD
+            // 
+            this.INTOVD.DataPropertyName = "INTOVD";
+            this.INTOVD.HeaderText = "Lãi quá hạn";
+            this.INTOVD.MinimumWidth = 6;
+            this.INTOVD.Name = "INTOVD";
+            this.INTOVD.Width = 125;
+            // 
+            // INTOVDPRIN
+            // 
+            this.INTOVDPRIN.DataPropertyName = "INTOVDPRIN";
+            this.INTOVDPRIN.HeaderText = "Lãi trên gốc quá hạn";
+            this.INTOVDPRIN.MinimumWidth = 6;
+            this.INTOVDPRIN.Name = "INTOVDPRIN";
+            this.INTOVDPRIN.Width = 125;
             // 
             // RLSDATE
             // 
@@ -174,6 +198,22 @@
             this.RLSDATE.MinimumWidth = 6;
             this.RLSDATE.Name = "RLSDATE";
             this.RLSDATE.Width = 125;
+            // 
+            // DUEDATE
+            // 
+            this.DUEDATE.DataPropertyName = "DUEDATE";
+            this.DUEDATE.HeaderText = "Hạn thanh toán";
+            this.DUEDATE.MinimumWidth = 6;
+            this.DUEDATE.Name = "DUEDATE";
+            this.DUEDATE.Width = 125;
+            // 
+            // OVERDUEDATE
+            // 
+            this.OVERDUEDATE.DataPropertyName = "OVERDUEDATE";
+            this.OVERDUEDATE.HeaderText = "Ngày đến hạn";
+            this.OVERDUEDATE.MinimumWidth = 6;
+            this.OVERDUEDATE.Name = "OVERDUEDATE";
+            this.OVERDUEDATE.Width = 125;
             // 
             // frmLNSCHD
             // 
@@ -205,9 +245,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NML;
         private System.Windows.Forms.DataGridViewTextBoxColumn FEE;
         private System.Windows.Forms.DataGridViewTextBoxColumn INTNMLACR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OVD;
         private System.Windows.Forms.DataGridViewTextBoxColumn PAID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OVERDUEDATE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn INTPAID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OVD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn INTOVD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn INTOVDPRIN;
         private System.Windows.Forms.DataGridViewTextBoxColumn RLSDATE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DUEDATE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OVERDUEDATE;
     }
 }

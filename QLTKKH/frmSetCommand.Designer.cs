@@ -40,8 +40,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLenh = new System.Windows.Forms.Button();
             this.grbLenhDat = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtAFACCTNO = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.grbLenhDat.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +52,7 @@
             this.btnMua.Location = new System.Drawing.Point(38, 23);
             this.btnMua.Name = "btnMua";
             this.btnMua.Size = new System.Drawing.Size(129, 39);
-            this.btnMua.TabIndex = 0;
+            this.btnMua.TabIndex = 7;
             this.btnMua.Text = "Mua";
             this.btnMua.UseVisualStyleBackColor = true;
             this.btnMua.Click += new System.EventHandler(this.btnMua_Click);
@@ -63,7 +63,7 @@
             this.btnBan.Location = new System.Drawing.Point(200, 23);
             this.btnBan.Name = "btnBan";
             this.btnBan.Size = new System.Drawing.Size(129, 39);
-            this.btnBan.TabIndex = 1;
+            this.btnBan.TabIndex = 8;
             this.btnBan.Text = "Bán";
             this.btnBan.UseVisualStyleBackColor = true;
             this.btnBan.Click += new System.EventHandler(this.btnBan_Click);
@@ -75,7 +75,7 @@
             this.txtQUOTEPRICE.Multiline = true;
             this.txtQUOTEPRICE.Name = "txtQUOTEPRICE";
             this.txtQUOTEPRICE.Size = new System.Drawing.Size(238, 40);
-            this.txtQUOTEPRICE.TabIndex = 55;
+            this.txtQUOTEPRICE.TabIndex = 3;
             // 
             // txtORDERQTTY
             // 
@@ -84,7 +84,7 @@
             this.txtORDERQTTY.Multiline = true;
             this.txtORDERQTTY.Name = "txtORDERQTTY";
             this.txtORDERQTTY.Size = new System.Drawing.Size(238, 38);
-            this.txtORDERQTTY.TabIndex = 54;
+            this.txtORDERQTTY.TabIndex = 2;
             // 
             // txtSYMBOL
             // 
@@ -93,7 +93,7 @@
             this.txtSYMBOL.Multiline = true;
             this.txtSYMBOL.Name = "txtSYMBOL";
             this.txtSYMBOL.Size = new System.Drawing.Size(238, 39);
-            this.txtSYMBOL.TabIndex = 53;
+            this.txtSYMBOL.TabIndex = 1;
             this.txtSYMBOL.TextChanged += new System.EventHandler(this.txtSYMBOL_TextChanged);
             // 
             // label4
@@ -132,7 +132,7 @@
             this.btnDat.Location = new System.Drawing.Point(573, 477);
             this.btnDat.Name = "btnDat";
             this.btnDat.Size = new System.Drawing.Size(129, 39);
-            this.btnDat.TabIndex = 56;
+            this.btnDat.TabIndex = 4;
             this.btnDat.Text = "Đặt";
             this.btnDat.UseVisualStyleBackColor = true;
             this.btnDat.Click += new System.EventHandler(this.btnDat_Click);
@@ -179,16 +179,6 @@
             this.grbLenhDat.TabStop = false;
             this.grbLenhDat.Text = "Trạng thái";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(80, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 25);
-            this.label1.TabIndex = 56;
-            this.label1.Text = "Số tài khoản:";
-            // 
             // txtAFACCTNO
             // 
             this.txtAFACCTNO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -198,6 +188,16 @@
             this.txtAFACCTNO.ReadOnly = true;
             this.txtAFACCTNO.Size = new System.Drawing.Size(238, 39);
             this.txtAFACCTNO.TabIndex = 58;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(80, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 25);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "Số tài khoản:";
             // 
             // frmSetCommand
             // 

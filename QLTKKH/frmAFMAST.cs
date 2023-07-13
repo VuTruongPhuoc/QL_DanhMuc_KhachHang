@@ -86,16 +86,21 @@ namespace QLTKKH
                         long prinnml = 0;
                         long intdue = 0;
                         long intnmlacr = 0;
-                        long rate1 = 10;
-                        long rate2 = 12;
-                        long rate3 = 14;
+                        long prinpaid = 0;
+                        long intpaid = 0;
+                        long prinovd = 0;
+                        long intnmlovd = 0;
+                        long intovdacr = 0;
+                        long rate1 = 8;
+                        long rate2 = 10;
+                        long rate3 = 12;
                         DateTime lastdate = DateTime.Now;
                         DateTime opndate = DateTime.Now;
                         DateTime rlsdate = DateTime.Now;
 
                         if(MessageBox.Show("Bạn có muốn thêm tài khoản nợ không ?","Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {
-                            lnmastsv.ThemLNMAST(acctno,prinnml,intdue, intnmlacr,rate1,rate2,rate3,lastdate,opndate,rlsdate);
+                            lnmastsv.ThemLNMAST(acctno,prinnml,intdue,prinpaid,intpaid,prinovd,intnmlovd, intnmlacr, intovdacr, rate1,rate2,rate3,lastdate,opndate,rlsdate);
                             MessageBox.Show("Thành công", "Thông báo");
                         }
                     }

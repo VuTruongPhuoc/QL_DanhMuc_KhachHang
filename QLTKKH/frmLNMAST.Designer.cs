@@ -36,6 +36,11 @@
             this.PRINNML = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.INTDUE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.INTNMLACR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRINPAID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.INTPAID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRINOVD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.INTNMLOVD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.INTOVDACR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RATE1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RATE2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RATE3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +73,11 @@
             this.PRINNML,
             this.INTDUE,
             this.INTNMLACR,
+            this.PRINPAID,
+            this.INTPAID,
+            this.PRINOVD,
+            this.INTNMLOVD,
+            this.INTOVDACR,
             this.RATE1,
             this.RATE2,
             this.RATE3,
@@ -134,6 +144,46 @@
             this.INTNMLACR.MinimumWidth = 6;
             this.INTNMLACR.Name = "INTNMLACR";
             this.INTNMLACR.Width = 125;
+            // 
+            // PRINPAID
+            // 
+            this.PRINPAID.DataPropertyName = "PRINPAID";
+            this.PRINPAID.HeaderText = "Gốc đã trả";
+            this.PRINPAID.MinimumWidth = 6;
+            this.PRINPAID.Name = "PRINPAID";
+            this.PRINPAID.Width = 125;
+            // 
+            // INTPAID
+            // 
+            this.INTPAID.DataPropertyName = "INTPAID";
+            this.INTPAID.HeaderText = "Lãi đã trả";
+            this.INTPAID.MinimumWidth = 6;
+            this.INTPAID.Name = "INTPAID";
+            this.INTPAID.Width = 125;
+            // 
+            // PRINOVD
+            // 
+            this.PRINOVD.DataPropertyName = "PRINOVD";
+            this.PRINOVD.HeaderText = "Gốc quá hạn";
+            this.PRINOVD.MinimumWidth = 6;
+            this.PRINOVD.Name = "PRINOVD";
+            this.PRINOVD.Width = 125;
+            // 
+            // INTNMLOVD
+            // 
+            this.INTNMLOVD.DataPropertyName = "INTNMLOVD";
+            this.INTNMLOVD.HeaderText = "Lãi quá hạn";
+            this.INTNMLOVD.MinimumWidth = 6;
+            this.INTNMLOVD.Name = "INTNMLOVD";
+            this.INTNMLOVD.Width = 125;
+            // 
+            // INTOVDACR
+            // 
+            this.INTOVDACR.DataPropertyName = "INTOVDACR";
+            this.INTOVDACR.HeaderText = "Lãi quá hạn cộng dồn";
+            this.INTOVDACR.MinimumWidth = 6;
+            this.INTOVDACR.Name = "INTOVDACR";
+            this.INTOVDACR.Width = 125;
             // 
             // RATE1
             // 
@@ -212,6 +262,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PRINNML;
         private System.Windows.Forms.DataGridViewTextBoxColumn INTDUE;
         private System.Windows.Forms.DataGridViewTextBoxColumn INTNMLACR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRINPAID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn INTPAID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRINOVD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn INTNMLOVD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn INTOVDACR;
         private System.Windows.Forms.DataGridViewTextBoxColumn RATE1;
         private System.Windows.Forms.DataGridViewTextBoxColumn RATE2;
         private System.Windows.Forms.DataGridViewTextBoxColumn RATE3;
