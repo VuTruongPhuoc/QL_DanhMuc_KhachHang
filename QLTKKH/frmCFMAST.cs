@@ -78,7 +78,8 @@ namespace QLTKKH
             long balance = 20000000;
             long pp = 0;
             DateTime lastchange = DateTime.Now;
-            cfmastsv.DuyetCFMAST(custid, acctno, martype, mrcrlimitmax, afacctno, balance,pp, cidepofeeacr, depofeeamt,currentdebt, lastchange);
+            string status = "N";
+            cfmastsv.DuyetCFMAST(custid, acctno, martype, mrcrlimitmax, afacctno, balance,pp, cidepofeeacr, depofeeamt,currentdebt, lastchange,status);
             MessageBox.Show("Thành công.", "Thông báo");
         }
     }

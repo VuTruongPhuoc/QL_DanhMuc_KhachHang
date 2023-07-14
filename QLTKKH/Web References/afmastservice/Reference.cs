@@ -23,7 +23,7 @@ namespace QLTKKH.afmastservice {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="_AFMASTWebServiceSoap", Namespace="http://tempuri.org/")]
@@ -84,7 +84,7 @@ namespace QLTKKH.afmastservice {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ThemAFMAST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void ThemAFMAST(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long pp, long cidepofeeacr, long depofeeamt, long currentdebt, System.DateTime lastchange) {
+        public void ThemAFMAST(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long pp, long cidepofeeacr, long depofeeamt, long currentdebt, System.DateTime lastchange, string status) {
             this.Invoke("ThemAFMAST", new object[] {
                         custid,
                         acctno,
@@ -96,16 +96,17 @@ namespace QLTKKH.afmastservice {
                         cidepofeeacr,
                         depofeeamt,
                         currentdebt,
-                        lastchange});
+                        lastchange,
+                        status});
         }
         
         /// <remarks/>
-        public void ThemAFMASTAsync(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long pp, long cidepofeeacr, long depofeeamt, long currentdebt, System.DateTime lastchange) {
-            this.ThemAFMASTAsync(custid, acctno, martype, mrcrlimitmax, afacctno, balance, pp, cidepofeeacr, depofeeamt, currentdebt, lastchange, null);
+        public void ThemAFMASTAsync(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long pp, long cidepofeeacr, long depofeeamt, long currentdebt, System.DateTime lastchange, string status) {
+            this.ThemAFMASTAsync(custid, acctno, martype, mrcrlimitmax, afacctno, balance, pp, cidepofeeacr, depofeeamt, currentdebt, lastchange, status, null);
         }
         
         /// <remarks/>
-        public void ThemAFMASTAsync(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long pp, long cidepofeeacr, long depofeeamt, long currentdebt, System.DateTime lastchange, object userState) {
+        public void ThemAFMASTAsync(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long pp, long cidepofeeacr, long depofeeamt, long currentdebt, System.DateTime lastchange, string status, object userState) {
             if ((this.ThemAFMASTOperationCompleted == null)) {
                 this.ThemAFMASTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnThemAFMASTOperationCompleted);
             }
@@ -120,7 +121,8 @@ namespace QLTKKH.afmastservice {
                         cidepofeeacr,
                         depofeeamt,
                         currentdebt,
-                        lastchange}, this.ThemAFMASTOperationCompleted, userState);
+                        lastchange,
+                        status}, this.ThemAFMASTOperationCompleted, userState);
         }
         
         private void OnThemAFMASTOperationCompleted(object arg) {
@@ -214,15 +216,15 @@ namespace QLTKKH.afmastservice {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void ThemAFMASTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void SuaAFMASTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void XoaAFMASTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 

@@ -24,6 +24,7 @@ namespace QLTKKH
             DataTable dt = read.Reader("ODMAST");
             
             dgvODMAST.DataSource = dt;
+            dgvODMAST.Sort(dgvODMAST.Columns["LAST_CHANGE"], ListSortDirection.Descending);
         }
 
         private void frmODMAST_Load(object sender, EventArgs e)
@@ -32,7 +33,10 @@ namespace QLTKKH
             column.DefaultCellStyle.Format = "dd-MM-yyyy";
             dgvODMAST.Columns["AFACCTNO"].Visible = false;
             dgvODMAST.Columns["CODEID"].Visible = false;
+            
             loaddgv();
+            //dgvODMAST.RowsDefaultCellStyle.BackColor = Color.LightBlue;
+            //dgvODMAST.AlternatingRowsDefaultCellStyle.BackColor = Color.LightSkyBlue;
         }
 
         private void dgvODMAST_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -48,6 +52,10 @@ namespace QLTKKH
                     e.Value = "BÁN";
                     e.FormattingApplied = true;
                 }
+            }
+            if (dgvODMAST.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)dgvODMAST.Rows[e.RowIndex].Cells[e.ColumnIndex];
             }
 
         }

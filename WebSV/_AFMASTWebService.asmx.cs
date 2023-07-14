@@ -21,7 +21,7 @@ namespace WebSV
         WebService1 websv = new WebService1();
         [WebMethod]
         [Obsolete]
-        public void ThemAFMAST(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance,long pp, long cidepofeeacr, long depofeeamt,long currentdebt, DateTime lastchange)
+        public void ThemAFMAST(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance,long pp, long cidepofeeacr, long depofeeamt,long currentdebt, DateTime lastchange,string status)
         {
             OracleConnection conn = null;
             OracleCommand command = new OracleCommand();
@@ -41,6 +41,7 @@ namespace WebSV
             command.Parameters.Add("p_depofeeamt", OracleDbType.Long).Value = depofeeamt;
             command.Parameters.Add("p_currentdebt", OracleDbType.Long).Value = currentdebt;
             command.Parameters.Add("p_lastchange", OracleDbType.Date).Value = lastchange;
+            command.Parameters.Add("p_status", OracleDbType.Varchar2).Value = status;
             conn.Open();
             command.ExecuteNonQuery();
             conn.Close();

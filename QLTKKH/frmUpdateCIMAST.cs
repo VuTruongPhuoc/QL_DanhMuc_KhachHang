@@ -16,13 +16,12 @@ namespace QLTKKH
 
         private void frmUpdateCIMAST_Load(object sender, EventArgs e)
         {
-            txtAFACCTNO.Text = dgv.Rows[frmCIMAST.row].Cells[0].Value.ToString();
-            txtACCTNO.Text = dgv.Rows[frmCIMAST.row].Cells[1].Value.ToString();
-            txtBALANCE.Text = dgv.Rows[frmCIMAST.row].Cells[2].Value.ToString();
-            txtCIDEPOFEEACR.Text = dgv.Rows[frmCIMAST.row].Cells[4].Value.ToString();
-            txtDEPOFEEAMT.Text = dgv.Rows[frmCIMAST.row].Cells[5].Value.ToString();
-            dtpLASTCHANGE.Text = dgv.Rows[frmCIMAST.row].Cells[7].Value.ToString();
-            txtMONEY.Text = txtDEPOFEEAMT.Text;
+            txtAFACCTNO.Text = dgv.Rows[frmCIMAST.row].Cells["AFACCTNO"].Value.ToString();
+            txtCURRENTDEBT.Text = dgv.Rows[frmCIMAST.row].Cells["CURRENTDEBT"].Value.ToString();
+            txtBALANCE.Text = dgv.Rows[frmCIMAST.row].Cells["BALANCE"].Value.ToString();
+            txtCIDEPOFEEACR.Text = dgv.Rows[frmCIMAST.row].Cells["CIDEPOFEEACR"].Value.ToString();
+            txtDEPOFEEAMT.Text = dgv.Rows[frmCIMAST.row].Cells["DEPOFEEAMT"].Value.ToString();
+            dtpLASTCHANGE.Text = dgv.Rows[frmCIMAST.row].Cells["LASTCHANGE"].Value.ToString();
         }
 
         private void btnBoSung_Click(object sender, EventArgs e)
@@ -32,14 +31,14 @@ namespace QLTKKH
                 return;
             }
             string afacctno = txtAFACCTNO.Text.ToString().Trim();
-            string acctno = txtACCTNO.Text.ToString().Trim();
-            long money = long.Parse(txtMONEY.Text.ToString().Trim());
-            long depofeeamt = long.Parse(txtDEPOFEEAMT.Text.ToString().Trim());
+            double money = double.Parse(txtMONEY.Text.ToString().Trim());
+            double depofeeamt = double.Parse(txtDEPOFEEAMT.Text.ToString().Trim());
             DateTime lastchange = DateTime.Now;
-            cfmastsv.SuaThemTienCIMAST(afacctno, acctno, money, depofeeamt, lastchange);
+            cfmastsv.SuaThemTienCIMAST(afacctno, money, depofeeamt, lastchange);
             cfmastsv.SucMua();
             dgv.DataSource = read.Reader("CIMAST");
-            txtBALANCE.Text = dgv.Rows[frmCIMAST.row].Cells[2].Value.ToString();
+            txtBALANCE.Text = dgv.Rows[frmCIMAST.row].Cells["BALANCE"].Value.ToString();
+            txtCURRENTDEBT.Text = dgv.Rows[frmCIMAST.row].Cells["CURRENTDEBT"].Value.ToString();
             MessageBox.Show("Thành công.", "Thông báo");
         }
 
@@ -49,27 +48,31 @@ namespace QLTKKH
             {
                 return;
             }
-            if (long.Parse(txtBALANCE.Text.ToString()) < long.Parse(txtDEPOFEEAMT.Text.ToString()) || long.Parse(txtMONEY.Text.ToString().Trim()) > long.Parse(txtBALANCE.Text.ToString().Trim()))
+            if (double.Parse(txtBALANCE.Text.ToString()) < double.Parse(txtDEPOFEEAMT.Text.ToString()) || double.Parse(txtMONEY.Text.ToString().Trim()) > double.Parse(txtBALANCE.Text.ToString().Trim()))
             {
                 MessageBox.Show("Không đủ tiền để thu!", "Thông báo");
                 return;
             }
             string afacctno = txtAFACCTNO.Text.ToString().Trim();
-            string acctno = txtACCTNO.Text.ToString().Trim();
-            long money = long.Parse(txtMONEY.Text.ToString().Trim());
-            long depofeeamt = long.Parse(txtDEPOFEEAMT.Text.ToString().Trim());
+            double money = double.Parse(txtMONEY.Text.ToString().Trim());
+            double depofeeamt = double.Parse(txtDEPOFEEAMT.Text.ToString().Trim());
             DateTime lastchange = DateTime.Now;
-            cfmastsv.SuaTruTienCIMAST(afacctno, acctno, money, depofeeamt, lastchange);
+            cfmastsv.SuaTruTienCIMAST(afacctno,money, depofeeamt, lastchange);
             cfmastsv.SucMua();
             dgv.DataSource = read.Reader("CIMAST");
-            txtBALANCE.Text = dgv.Rows[frmCIMAST.row].Cells[2].Value.ToString();
-            txtDEPOFEEAMT.Text = dgv.Rows[frmCIMAST.row].Cells[5].Value.ToString();
+            txtBALANCE.Text = dgv.Rows[frmCIMAST.row].Cells["BALANCE"].Value.ToString();
+            txtDEPOFEEAMT.Text = dgv.Rows[frmCIMAST.row].Cells["DEPOFEEAMT"].Value.ToString();
             MessageBox.Show("Thành công", "Thông báo");
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtCURRENTDEBT_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

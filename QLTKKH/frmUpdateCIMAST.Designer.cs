@@ -36,7 +36,7 @@
             this.txtCIDEPOFEEACR = new System.Windows.Forms.TextBox();
             this.dtpLASTCHANGE = new System.Windows.Forms.DateTimePicker();
             this.txtBALANCE = new System.Windows.Forms.TextBox();
-            this.txtACCTNO = new System.Windows.Forms.TextBox();
+            this.txtCURRENTDEBT = new System.Windows.Forms.TextBox();
             this.txtAFACCTNO = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -73,7 +73,7 @@
             this.groupBox1.Controls.Add(this.txtCIDEPOFEEACR);
             this.groupBox1.Controls.Add(this.dtpLASTCHANGE);
             this.groupBox1.Controls.Add(this.txtBALANCE);
-            this.groupBox1.Controls.Add(this.txtACCTNO);
+            this.groupBox1.Controls.Add(this.txtCURRENTDEBT);
             this.groupBox1.Controls.Add(this.txtAFACCTNO);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -147,15 +147,16 @@
             this.txtBALANCE.Size = new System.Drawing.Size(188, 33);
             this.txtBALANCE.TabIndex = 48;
             // 
-            // txtACCTNO
+            // txtCURRENTDEBT
             // 
-            this.txtACCTNO.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtACCTNO.Location = new System.Drawing.Point(646, 30);
-            this.txtACCTNO.Multiline = true;
-            this.txtACCTNO.Name = "txtACCTNO";
-            this.txtACCTNO.ReadOnly = true;
-            this.txtACCTNO.Size = new System.Drawing.Size(188, 33);
-            this.txtACCTNO.TabIndex = 47;
+            this.txtCURRENTDEBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCURRENTDEBT.Location = new System.Drawing.Point(646, 30);
+            this.txtCURRENTDEBT.Multiline = true;
+            this.txtCURRENTDEBT.Name = "txtCURRENTDEBT";
+            this.txtCURRENTDEBT.ReadOnly = true;
+            this.txtCURRENTDEBT.Size = new System.Drawing.Size(188, 33);
+            this.txtCURRENTDEBT.TabIndex = 47;
+            this.txtCURRENTDEBT.TextChanged += new System.EventHandler(this.txtCURRENTDEBT_TextChanged);
             // 
             // txtAFACCTNO
             // 
@@ -193,9 +194,9 @@
             this.lbCUSTODYCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCUSTODYCD.Location = new System.Drawing.Point(424, 42);
             this.lbCUSTODYCD.Name = "lbCUSTODYCD";
-            this.lbCUSTODYCD.Size = new System.Drawing.Size(118, 20);
+            this.lbCUSTODYCD.Size = new System.Drawing.Size(94, 20);
             this.lbCUSTODYCD.TabIndex = 24;
-            this.lbCUSTODYCD.Text = "Tài khoản tiền:";
+            this.lbCUSTODYCD.Text = "Nợ hiện tại:";
             // 
             // lbCUSTID
             // 
@@ -311,7 +312,7 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtBALANCE;
-        private System.Windows.Forms.TextBox txtACCTNO;
+        private System.Windows.Forms.TextBox txtCURRENTDEBT;
         private System.Windows.Forms.TextBox txtAFACCTNO;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

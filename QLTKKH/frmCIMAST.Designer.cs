@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.grbKhachHang = new System.Windows.Forms.GroupBox();
+            this.dgvCIMAST = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnQuanLy = new System.Windows.Forms.Button();
-            this.dgvCIMAST = new System.Windows.Forms.DataGridView();
             this.AFACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BALANCE = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,10 +39,11 @@
             this.CIDEPOFEEACR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DEPOFEEAMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CURRENTDEBT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.STATUS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LASTCHANGE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbKhachHang.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCIMAST)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbKhachHang
@@ -56,6 +57,28 @@
             this.grbKhachHang.TabIndex = 12;
             this.grbKhachHang.TabStop = false;
             this.grbKhachHang.Text = "Danh sách tiền KH";
+            // 
+            // dgvCIMAST
+            // 
+            this.dgvCIMAST.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvCIMAST.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCIMAST.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AFACCTNO,
+            this.ACCTNO,
+            this.BALANCE,
+            this.PP,
+            this.CIDEPOFEEACR,
+            this.DEPOFEEAMT,
+            this.CURRENTDEBT,
+            this.STATUS,
+            this.LASTCHANGE});
+            this.dgvCIMAST.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvCIMAST.Location = new System.Drawing.Point(12, 28);
+            this.dgvCIMAST.Name = "dgvCIMAST";
+            this.dgvCIMAST.RowHeadersWidth = 51;
+            this.dgvCIMAST.RowTemplate.Height = 24;
+            this.dgvCIMAST.Size = new System.Drawing.Size(845, 348);
+            this.dgvCIMAST.TabIndex = 1;
             // 
             // panel1
             // 
@@ -76,27 +99,6 @@
             this.btnQuanLy.Text = "Quản Lý";
             this.btnQuanLy.UseVisualStyleBackColor = true;
             this.btnQuanLy.Click += new System.EventHandler(this.btnQuanLy_Click);
-            // 
-            // dgvCIMAST
-            // 
-            this.dgvCIMAST.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCIMAST.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCIMAST.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.AFACCTNO,
-            this.ACCTNO,
-            this.BALANCE,
-            this.PP,
-            this.CIDEPOFEEACR,
-            this.DEPOFEEAMT,
-            this.CURRENTDEBT,
-            this.LASTCHANGE});
-            this.dgvCIMAST.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCIMAST.Location = new System.Drawing.Point(12, 28);
-            this.dgvCIMAST.Name = "dgvCIMAST";
-            this.dgvCIMAST.RowHeadersWidth = 51;
-            this.dgvCIMAST.RowTemplate.Height = 24;
-            this.dgvCIMAST.Size = new System.Drawing.Size(845, 348);
-            this.dgvCIMAST.TabIndex = 1;
             // 
             // AFACCTNO
             // 
@@ -154,6 +156,14 @@
             this.CURRENTDEBT.Name = "CURRENTDEBT";
             this.CURRENTDEBT.Width = 125;
             // 
+            // STATUS
+            // 
+            this.STATUS.DataPropertyName = "STATUS";
+            this.STATUS.HeaderText = "Trạng thái";
+            this.STATUS.MinimumWidth = 6;
+            this.STATUS.Name = "STATUS";
+            this.STATUS.Width = 125;
+            // 
             // LASTCHANGE
             // 
             this.LASTCHANGE.DataPropertyName = "LASTCHANGE";
@@ -174,8 +184,8 @@
             this.Text = "frmCIMAST";
             this.Load += new System.EventHandler(this.frmCIMAST_Load);
             this.grbKhachHang.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCIMAST)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -193,6 +203,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CIDEPOFEEACR;
         private System.Windows.Forms.DataGridViewTextBoxColumn DEPOFEEAMT;
         private System.Windows.Forms.DataGridViewTextBoxColumn CURRENTDEBT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STATUS;
         private System.Windows.Forms.DataGridViewTextBoxColumn LASTCHANGE;
     }
 }

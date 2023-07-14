@@ -23,7 +23,7 @@ namespace QLTKKH.cfmastservice {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="CFMASTWebServiceSoap", Namespace="http://tempuri.org/")]
@@ -104,7 +104,7 @@ namespace QLTKKH.cfmastservice {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DuyetCFMAST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void DuyetCFMAST(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long pp, long cidepofeeacr, long depofeeamt, long currentdebt, System.DateTime lastchange) {
+        public void DuyetCFMAST(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long pp, long cidepofeeacr, long depofeeamt, long currentdebt, System.DateTime lastchange, string status) {
             this.Invoke("DuyetCFMAST", new object[] {
                         custid,
                         acctno,
@@ -116,16 +116,17 @@ namespace QLTKKH.cfmastservice {
                         cidepofeeacr,
                         depofeeamt,
                         currentdebt,
-                        lastchange});
+                        lastchange,
+                        status});
         }
         
         /// <remarks/>
-        public void DuyetCFMASTAsync(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long pp, long cidepofeeacr, long depofeeamt, long currentdebt, System.DateTime lastchange) {
-            this.DuyetCFMASTAsync(custid, acctno, martype, mrcrlimitmax, afacctno, balance, pp, cidepofeeacr, depofeeamt, currentdebt, lastchange, null);
+        public void DuyetCFMASTAsync(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long pp, long cidepofeeacr, long depofeeamt, long currentdebt, System.DateTime lastchange, string status) {
+            this.DuyetCFMASTAsync(custid, acctno, martype, mrcrlimitmax, afacctno, balance, pp, cidepofeeacr, depofeeamt, currentdebt, lastchange, status, null);
         }
         
         /// <remarks/>
-        public void DuyetCFMASTAsync(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long pp, long cidepofeeacr, long depofeeamt, long currentdebt, System.DateTime lastchange, object userState) {
+        public void DuyetCFMASTAsync(string custid, string acctno, string martype, long mrcrlimitmax, string afacctno, long balance, long pp, long cidepofeeacr, long depofeeamt, long currentdebt, System.DateTime lastchange, string status, object userState) {
             if ((this.DuyetCFMASTOperationCompleted == null)) {
                 this.DuyetCFMASTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDuyetCFMASTOperationCompleted);
             }
@@ -140,7 +141,8 @@ namespace QLTKKH.cfmastservice {
                         cidepofeeacr,
                         depofeeamt,
                         currentdebt,
-                        lastchange}, this.DuyetCFMASTOperationCompleted, userState);
+                        lastchange,
+                        status}, this.DuyetCFMASTOperationCompleted, userState);
         }
         
         private void OnDuyetCFMASTOperationCompleted(object arg) {
@@ -152,28 +154,26 @@ namespace QLTKKH.cfmastservice {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/SuaThemTienCIMAST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void SuaThemTienCIMAST(string afacctno, string acctno, long money, long depofeeamt, System.DateTime lastchange) {
+        public void SuaThemTienCIMAST(string afacctno, double money, double depofeeamt, System.DateTime lastchange) {
             this.Invoke("SuaThemTienCIMAST", new object[] {
                         afacctno,
-                        acctno,
                         money,
                         depofeeamt,
                         lastchange});
         }
         
         /// <remarks/>
-        public void SuaThemTienCIMASTAsync(string afacctno, string acctno, long money, long depofeeamt, System.DateTime lastchange) {
-            this.SuaThemTienCIMASTAsync(afacctno, acctno, money, depofeeamt, lastchange, null);
+        public void SuaThemTienCIMASTAsync(string afacctno, double money, double depofeeamt, System.DateTime lastchange) {
+            this.SuaThemTienCIMASTAsync(afacctno, money, depofeeamt, lastchange, null);
         }
         
         /// <remarks/>
-        public void SuaThemTienCIMASTAsync(string afacctno, string acctno, long money, long depofeeamt, System.DateTime lastchange, object userState) {
+        public void SuaThemTienCIMASTAsync(string afacctno, double money, double depofeeamt, System.DateTime lastchange, object userState) {
             if ((this.SuaThemTienCIMASTOperationCompleted == null)) {
                 this.SuaThemTienCIMASTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSuaThemTienCIMASTOperationCompleted);
             }
             this.InvokeAsync("SuaThemTienCIMAST", new object[] {
                         afacctno,
-                        acctno,
                         money,
                         depofeeamt,
                         lastchange}, this.SuaThemTienCIMASTOperationCompleted, userState);
@@ -188,28 +188,26 @@ namespace QLTKKH.cfmastservice {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/SuaTruTienCIMAST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void SuaTruTienCIMAST(string afacctno, string acctno, long money, long depofeeamt, System.DateTime lastchange) {
+        public void SuaTruTienCIMAST(string afacctno, double money, double depofeeamt, System.DateTime lastchange) {
             this.Invoke("SuaTruTienCIMAST", new object[] {
                         afacctno,
-                        acctno,
                         money,
                         depofeeamt,
                         lastchange});
         }
         
         /// <remarks/>
-        public void SuaTruTienCIMASTAsync(string afacctno, string acctno, long money, long depofeeamt, System.DateTime lastchange) {
-            this.SuaTruTienCIMASTAsync(afacctno, acctno, money, depofeeamt, lastchange, null);
+        public void SuaTruTienCIMASTAsync(string afacctno, double money, double depofeeamt, System.DateTime lastchange) {
+            this.SuaTruTienCIMASTAsync(afacctno, money, depofeeamt, lastchange, null);
         }
         
         /// <remarks/>
-        public void SuaTruTienCIMASTAsync(string afacctno, string acctno, long money, long depofeeamt, System.DateTime lastchange, object userState) {
+        public void SuaTruTienCIMASTAsync(string afacctno, double money, double depofeeamt, System.DateTime lastchange, object userState) {
             if ((this.SuaTruTienCIMASTOperationCompleted == null)) {
                 this.SuaTruTienCIMASTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSuaTruTienCIMASTOperationCompleted);
             }
             this.InvokeAsync("SuaTruTienCIMAST", new object[] {
                         afacctno,
-                        acctno,
                         money,
                         depofeeamt,
                         lastchange}, this.SuaTruTienCIMASTOperationCompleted, userState);
@@ -388,31 +386,31 @@ namespace QLTKKH.cfmastservice {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void DuyetCFMASTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void SuaThemTienCIMASTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void SuaTruTienCIMASTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void SucMuaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void ThemCFMASTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void SuaCFMASTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9037.0")]
     public delegate void XoaCFMASTCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 

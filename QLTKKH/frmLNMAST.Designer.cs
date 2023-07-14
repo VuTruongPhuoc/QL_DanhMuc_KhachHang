@@ -30,8 +30,6 @@
         {
             this.grbNO = new System.Windows.Forms.GroupBox();
             this.dgvLNMAST = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.ACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRINNML = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.INTDUE = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +45,8 @@
             this.LASTDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OPNDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RLSDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.grbNO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLNMAST)).BeginInit();
             this.panel1.SuspendLayout();
@@ -59,7 +59,7 @@
             this.grbNO.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.grbNO.Location = new System.Drawing.Point(0, 86);
             this.grbNO.Name = "grbNO";
-            this.grbNO.Size = new System.Drawing.Size(1177, 395);
+            this.grbNO.Size = new System.Drawing.Size(1019, 395);
             this.grbNO.TabIndex = 10;
             this.grbNO.TabStop = false;
             this.grbNO.Text = "Danh sách tài khoản nợ";
@@ -92,26 +92,6 @@
             this.dgvLNMAST.Size = new System.Drawing.Size(1132, 349);
             this.dgvLNMAST.TabIndex = 0;
             this.dgvLNMAST.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLNMAST_CellDoubleClick);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1177, 86);
-            this.panel1.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Thông tin tài khoản nợ.";
             // 
             // ACCTNO
             // 
@@ -233,11 +213,31 @@
             this.RLSDATE.Name = "RLSDATE";
             this.RLSDATE.Width = 125;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1019, 86);
+            this.panel1.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(23, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(210, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Thông tin tài khoản nợ.";
+            // 
             // frmLNMAST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1177, 512);
+            this.ClientSize = new System.Drawing.Size(1019, 520);
             this.Controls.Add(this.grbNO);
             this.Controls.Add(this.panel1);
             this.Name = "frmLNMAST";

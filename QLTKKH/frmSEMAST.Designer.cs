@@ -30,11 +30,6 @@
         {
             this.grbKhachHang = new System.Windows.Forms.GroupBox();
             this.dgvSEMAST = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSECURITIES_INFO = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
             this.AFACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CODEID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +38,11 @@
             this.OPNDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CLSDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LASTDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSECURITIES_INFO = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
             this.grbKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSEMAST)).BeginInit();
             this.panel1.SuspendLayout();
@@ -81,59 +81,6 @@
             this.dgvSEMAST.RowTemplate.Height = 24;
             this.dgvSEMAST.Size = new System.Drawing.Size(1132, 349);
             this.dgvSEMAST.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel1.Controls.Add(this.btnSECURITIES_INFO);
-            this.panel1.Controls.Add(this.btnThem);
-            this.panel1.Controls.Add(this.btnXoa);
-            this.panel1.Controls.Add(this.btnSua);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1166, 86);
-            this.panel1.TabIndex = 9;
-            // 
-            // btnSECURITIES_INFO
-            // 
-            this.btnSECURITIES_INFO.Location = new System.Drawing.Point(817, 27);
-            this.btnSECURITIES_INFO.Name = "btnSECURITIES_INFO";
-            this.btnSECURITIES_INFO.Size = new System.Drawing.Size(229, 30);
-            this.btnSECURITIES_INFO.TabIndex = 4;
-            this.btnSECURITIES_INFO.Text = "Xem thông tin chứng khoán";
-            this.btnSECURITIES_INFO.UseVisualStyleBackColor = true;
-            this.btnSECURITIES_INFO.Click += new System.EventHandler(this.btnSECURITIES_INFO_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(47, 27);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(107, 30);
-            this.btnThem.TabIndex = 1;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(382, 27);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(107, 30);
-            this.btnXoa.TabIndex = 3;
-            this.btnXoa.Text = "Xoá";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(211, 27);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(107, 30);
-            this.btnSua.TabIndex = 2;
-            this.btnSua.Text = "Sửa ";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // AFACCTNO
             // 
@@ -198,6 +145,59 @@
             this.LASTDATE.MinimumWidth = 6;
             this.LASTDATE.Name = "LASTDATE";
             this.LASTDATE.Width = 125;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel1.Controls.Add(this.btnSECURITIES_INFO);
+            this.panel1.Controls.Add(this.btnThem);
+            this.panel1.Controls.Add(this.btnXoa);
+            this.panel1.Controls.Add(this.btnSua);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1166, 86);
+            this.panel1.TabIndex = 9;
+            // 
+            // btnSECURITIES_INFO
+            // 
+            this.btnSECURITIES_INFO.Location = new System.Drawing.Point(953, 27);
+            this.btnSECURITIES_INFO.Name = "btnSECURITIES_INFO";
+            this.btnSECURITIES_INFO.Size = new System.Drawing.Size(97, 30);
+            this.btnSECURITIES_INFO.TabIndex = 4;
+            this.btnSECURITIES_INFO.Text = "Xem CK";
+            this.btnSECURITIES_INFO.UseVisualStyleBackColor = true;
+            this.btnSECURITIES_INFO.Click += new System.EventHandler(this.btnSECURITIES_INFO_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(47, 27);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(107, 30);
+            this.btnThem.TabIndex = 1;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(382, 27);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(107, 30);
+            this.btnXoa.TabIndex = 3;
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(211, 27);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(107, 30);
+            this.btnSua.TabIndex = 2;
+            this.btnSua.Text = "Sửa ";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // frmSEMAST
             // 

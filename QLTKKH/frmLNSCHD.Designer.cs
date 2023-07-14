@@ -31,8 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grbNO = new System.Windows.Forms.GroupBox();
             this.dgvLNSCHD = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.AUTOID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ACCTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NML = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +44,8 @@
             this.RLSDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DUEDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OVERDUEDATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.grbNO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLNSCHD)).BeginInit();
             this.panel1.SuspendLayout();
@@ -58,7 +58,7 @@
             this.grbNO.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.grbNO.Location = new System.Drawing.Point(0, 86);
             this.grbNO.Name = "grbNO";
-            this.grbNO.Size = new System.Drawing.Size(1010, 395);
+            this.grbNO.Size = new System.Drawing.Size(1011, 420);
             this.grbNO.TabIndex = 12;
             this.grbNO.TabStop = false;
             this.grbNO.Text = "Danh sách tài khoản nợ";
@@ -82,32 +82,12 @@
             this.DUEDATE,
             this.OVERDUEDATE});
             this.dgvLNSCHD.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvLNSCHD.Location = new System.Drawing.Point(28, 40);
+            this.dgvLNSCHD.Location = new System.Drawing.Point(12, 40);
             this.dgvLNSCHD.Name = "dgvLNSCHD";
             this.dgvLNSCHD.RowHeadersWidth = 51;
             this.dgvLNSCHD.RowTemplate.Height = 24;
-            this.dgvLNSCHD.Size = new System.Drawing.Size(970, 349);
+            this.dgvLNSCHD.Size = new System.Drawing.Size(986, 357);
             this.dgvLNSCHD.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1010, 86);
-            this.panel1.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Thông tin tài khoản nợ.";
             // 
             // AUTOID
             // 
@@ -215,11 +195,31 @@
             this.OVERDUEDATE.Name = "OVERDUEDATE";
             this.OVERDUEDATE.Width = 125;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1011, 86);
+            this.panel1.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(23, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(210, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Thông tin tài khoản nợ.";
+            // 
             // frmLNSCHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 525);
+            this.ClientSize = new System.Drawing.Size(1011, 518);
             this.Controls.Add(this.grbNO);
             this.Controls.Add(this.panel1);
             this.Name = "frmLNSCHD";

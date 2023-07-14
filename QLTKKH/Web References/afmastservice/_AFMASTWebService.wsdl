@@ -16,6 +16,7 @@
             <s:element minOccurs="1" maxOccurs="1" name="depofeeamt" type="s:long" />
             <s:element minOccurs="1" maxOccurs="1" name="currentdebt" type="s:long" />
             <s:element minOccurs="1" maxOccurs="1" name="lastchange" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>

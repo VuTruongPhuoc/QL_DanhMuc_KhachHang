@@ -35,7 +35,7 @@ namespace QLTKKH
             long balance = 20000000;
             long pp = 0;
             DateTime lastchange = DateTime.Now;
-
+            string status = "N";
             if (frmAFMAST.str.Trim() == "Sửa tiểu khoản.")
             {
                 afmastsv.SuaAFMAST(custid, acctno, martype, mrcrlimitmax);
@@ -45,7 +45,7 @@ namespace QLTKKH
                 cfmast.SucMua();
                 return;
             }
-            afmastsv.ThemAFMAST(custid, acctno, martype, mrcrlimitmax, afacctno, balance,pp, cidepofeeacr, depofeeamt,currentdebt, lastchange);
+            afmastsv.ThemAFMAST(custid, acctno, martype, mrcrlimitmax, afacctno, balance,pp, cidepofeeacr, depofeeamt,currentdebt, lastchange,status);
             MessageBox.Show("Thêm thành công", "Thông báo");
             dgv.DataSource = read.Reader("AFMAST");
             cfmast.SucMua();

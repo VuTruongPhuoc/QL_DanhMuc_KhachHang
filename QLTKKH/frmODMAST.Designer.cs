@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnHuyLenh = new System.Windows.Forms.Button();
             this.lbDatLenh = new System.Windows.Forms.Label();
+            this.btnHuyLenh = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvODMAST = new System.Windows.Forms.DataGridView();
             this.btnThanhToan = new System.Windows.Forms.Button();
@@ -61,24 +62,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel1.Controls.Add(this.btnHuyLenh);
             this.panel1.Controls.Add(this.lbDatLenh);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1340, 72);
+            this.panel1.Size = new System.Drawing.Size(1295, 72);
             this.panel1.TabIndex = 34;
-            // 
-            // btnHuyLenh
-            // 
-            this.btnHuyLenh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuyLenh.Location = new System.Drawing.Point(1058, 14);
-            this.btnHuyLenh.Name = "btnHuyLenh";
-            this.btnHuyLenh.Size = new System.Drawing.Size(165, 42);
-            this.btnHuyLenh.TabIndex = 1;
-            this.btnHuyLenh.Text = "Huỷ lệnh";
-            this.btnHuyLenh.UseVisualStyleBackColor = true;
-            this.btnHuyLenh.Click += new System.EventHandler(this.btnHuyLenh_Click);
             // 
             // lbDatLenh
             // 
@@ -90,6 +79,18 @@
             this.lbDatLenh.TabIndex = 0;
             this.lbDatLenh.Text = "Thông tin đặt lệnh.";
             // 
+            // btnHuyLenh
+            // 
+            this.btnHuyLenh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuyLenh.Location = new System.Drawing.Point(881, 555);
+            this.btnHuyLenh.Name = "btnHuyLenh";
+            this.btnHuyLenh.Size = new System.Drawing.Size(145, 43);
+            this.btnHuyLenh.TabIndex = 1;
+            this.btnHuyLenh.Text = "Huỷ lệnh";
+            this.btnHuyLenh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHuyLenh.UseVisualStyleBackColor = true;
+            this.btnHuyLenh.Click += new System.EventHandler(this.btnHuyLenh_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvODMAST);
@@ -97,7 +98,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 72);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1340, 417);
+            this.groupBox1.Size = new System.Drawing.Size(1295, 456);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách đặt lệnh";
@@ -127,18 +128,21 @@
             this.dgvODMAST.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvODMAST.Location = new System.Drawing.Point(12, 39);
             this.dgvODMAST.Name = "dgvODMAST";
+            this.dgvODMAST.RowHeadersVisible = false;
             this.dgvODMAST.RowHeadersWidth = 51;
             this.dgvODMAST.RowTemplate.Height = 24;
-            this.dgvODMAST.Size = new System.Drawing.Size(1306, 358);
+            this.dgvODMAST.Size = new System.Drawing.Size(1271, 411);
             this.dgvODMAST.TabIndex = 2;
             this.dgvODMAST.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvODMAST_CellContentClick);
             this.dgvODMAST.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvODMAST_CellFormatting);
             // 
             // btnThanhToan
             // 
-            this.btnThanhToan.Location = new System.Drawing.Point(1075, 509);
+            this.btnThanhToan.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.Location = new System.Drawing.Point(1084, 555);
             this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(176, 43);
+            this.btnThanhToan.Size = new System.Drawing.Size(137, 43);
             this.btnThanhToan.TabIndex = 36;
             this.btnThanhToan.Text = "Thanh toán";
             this.btnThanhToan.UseVisualStyleBackColor = true;
@@ -277,6 +281,10 @@
             // ORDERMATCH
             // 
             this.ORDERMATCH.DataPropertyName = "ORDERMATCH";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Beige;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Beige;
+            this.ORDERMATCH.DefaultCellStyle = dataGridViewCellStyle2;
             this.ORDERMATCH.HeaderText = "Thực hiện";
             this.ORDERMATCH.MinimumWidth = 6;
             this.ORDERMATCH.Name = "ORDERMATCH";
@@ -288,7 +296,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1340, 577);
+            this.ClientSize = new System.Drawing.Size(1295, 610);
+            this.Controls.Add(this.btnHuyLenh);
             this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);

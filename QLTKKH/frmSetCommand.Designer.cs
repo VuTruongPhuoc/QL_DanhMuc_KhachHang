@@ -38,7 +38,6 @@
             this.lbCUSTODYCD = new System.Windows.Forms.Label();
             this.btnDat = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLenh = new System.Windows.Forms.Button();
             this.grbLenhDat = new System.Windows.Forms.GroupBox();
             this.txtAFACCTNO = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -76,6 +75,7 @@
             this.txtQUOTEPRICE.Name = "txtQUOTEPRICE";
             this.txtQUOTEPRICE.Size = new System.Drawing.Size(238, 40);
             this.txtQUOTEPRICE.TabIndex = 3;
+            this.txtQUOTEPRICE.Text = "10000";
             // 
             // txtORDERQTTY
             // 
@@ -94,6 +94,7 @@
             this.txtSYMBOL.Name = "txtSYMBOL";
             this.txtSYMBOL.Size = new System.Drawing.Size(238, 39);
             this.txtSYMBOL.TabIndex = 1;
+            this.txtSYMBOL.Text = "stb";
             this.txtSYMBOL.TextChanged += new System.EventHandler(this.txtSYMBOL_TextChanged);
             // 
             // label4
@@ -140,7 +141,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel1.Controls.Add(this.btnLenh);
             this.panel1.Controls.Add(this.btnMua);
             this.panel1.Controls.Add(this.btnBan);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -148,17 +148,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(780, 86);
             this.panel1.TabIndex = 57;
-            // 
-            // btnLenh
-            // 
-            this.btnLenh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLenh.Location = new System.Drawing.Point(510, 23);
-            this.btnLenh.Name = "btnLenh";
-            this.btnLenh.Size = new System.Drawing.Size(234, 39);
-            this.btnLenh.TabIndex = 2;
-            this.btnLenh.Text = "Xem lệnh";
-            this.btnLenh.UseVisualStyleBackColor = true;
-            this.btnLenh.Click += new System.EventHandler(this.btnLenh_Click);
             // 
             // grbLenhDat
             // 
@@ -231,7 +220,6 @@
         private System.Windows.Forms.Button btnDat;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox grbLenhDat;
-        private System.Windows.Forms.Button btnLenh;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtAFACCTNO;
     }
